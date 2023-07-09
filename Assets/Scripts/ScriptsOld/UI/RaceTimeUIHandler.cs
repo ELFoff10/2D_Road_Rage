@@ -1,16 +1,17 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class RaceTimeUIHandler : MonoBehaviour
 {
-    private Text _timeText;
+    private TMP_Text _timeText;
 
     private float _lastRaceTimeUpdate;
 
     private void Awake()
     {
-        _timeText = GetComponent<Text>();
+        _timeText = GetComponent<TMP_Text>();
     }
 
     private void Start()

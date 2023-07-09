@@ -40,7 +40,10 @@ public class SpawnCars : MonoBehaviour
                         car.GetComponent<CarAIHandler>().enabled = false;
                         car.name = "Player";
                         car.tag = "Player";
-                        _cameraController.SetTarget(car.transform);
+                        if (_cameraController != null)
+                        {
+                            _cameraController.SetTarget(car.transform);
+                        }
                     }
 
                     break;

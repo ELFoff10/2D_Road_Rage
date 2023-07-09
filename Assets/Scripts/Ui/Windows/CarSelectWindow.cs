@@ -10,7 +10,7 @@ namespace Ui.Windows
         [SerializeField] private UiButton _selectButton;
         [SerializeField] private UiButton _leftButton;
         [SerializeField] private UiButton _rightButton;
-        [SerializeField] private AudioSource _clickClip;
+        // [SerializeField] private AudioSource _clickClip;
 
         protected override void OnActivate()
         {
@@ -32,28 +32,28 @@ namespace Ui.Windows
 
         private void OnBackButton()
         {
-            PlayClip();
+            // PlayClip();
             _manager.Hide<CarSelectWindow>();
             _manager.Show<MainMenuWindow>();
         }
         
         private void OnSelectButton()
         {
-            PlayClip();
+            // PlayClip();
             _manager.Hide<CarSelectWindow>();
             _manager.Show<LevelSelectWindow>();
         }
         
         private void OnLeftButton()
         {
-            PlayClip();
+            // PlayClip();
         }
         
         private void OnRightButton()
         {
-            PlayClip();
+            // PlayClip();
         }
 
-        private void PlayClip() => _clickClip.Play();
+        // private void PlayClip() => _clickClip.Play();
     }
 }

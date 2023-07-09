@@ -64,10 +64,6 @@ namespace Tools.UiManager
                 windowGo.name = go.name;
 #endif
             }
-            catch (Exception e)
-            {
-                throw;
-            }
             finally
             {
                 go.SetActive(lastActiveState);

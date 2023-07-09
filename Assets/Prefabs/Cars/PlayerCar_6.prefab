@@ -10095,6 +10095,7 @@ GameObject:
   - component: {fileID: 6110269616868146646}
   - component: {fileID: 3192770904469577162}
   - component: {fileID: 1020832703983588081}
+  - component: {fileID: 9130786509256244834}
   m_Layer: 0
   m_Name: PlayerCar_6
   m_TagString: Player
@@ -10198,6 +10199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a468240c75b26ed4383b85dc8f8fd523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carPositionText: {fileID: 0}
 --- !u!114 &1020832703983588081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10211,6 +10213,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AICarMode: 1
+--- !u!114 &9130786509256244834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8009953912075715981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88877249f0b10942b19aa117fb6f7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8033804166739616838
 GameObject:
   m_ObjectHideFlags: 0

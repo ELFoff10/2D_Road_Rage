@@ -10,15 +10,21 @@ namespace Ui.Windows
     public class LevelSelectWindow : Window
     {
         [SerializeField] private UiButton _backButton;
-        [SerializeField] private UiButton _level1Button;
-        [SerializeField] private UiButton _level2Button;
-        [SerializeField] private UiButton _level3Button;
-        [SerializeField] private UiButton _level4Button;
-        [SerializeField] private UiButton _level5Button;
-        [SerializeField] private AudioSource _clickClip;
 
-        [Inject] private readonly ICoreStateMachine _coreStateMachine;
-        
+        [SerializeField] private UiButton _level1Button;
+
+        [SerializeField] private UiButton _level2Button;
+
+        [SerializeField] private UiButton _level3Button;
+
+        [SerializeField] private UiButton _level4Button;
+
+        [SerializeField] private UiButton _level5Button;
+        // [SerializeField] private AudioSource _clickClip;
+
+        [Inject]
+        private readonly ICoreStateMachine _coreStateMachine;
+
         protected override void OnActivate()
         {
             base.OnActivate();
@@ -44,31 +50,52 @@ namespace Ui.Windows
 
         private void OnBackButton()
         {
-            PlayClip();
+            // PlayClip();
             _manager.Hide<LevelSelectWindow>();
             _manager.Show<CarSelectWindow>();
         }
+
+        private void OnLevel1Button()
+        {
+            _manager.Hide<MainMenuWindow>();
+            LoadLevel(ScenesStateEnum.Level1);
+        }    
         
-        private void OnLevel1Button() => LoadLevel(ScenesStateEnum.Level1);
+        private void OnLevel2Button()
+        {
+            _manager.Hide<MainMenuWindow>();
+            LoadLevel(ScenesStateEnum.Level2);
+        }      
         
-        private void OnLevel2Button() => LoadLevel(ScenesStateEnum.Level2);
+        private void OnLevel3Button()
+        {
+            _manager.Hide<MainMenuWindow>();
+            LoadLevel(ScenesStateEnum.Level3);
+        }      
         
-        private void OnLevel3Button() => LoadLevel(ScenesStateEnum.Level3);
+        private void OnLevel4Button()
+        {
+            _manager.Hide<MainMenuWindow>();
+            LoadLevel(ScenesStateEnum.Level4);
+        }    
         
-        private void OnLevel4Button() => LoadLevel(ScenesStateEnum.Level4);
-        
-        private void OnLevel5Button() => LoadLevel(ScenesStateEnum.Level5);
+        private void OnLevel5Button()
+        {
+            _manager.Hide<MainMenuWindow>();
+            LoadLevel(ScenesStateEnum.Level5);
+        }
 
         private void LoadLevel(ScenesStateEnum scenesStateEnum)
         {
-            PlayClip();
+            // PlayClip();
             _coreStateMachine.SceneEndLoad += OnSceneEndLoad;
             _coreStateMachine.SetScenesState(scenesStateEnum);
         }
+
         private void OnSceneEndLoad(ScenesStateEnum scenesStateEnum)
         {
             _manager.Hide(this);
         }
-        private void PlayClip() => _clickClip.Play();
+        // private void PlayClip() => _clickClip.Play();
     }
 }

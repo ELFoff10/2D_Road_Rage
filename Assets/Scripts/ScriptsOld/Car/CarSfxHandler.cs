@@ -19,13 +19,9 @@ public class CarSfxHandler : MonoBehaviour
 
     private void Awake()
     {
-        _carController = GetComponent<CarController>();
-    }
-
-    private void Start()
-    {
         _tiresScreechingAudioSource.Play();
         _engineAudioSource.Play();
+        _carController = GetComponent<CarController>();
     }
 
     private void Update()

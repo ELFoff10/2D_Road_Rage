@@ -18,7 +18,7 @@ namespace RoadRage.MultiScene
     public class MultiSceneManager : IMultiSceneManager
     {
         private ScenesStateEnum _lastLoadedLevel = ScenesStateEnum.Base;
-        private ScenesStateEnum _lasScene = ScenesStateEnum.Base;
+        private ScenesStateEnum _lastScene = ScenesStateEnum.Base;
 
         public void LoadScene(ScenesStateEnum scene, Action sceneLoaded)
         {
@@ -26,7 +26,7 @@ namespace RoadRage.MultiScene
 
             load.completed += (AsyncOperation result) =>
             {
-                _lasScene = _lastLoadedLevel;
+                _lastScene = _lastLoadedLevel;
                 _lastLoadedLevel = scene;
                 sceneLoaded?.Invoke();
             };
@@ -34,7 +34,7 @@ namespace RoadRage.MultiScene
 
         public void UnloadLastScene(Action sceneLoaded)
         {
-            AsyncOperation load = SceneManager.UnloadSceneAsync(_lasScene.ToString());
+            AsyncOperation load = SceneManager.UnloadSceneAsync(_lastScene.ToString());
 
             load.completed += (AsyncOperation result) =>
             {

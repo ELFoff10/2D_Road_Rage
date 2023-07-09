@@ -7,10 +7,14 @@ namespace Ui.Windows
     public class MainMenuWindow : Window
     {
         [SerializeField] private UiButton _playButton;
+
         [SerializeField] private UiButton _statusButton;
+
         [SerializeField] private UiButton _optionsButton;
+
         [SerializeField] private UiButton _quitButton;
-        [SerializeField] private AudioSource _clickClip;
+
+        // [SerializeField] private AudioSource _clickClip;
 
         protected override void OnActivate()
         {
@@ -32,6 +36,7 @@ namespace Ui.Windows
 
         private void OnPlayButton()
         {
+            // PlayClip();
             _manager.Hide<MainMenuWindow>();
             _manager.Show<CarSelectWindow>();
         }
@@ -53,6 +58,9 @@ namespace Ui.Windows
             // exit game
         }
 
-        public void PlayClip() => _clickClip.Play();
+        // private void PlayClip()
+        // {
+        //     _clickClip.Play();
+        // }
     }
 }

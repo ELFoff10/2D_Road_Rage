@@ -116,8 +116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -683.3699, y: 406.5}
-  m_SizeDelta: {x: 250, y: 100}
+  m_AnchoredPosition: {x: -858.3699, y: 406.5}
+  m_SizeDelta: {x: 450, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4621942183905126331
 CanvasRenderer:
@@ -200,7 +200,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 436754810318197461}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 574465752387742511}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7579628968410944682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +327,7 @@ MonoBehaviour:
   forcedTargetType: 0
   autoPlay: 0
   useTargetAsV3: 0
-  endValueFloat: 1.1
+  endValueFloat: 1.5
   endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -381,7 +393,7 @@ AudioSource:
   m_GameObject: {fileID: 5849005919148455411}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -705446722596059707, guid: c9a3504f5fda2b44e9e2adf5a1fa4a51, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5347777b5b5241f4daf47791f1e3d8e1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1044,7 +1056,6 @@ MonoBehaviour:
   _isUndestroyable: 0
   _isTransparent: 1
   _backButton: {fileID: 7579628968410944682}
-  _clickClip: {fileID: 574465752387742511}
 --- !u!1 &6343973023863992956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,8 +1229,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

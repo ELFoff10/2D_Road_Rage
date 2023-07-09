@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class CarLapCounter : MonoBehaviour
 {
-    [SerializeField]
-    private TMP_Text _carPositionText;
+    // [SerializeField]
+    // private TMP_Text _carPositionText;
 
     public event Action<CarLapCounter> OnPassCheckPoint;
 
@@ -98,9 +98,9 @@ public class CarLapCounter : MonoBehaviour
     {
         _hideUIDelayTime += delayUntilHidePosition;
 
-        _carPositionText.text = _carPosition.ToString();
-
-        _carPositionText.gameObject.SetActive(true);
+        // _carPositionText.text = _carPosition.ToString();
+        //
+        // _carPositionText.gameObject.SetActive(true);
 
         if (!_isHideRoutineRunning)
         {
@@ -108,7 +108,7 @@ public class CarLapCounter : MonoBehaviour
 
             yield return new WaitForSeconds(_hideUIDelayTime);
 
-            _carPositionText.gameObject.SetActive(false);
+            // _carPositionText.gameObject.SetActive(false);
 
             _isHideRoutineRunning = false;
         }

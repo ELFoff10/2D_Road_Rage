@@ -7,7 +7,7 @@ namespace Ui.Windows
     public class StatusWindow : Window
     {
         [SerializeField] private UiButton _backButton;
-        [SerializeField] private AudioSource _clickClip;
+        //[SerializeField] private AudioSource _clickClip;
 
         protected override void OnActivate()
         {
@@ -23,11 +23,11 @@ namespace Ui.Windows
 
         private void OnBackButton()
         {
-            PlayClip();
+            // PlayClip();
             _manager.Hide<StatusWindow>();
             _manager.Show<MainMenuWindow>();
         }
 
-        private void PlayClip() => _clickClip.Play();
+        // private void PlayClip() => _clickClip.Play();
     }
 }

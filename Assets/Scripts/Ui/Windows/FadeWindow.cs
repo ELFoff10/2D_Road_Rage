@@ -35,14 +35,12 @@ namespace Ui.Windows
         public void EndOpenFade()
         {
             _fadeSceneDelegate?.Invoke();
-            Debug.Log("Open scene Fade ended");
             _manager.Hide(this);
         }
         
         public void EndCloseFade()
         {
             _fadeSceneDelegate?.Invoke();
-            Debug.Log("Close scene Fade ended");
         }
     }
 }

@@ -27,7 +27,7 @@ public class InGameMenuUIHandler : MonoBehaviour
 
     IEnumerator ShowMenuCO()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0);
 
         _canvas.enabled = true;
     }
