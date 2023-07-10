@@ -1923,5 +1923,9 @@ PrefabInstance:
       propertyPath: IsFinishLine
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4540830040744784140, guid: 1eca654c31dc2cb418497fc9679b48b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eca654c31dc2cb418497fc9679b48b6, type: 3}
