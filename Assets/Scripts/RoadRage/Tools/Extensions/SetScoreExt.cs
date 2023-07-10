@@ -1,4 +1,6 @@
 ﻿using System;
+using RoadRage.MultiScene;
+using VContainer;
 
 namespace RoadRage.Tools.Extensions
 {
