@@ -4,7 +4,9 @@ public class SpawnCars : MonoBehaviour
 {
     [SerializeField]
     private CameraController _cameraController;
-
+    [SerializeField]
+    private Material _material;
+    
     private void Awake()
     {
         var spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
@@ -25,6 +27,7 @@ public class SpawnCars : MonoBehaviour
 
                     if (PlayerPrefs.GetInt($"P{playerNumber}_IsAI") == 1)
                     {
+                        car.GetComponentInChildren<SpriteRenderer>().material = new Material(_material);
                         car.GetComponent<CarSfxHandler>().enabled = false;
                         car.GetComponent<CarInputHandler>().enabled = false;
                         car.name = "AI";
