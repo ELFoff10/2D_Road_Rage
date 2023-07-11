@@ -17,7 +17,7 @@ public class CarSfxHandler : MonoBehaviour
     private float _desiredEnginePitch = 0.5f;
     private float _tireScreechPitch = 0.5f;
 
-    private void Awake()
+    private void Start()
     {
         _tiresScreechingAudioSource.Play();
         _engineAudioSource.Play();

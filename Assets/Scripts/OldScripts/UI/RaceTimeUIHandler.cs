@@ -1,12 +1,10 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class RaceTimeUIHandler : MonoBehaviour
 {
     private TMP_Text _timeText;
-
     private float _lastRaceTimeUpdate;
 
     private void Awake()
@@ -16,10 +14,10 @@ public class RaceTimeUIHandler : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(UpdateTimeCO());
+        StartCoroutine(UpdateTime());
     }
 
-    IEnumerator UpdateTimeCO()
+    private IEnumerator UpdateTime()
     {
         while (true)
         {

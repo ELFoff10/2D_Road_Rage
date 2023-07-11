@@ -2,11 +2,8 @@ using UnityEngine;
 
 public class WheelParticleHandler : MonoBehaviour
 {
-    [SerializeField]
-    private CarController _carController;
-
-    private float _particleEmissionRate = 0;
-
+    [SerializeField] private CarController _carController;
+    private float _particleEmissionRate;
     private ParticleSystem _particleSystemSmoke;
     private ParticleSystem.EmissionModule _particleSystemEmissionModule;
 

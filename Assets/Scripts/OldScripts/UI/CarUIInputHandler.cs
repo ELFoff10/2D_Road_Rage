@@ -3,7 +3,6 @@ using UnityEngine;
 public class CarUIInputHandler : MonoBehaviour
 {
     private CarInputHandler _playerCarInputHandler;
-
     private Vector2 _inputVector = Vector2.zero;
 
     private void Awake()

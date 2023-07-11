@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class LevelGeneration : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] 
     private GameObject _roadPrefab;
-
-    [SerializeField]
+    [SerializeField] 
     private Transform _startRoad;
-
     private Vector3 _lastEndPosition;
     private float _offset;
     private const float PlayerDistanceSpawn = 200f;

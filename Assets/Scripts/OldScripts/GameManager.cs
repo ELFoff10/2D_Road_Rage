@@ -11,12 +11,12 @@ public enum GameStates
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance = null;
+    public static GameManager Instance;
 
     private GameStates _gameState = GameStates.CountDown;
 
-    private float _raceStartedTime = 0;
-    private float _raceCompletedTime = 0;
+    private float _raceStartedTime;
+    private float _raceCompletedTime ;
 
     public event Action<GameManager> OnGameStateChanged;
 

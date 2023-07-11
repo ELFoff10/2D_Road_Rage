@@ -9,7 +9,7 @@ public class Startup : MonoBehaviour
 
         foreach (GameObject prefab in prefabsToInstantiate)
         {
-            GameObject.Instantiate(prefab);
+            Instantiate(prefab);
         }
     }
 }

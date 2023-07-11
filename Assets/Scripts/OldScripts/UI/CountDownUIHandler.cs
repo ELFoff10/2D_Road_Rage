@@ -15,10 +15,10 @@ public class CountDownUIHandler : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(CountDownCO());
+        StartCoroutine(CountDown());
     }
 
-    IEnumerator CountDownCO()
+    private IEnumerator CountDown()
     {
         yield return new WaitForSeconds(0.3f);
 

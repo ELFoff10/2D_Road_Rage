@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(CarController))]
 public class CarInputHandler : MonoBehaviour
 {
-    public bool IsUIInput = false;
+    public bool IsUIInput;
 
     private CarController _carController;
 

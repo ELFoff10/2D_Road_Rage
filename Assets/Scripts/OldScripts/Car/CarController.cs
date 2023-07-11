@@ -7,21 +7,14 @@ public class CarController : MonoBehaviour
     [Header("Car settings")]
     [SerializeField]
     private float _driftFactor = 0.93f;
-
     [SerializeField]
     private float _accelerationFactor = 5f;
-
     [SerializeField]
     private float _turnFactor = 3f;
-
     [SerializeField]
     private float _maxSpeed = 7f;
-
     [SerializeField]
-    private bool _isEndlessMap = false;
-
-    [SerializeField]
-    private GameObject _sfx;
+    private bool _isEndlessMap;
 
     public float MaxSpeed
     {
@@ -35,13 +28,12 @@ public class CarController : MonoBehaviour
         set => _isEndlessMap = value;
     }
 
+    private readonly float _accelerationInput = 1;
     private float _defaultSpeedBeforeAddSpeed;
     private float _defaultSpeedBeforeSlowSpeed;
-
-    private readonly float _accelerationInput = 1;
-    private float _steeringInput = 0;
-    private float _rotationAngle = 0;
-    private float _velocityVsUp = 0;
+    private float _steeringInput;
+    private float _rotationAngle;
+    private float _velocityVsUp;
 
     private Rigidbody2D _carRigidbody2D;
 
@@ -52,15 +44,10 @@ public class CarController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManager.Instance.GetGameState() == GameStates.CountDown)
-        {
-            return;
-        }
+        if (GameManager.Instance.GetGameState() == GameStates.CountDown) return;
 
         ApplyEngineForce();
-
         KillOrthogonalVelocity();
-
         ApplySteering();
     }
 
@@ -70,22 +57,13 @@ public class CarController : MonoBehaviour
         _velocityVsUp = Vector2.Dot(transform.up, _carRigidbody2D.velocity);
 
         // Limit so we cannot go faster than the max speed in the "forward: direction
-        if (_velocityVsUp > _maxSpeed && _accelerationInput > 0)
-        {
-            return;
-        }
+        if (_velocityVsUp > _maxSpeed && _accelerationInput > 0) return;
 
         // Limit so we cannot go faster than the 25% of max speed in the "reverse" direction
-        if (_velocityVsUp < _maxSpeed * 0.25f && _accelerationInput < 0)
-        {
-            return;
-        }
+        if (_velocityVsUp < _maxSpeed * 0.25f && _accelerationInput < 0) return;
 
         // Limit so we cannot go faster in any direction while accelerating
-        if (_carRigidbody2D.velocity.sqrMagnitude > _maxSpeed * _maxSpeed && _accelerationInput > 0)
-        {
-            return;
-        }
+        if (_carRigidbody2D.velocity.sqrMagnitude > _maxSpeed * _maxSpeed && _accelerationInput > 0) return;
 
         // Apply drag if there is no accelerationInput so the car stops when the player lets go of the accelerator
         if (_accelerationInput == 0)
@@ -96,9 +74,8 @@ public class CarController : MonoBehaviour
         {
             _carRigidbody2D.drag = 0;
         }
-
+        
         Vector2 engineForceVector = transform.up * (_accelerationInput * _accelerationFactor);
-
         _carRigidbody2D.AddForce(engineForceVector, ForceMode2D.Force);
     }
 
@@ -109,7 +86,6 @@ public class CarController : MonoBehaviour
         minSpeedBeforeAllowTurningFactor = Mathf.Clamp01(minSpeedBeforeAllowTurningFactor);
 
         _rotationAngle -= _steeringInput * _turnFactor * minSpeedBeforeAllowTurningFactor;
-
         _carRigidbody2D.MoveRotation(_rotationAngle);
     }
 
@@ -163,11 +139,6 @@ public class CarController : MonoBehaviour
         _maxSpeed -= speed;
         _defaultSpeedBeforeSlowSpeed = speed;
         StartCoroutine(SlowSpeedCoroutine());
-    }
-
-    public void OffSfx()
-    {
-        _sfx.SetActive(false);
     }
 
     private IEnumerator AddSpeedCoroutine()

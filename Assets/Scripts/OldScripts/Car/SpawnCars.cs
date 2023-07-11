@@ -1,4 +1,3 @@
-using SpaceShooter;
 using UnityEngine;
 
 public class SpawnCars : MonoBehaviour
@@ -6,10 +5,9 @@ public class SpawnCars : MonoBehaviour
     [SerializeField]
     private CameraController _cameraController;
 
-    private void Start()
+    private void Awake()
     {
         var spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
-
         CarData[] carDatas = Resources.LoadAll<CarData>("CarData/");
 
         for (var i = 0; i < spawnPoints.Length; i++)
@@ -23,14 +21,11 @@ public class SpawnCars : MonoBehaviour
                 if (carData.CarUniqueID == playerSelectedCarID)
                 {
                     var car = Instantiate(carData.CarPrefab, spawnPoint.position, spawnPoint.rotation);
-
                     var playerNumber = i + 1;
-
-                    //car.GetComponent<CarInputHandler>()._playerNumber = i + 1;
 
                     if (PlayerPrefs.GetInt($"P{playerNumber}_IsAI") == 1)
                     {
-                        car.GetComponent<CarController>().OffSfx();
+                        car.GetComponent<CarSfxHandler>().enabled = false;
                         car.GetComponent<CarInputHandler>().enabled = false;
                         car.name = "AI";
                         car.tag = "AI";
@@ -40,6 +35,7 @@ public class SpawnCars : MonoBehaviour
                         car.GetComponent<CarAIHandler>().enabled = false;
                         car.name = "Player";
                         car.tag = "Player";
+                        
                         if (_cameraController != null)
                         {
                             _cameraController.SetTarget(car.transform);

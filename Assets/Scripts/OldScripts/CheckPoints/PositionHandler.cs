@@ -5,13 +5,11 @@ using UnityEngine;
 public class PositionHandler : MonoBehaviour
 {
     public List<CarLapCounter> CarLapCounters = new List<CarLapCounter>();
-
     private LeaderBoardUIHandler _leaderBoardUIHandler;
 
     private void Start()
     {
         CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
-
         CarLapCounters = carLapCounterArray.ToList<CarLapCounter>();
 
         foreach (CarLapCounter lapCounters in CarLapCounters)

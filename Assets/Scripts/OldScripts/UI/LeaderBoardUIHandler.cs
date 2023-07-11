@@ -9,7 +9,7 @@ public class LeaderBoardUIHandler : MonoBehaviour
 
     private SetLeaderBoardItemInfo[] _setLeaderBoardItemInfo;
 
-    private bool _isInitialized = false;
+    private bool _isInitialized;
 
     private Canvas _canvas;
 

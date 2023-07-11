@@ -25,7 +25,7 @@ public class InGameMenuUIHandler : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    IEnumerator ShowMenuCO()
+    private IEnumerator ShowMenu()
     {
         yield return new WaitForSeconds(0);
 
@@ -36,7 +36,7 @@ public class InGameMenuUIHandler : MonoBehaviour
     {
         if (GameManager.Instance.GetGameState() == GameStates.RaceOver)
         {
-            StartCoroutine(ShowMenuCO());
+            StartCoroutine(ShowMenu());
         }
     }
 

@@ -13,11 +13,9 @@ public class CarAIHandler : MonoBehaviour
     public AIMode AICarMode;
 
     private Vector3 _targetPosition = Vector3.zero;
-    private Transform _targetTransform = null;
-
-    private WayPointNode _currentWayPoint = null;
+    private Transform _targetTransform;
+    private WayPointNode _currentWayPoint;
     private WayPointNode[] _allWayPoints;
-
     private CarController _carController;
 
     private void Awake()
@@ -65,7 +63,7 @@ public class CarAIHandler : MonoBehaviour
     {
         if (_currentWayPoint == null)
         {
-            _currentWayPoint = FindClossestWayPoints();
+            _currentWayPoint = FindClosestWayPoints();
         }
 
         if (_currentWayPoint != null)
@@ -82,7 +80,7 @@ public class CarAIHandler : MonoBehaviour
         }
     }
 
-    private WayPointNode FindClossestWayPoints()
+    private WayPointNode FindClosestWayPoints()
     {
         return _allWayPoints
             .OrderBy(t => Vector3.Distance(transform.position, t.transform.position))

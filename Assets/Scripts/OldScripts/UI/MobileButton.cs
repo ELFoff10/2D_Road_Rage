@@ -11,8 +11,8 @@ public class MobileButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public ButtonType buttonType;
 
-    private bool _isPressed = false;
-    private float _pressTime = 0f;
+    private bool _isPressed;
+    private float _pressTime;
     public float maxPressDuration = 1f; // Maximum time the button can be held down
 
     private RectTransform _buttonRectTransform;

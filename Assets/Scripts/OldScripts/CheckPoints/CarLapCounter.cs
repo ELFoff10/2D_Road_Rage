@@ -11,21 +11,15 @@ public class CarLapCounter : MonoBehaviour
 
     public event Action<CarLapCounter> OnPassCheckPoint;
 
-    private int _passedCheckPointNumber = 0;
-    private float _timeAtLastPassedCheckPoint = 0;
-
-    private int _numberOfPassedCheckPoints = 0;
-
-    private int _lapsCompleted = 0;
+    private int _passedCheckPointNumber;
+    private float _timeAtLastPassedCheckPoint;
+    private int _numberOfPassedCheckPoints;
+    private int _lapsCompleted;
     private const int LapsToComplete = 1;
-
-    private bool _isRaceCompleted = false;
-
-    private int _carPosition = 0;
-
-    private bool _isHideRoutineRunning = false;
+    private bool _isRaceCompleted;
+    private int _carPosition;
+    private bool _isHideRoutineRunning;
     private float _hideUIDelayTime;
-
 
     public void SetCarPosition(int position)
     {
