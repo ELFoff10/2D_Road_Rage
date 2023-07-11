@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class SpawnCars : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class SpawnCars : MonoBehaviour
     [SerializeField]
     private Material _material;
     
-    private void Awake()
+    private void Start()
     {
         var spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
         CarData[] carDatas = Resources.LoadAll<CarData>("CarData/");
@@ -27,7 +28,13 @@ public class SpawnCars : MonoBehaviour
 
                     if (PlayerPrefs.GetInt($"P{playerNumber}_IsAI") == 1)
                     {
+                        foreach (var light2D in car.GetComponentsInChildren<Light2D>())
+                        {
+                            light2D.enabled = false;
+                        }
+
                         car.GetComponentInChildren<SpriteRenderer>().material = new Material(_material);
+                        
                         car.GetComponent<CarSfxHandler>().enabled = false;
                         car.GetComponent<CarInputHandler>().enabled = false;
                         car.name = "AI";
