@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class SpawnCars : MonoBehaviour
+public class CarSpawner : MonoBehaviour
 {
     [SerializeField]
     private CameraController _cameraController;
@@ -32,8 +32,8 @@ public class SpawnCars : MonoBehaviour
                         {
                             light2D.enabled = false;
                         }
-
-                        car.GetComponentInChildren<SpriteRenderer>().material = new Material(_material);
+                        
+                        car.GetComponentInChildren<SpriteRenderer>().material = new Material(_material/*CarData.Material*/);
                         
                         car.GetComponent<CarSfxHandler>().enabled = false;
                         car.GetComponent<CarInputHandler>().enabled = false;

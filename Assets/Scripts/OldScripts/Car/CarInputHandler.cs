@@ -1,14 +1,12 @@
 using UnityEngine;
 
-[RequireComponent(typeof(CarController))]
 public class CarInputHandler : MonoBehaviour
 {
-    public bool IsUIInput;
-
+    public bool IsUIInput = false;
     private CarController _carController;
-
-    private Vector2 _inputVector = Vector2.zero;
     private ButtonInputAggregator _buttonInputAggregator;
+    private Vector2 _inputVector = Vector2.zero;
+    
 
     private void Awake()
     {
@@ -18,9 +16,9 @@ public class CarInputHandler : MonoBehaviour
 
     private void Update()
     {
-        if (IsUIInput)
+        if (IsUIInput == true)
         {
-            if (_buttonInputAggregator != null)
+            if(_buttonInputAggregator != null)
                 _inputVector.x = _buttonInputAggregator.GetHorizontalInput();
         }
         else

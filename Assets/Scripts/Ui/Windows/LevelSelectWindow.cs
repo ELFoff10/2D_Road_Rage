@@ -1,4 +1,5 @@
 ﻿using Enums;
+using RoadRage.Controllers;
 using RoadRage.StateMachines;
 using Tools.UiManager;
 using Ui.Common.Tools;
@@ -10,20 +11,15 @@ namespace Ui.Windows
     public class LevelSelectWindow : Window
     {
         [SerializeField] private UiButton _backButton;
-
         [SerializeField] private UiButton _level1Button;
-
         [SerializeField] private UiButton _level2Button;
-
         [SerializeField] private UiButton _level3Button;
-
         [SerializeField] private UiButton _level4Button;
-
         [SerializeField] private UiButton _level5Button;
         // [SerializeField] private AudioSource _clickClip;
 
-        [Inject]
-        private readonly ICoreStateMachine _coreStateMachine;
+        [Inject] private readonly ICoreStateMachine _coreStateMachine;
+        // [Inject] private readonly WindowManager _windowManager;
 
         protected override void OnActivate()
         {
@@ -58,6 +54,7 @@ namespace Ui.Windows
         private void OnLevel1Button()
         {
             _manager.Hide<MainMenuWindow>();
+            // _windowManager.gameObject.SetActive(false);
             LoadLevel(ScenesStateEnum.Level1);
         }    
         

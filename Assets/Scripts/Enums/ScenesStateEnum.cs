@@ -2,7 +2,6 @@
 {
     public enum ScenesStateEnum
     {
-        None,
         Base,
         Level1,
         Level2,
