@@ -1,4 +1,6 @@
-﻿using Models.Controllers;
+﻿using System;
+using FMODUnity;
+using Models.Controllers;
 using RoadRage.Tools.UiManager;
 using UniRx;
 using UnityEngine;
@@ -20,6 +22,7 @@ namespace Tools.UiManager
         private WindowStack _stack;
         public Canvas MenuCanvas => _menuCanvas;
         public ReadOnlyReactiveProperty<Window> LastWindow => _stack.LastWindow;
+        
 
         [Inject]
         private readonly UiFabric _uiFabric;

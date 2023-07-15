@@ -891,7 +891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75d8e9ef1771724fb36d509e5d1cc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsUIInput: 1
+  IsUIInput: 0
 --- !u!114 &5846990682677154171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,9 +917,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e89154ee7a93e48ba488eef10d17e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tiresScreechingAudioSource: {fileID: 6092175667191593935}
-  _engineAudioSource: {fileID: 6092175666790523821}
-  _carHitAudioSource: {fileID: 6092175666743013686}
 --- !u!114 &5632448760841595785
 MonoBehaviour:
   m_ObjectHideFlags: 0
