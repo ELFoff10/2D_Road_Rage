@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{814fe164-0371-486b-a137-26ec4d601958}">
+		<property name="assetPath">
+			<value>BackgroundMusic/Menu/Nebula By Frankum &amp; Frankumjay.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>34.968000000000004</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{59140bb6-f1a3-4a41-9fb2-a723e51a0e88}</destination>
+		</relationship>
+	</object>
+</objects>
