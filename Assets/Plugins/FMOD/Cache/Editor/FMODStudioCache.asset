@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 638250124248782293
+  lastModified: 638251525322939906
   FileSizes: []
   Exists: 1
 --- !u!114 &-4370062422497096226
@@ -104,7 +104,7 @@ MonoBehaviour:
   - {fileID: 5000420950123511134}
   StringsBanks:
   - {fileID: 8114129698339839814}
-  cacheTime: 638250551878353930
+  cacheTime: 638251525322939906
   cacheVersion: 131605
 --- !u!114 &1234583097017917922
 MonoBehaviour:
@@ -121,7 +121,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/GameBackgroundMusic.bank
   Name: GameBackgroundMusic
   StudioPath: bank:/GameBackgroundMusic
-  lastModified: 638250551878353930
+  lastModified: 638251525322879893
   FileSizes: []
   Exists: 1
 --- !u!114 &1970533513476859859
@@ -166,7 +166,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Car.bank
   Name: Car
   StudioPath: bank:/Car
-  lastModified: 638250551877927539
+  lastModified: 638251525322719901
   FileSizes: []
   Exists: 1
 --- !u!114 &2910660103727062437
@@ -211,7 +211,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638250524858665886
+  lastModified: 638251525322899907
   FileSizes: []
   Exists: 1
 --- !u!114 &5191227606189374348
@@ -310,7 +310,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638250524858695895
+  lastModified: 638251525322899907
   FileSizes:
   - Name: 
     Value: 1474
@@ -330,6 +330,6 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/MenuBackgroundMusic.bank
   Name: MenuBackgroundMusic
   StudioPath: bank:/MenuBackgroundMusic
-  lastModified: 638250187331655104
+  lastModified: 638251525322929898
   FileSizes: []
   Exists: 1
