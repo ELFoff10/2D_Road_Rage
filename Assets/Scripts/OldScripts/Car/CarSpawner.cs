@@ -5,9 +5,7 @@ public class CarSpawner : MonoBehaviour
 {
     [SerializeField]
     private CameraController _cameraController;
-    [SerializeField]
-    private Material _material;
-    
+
     private void Start()
     {
         var spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
@@ -33,7 +31,7 @@ public class CarSpawner : MonoBehaviour
                             light2D.enabled = false;
                         }
                         
-                        car.GetComponentInChildren<SpriteRenderer>().material = new Material(_material/*CarData.Material*/);
+                        car.GetComponentInChildren<SpriteRenderer>().material = new Material(carData.Material);
                         
                         car.GetComponent<CarSfxHandler>().enabled = false;
                         car.GetComponent<CarInputHandler>().enabled = false;

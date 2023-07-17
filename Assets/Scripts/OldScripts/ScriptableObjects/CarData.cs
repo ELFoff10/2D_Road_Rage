@@ -9,7 +9,11 @@ public class CarData : ScriptableObject
     private Sprite _carUISprite;
     [SerializeField]
     private GameObject _carPrefab;
+    [SerializeField]
+    private Material _material;
+    
     public int CarUniqueID => _carUniqueID;
     public Sprite CarUISprite => _carUISprite;
     public GameObject CarPrefab => _carPrefab;
+    public Material Material => _material;
 }

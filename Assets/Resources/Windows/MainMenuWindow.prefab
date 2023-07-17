@@ -749,6 +749,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 6038919691339902525, guid: 4af81533e076c234ca34159a3f3d6d40, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4af81533e076c234ca34159a3f3d6d40, type: 3}
 --- !u!114 &495522578218278094 stripped

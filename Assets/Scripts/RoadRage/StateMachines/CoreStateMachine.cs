@@ -1,5 +1,6 @@
 ﻿using System;
 using Enums;
+using RoadRage.StateMachines.Models;
 using UniRx;
 
 namespace RoadRage.StateMachines
@@ -17,6 +18,8 @@ namespace RoadRage.StateMachines
         event Action<ScenesStateEnum> SceneEndLoadFade;
 
         event Action<ScenesStateEnum> SceneEndLoad;
+        
+        public ILevelGameStateMachine LevelGameStateMachine { get; }
     }
 
     public class CoreStateMachine : ICoreStateMachine
@@ -38,6 +41,13 @@ namespace RoadRage.StateMachines
         public event Action<ScenesStateEnum> SceneEndLoadFade;
 
         public event Action<ScenesStateEnum> SceneEndLoad;
+
+        #endregion
+
+        #region SubStates
+        private LevelGameStateMachine _levelGameStateMachine = new LevelGameStateMachine();
+        public ILevelGameStateMachine LevelGameStateMachine => _levelGameStateMachine;
+        
 
         #endregion
 

@@ -15,3 +15,4 @@ MonoBehaviour:
   _carUniqueID: 0
   _carUISprite: {fileID: 21300000, guid: 9feb13edc87dc154dba3df1f86a85508, type: 3}
   _carPrefab: {fileID: 6115639297621940794, guid: ddd2e8c2229cbb949aa6a148f8d003b7, type: 3}
+  _material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
