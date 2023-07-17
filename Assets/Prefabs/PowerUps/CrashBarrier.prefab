@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8558776858558953313}
   - component: {fileID: 8558776858558953312}
+  - component: {fileID: 3328504657376527911}
   m_Layer: 0
   m_Name: CrashBarrier
   m_TagString: Untagged
@@ -59,6 +60,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3400178, y: 0.46399307}
   m_EdgeRadius: 0
+--- !u!114 &3328504657376527911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8558776858558953318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d54a1b460d92540ad550a74c011d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8558776858766754066
 GameObject:
   m_ObjectHideFlags: 0
