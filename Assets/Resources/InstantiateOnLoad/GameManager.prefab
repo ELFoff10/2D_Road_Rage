@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1583433446919035014}
   - component: {fileID: 4038782705022673864}
-  - component: {fileID: 3474553727569293171}
+  - component: {fileID: 648103765496312366}
+  - component: {fileID: 3175076881092879313}
+  - component: {fileID: 1182082565574636365}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17039d890de0fa34a9a73826a981ece0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3474553727569293171
+--- !u!114 &648103765496312366
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,3 +59,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 256a63c9441ec5342ab780c5ec2554fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3175076881092879313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5445864186170831157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a175a4c666450e409d2361eb384447a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1182082565574636365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5445864186170831157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a0161db9daa9d4fb5ebd3404c9260f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ClickButton>k__BackingField:
+    Guid:
+      Data1: 1068764656
+      Data2: 1150857244
+      Data3: 307555484
+      Data4: 1779609788
+    Path: event:/UI/ClickButton
+  <BackgroundMusic>k__BackingField:
+    Guid:
+      Data1: 44591312
+      Data2: 1230533440
+      Data3: -573948536
+      Data4: 437812662
+    Path: event:/BackgroundMusic/Menu/BackgroundMusic
+  <GameBackgroundMusic>k__BackingField:
+    Guid:
+      Data1: -1390882490
+      Data2: 1162567132
+      Data3: 1937155494
+      Data4: 1628798210
+    Path: event:/BackgroundMusic/Game/RaceMusic
+  <CarEngine>k__BackingField:
+    Guid:
+      Data1: 113039488
+      Data2: 1326468582
+      Data3: -1726659670
+      Data4: 163441829
+    Path: event:/Car/Engine
+  <CarSkid>k__BackingField:
+    Guid:
+      Data1: -188037760
+      Data2: 1317008628
+      Data3: 9903768
+      Data4: -402638604
+    Path: event:/Car/Skid
+  <CarHit>k__BackingField:
+    Guid:
+      Data1: 450890048
+      Data2: 1191947658
+      Data3: 2055141548
+      Data4: -139248438
+    Path: event:/Car/Hit

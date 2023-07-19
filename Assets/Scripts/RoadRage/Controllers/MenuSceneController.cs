@@ -12,10 +12,8 @@ namespace RoadRage.Controllers
     {
         [Inject]
         private readonly ICoreStateMachine _coreStateMachine;
-
         [Inject]
         private readonly IWindowManager _windowManager;
-
         private readonly ScenesStateEnum ScenesStateEnum = ScenesStateEnum.Menu;
 
         private void OnEnable()

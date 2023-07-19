@@ -22,6 +22,7 @@ namespace Ui.Common.Tools
 
         private void OnButtonClick()
         {
+            AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.ClickButton);
             _doTweenAnimation.DORestart();
             _doTweenAnimation.DOPlay();
             _button.interactable = false;

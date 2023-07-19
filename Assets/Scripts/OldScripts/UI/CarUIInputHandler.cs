@@ -8,10 +8,10 @@ public class CarUIInputHandler : MonoBehaviour
     private void Awake()
     {
         CarInputHandler[] carInputHandlers = FindObjectsOfType<CarInputHandler>();
-
+        
         foreach (CarInputHandler carInputHandler in carInputHandlers)
         {
-            if (carInputHandler.IsUIInput)
+            if (carInputHandler.IsUIInput == true)
             {
                 _playerCarInputHandler = carInputHandler;
                 break;
@@ -27,7 +27,7 @@ public class CarUIInputHandler : MonoBehaviour
 
     public void OnBrakePress()
     {
-        _inputVector.y = -1.0f;
+        _inputVector.y += -1.0f;
         _playerCarInputHandler.SetInput(_inputVector);
     }
 

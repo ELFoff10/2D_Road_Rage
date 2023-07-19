@@ -78,6 +78,24 @@ namespace UnityToolbarExtender.Examples
             {
                 //SceneHelper.OpenLastLaunchScene();
                 SceneHelper.OpenScene("Level5");
+            }       
+            
+            if (GUILayout.Button(new GUIContent("6", "Level 6"), ToolbarStyles.CommandButtonStyle))
+            {
+                //SceneHelper.OpenLastLaunchScene();
+                SceneHelper.OpenScene("Level6");
+            }       
+            
+            if (GUILayout.Button(new GUIContent("7", "Level 7"), ToolbarStyles.CommandButtonStyle))
+            {
+                //SceneHelper.OpenLastLaunchScene();
+                SceneHelper.OpenScene("Level7");
+            }      
+            
+            if (GUILayout.Button(new GUIContent("8", "Level 8"), ToolbarStyles.CommandButtonStyle))
+            {
+                //SceneHelper.OpenLastLaunchScene();
+                SceneHelper.OpenScene("Level8");
             }
         }
     }
