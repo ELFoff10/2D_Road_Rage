@@ -7,7 +7,6 @@ TagManager:
   - AI
   - CheckPoint
   - SpawnPoint
-  - Coin
   layers:
   - Default
   - TransparentFX
