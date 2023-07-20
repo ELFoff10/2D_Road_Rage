@@ -1,5 +1,4 @@
-﻿using RoadRage.Tools.UiManager;
-using UniRx;
+﻿using UniRx;
 using UnityEngine;
 
 namespace Tools.UiManager

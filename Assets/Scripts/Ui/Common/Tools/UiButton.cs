@@ -4,11 +4,17 @@ using Tools.UiManager;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
+using VContainer;
 
 namespace Ui.Common.Tools
 {
     public class UiButton : UIBehaviour
     {
+        [Inject]
+        private readonly AudioManager _audioManager;     
+        [Inject]
+        private readonly FMOD_Events _fmodEvents;
+        
         [SerializeField] private Button _button;
         [SerializeField] private DOTweenAnimation _doTweenAnimation;
 
@@ -22,7 +28,7 @@ namespace Ui.Common.Tools
 
         private void OnButtonClick()
         {
-            AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.ClickButton);
+            _audioManager.PlayOneShot(_fmodEvents.ClickButton);
             _doTweenAnimation.DORestart();
             _doTweenAnimation.DOPlay();
             _button.interactable = false;

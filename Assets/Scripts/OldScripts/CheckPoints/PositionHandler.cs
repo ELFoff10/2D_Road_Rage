@@ -6,6 +6,7 @@ public class PositionHandler : MonoBehaviour
 {
     [HideInInspector]
     public List<CarLapCounter> CarLapCounters = new List<CarLapCounter>();
+
     private LeaderBoardUIHandler _leaderBoardUIHandler;
 
     private void Start()

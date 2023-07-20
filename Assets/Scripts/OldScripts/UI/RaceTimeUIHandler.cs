@@ -1,39 +1,60 @@
-using System.Collections;
 using TMPro;
+using UniRx;
 using UnityEngine;
+using VContainer;
 
 public class RaceTimeUIHandler : MonoBehaviour
 {
     private TMP_Text _timeText;
     private float _lastRaceTimeUpdate;
 
+    [Inject]
+    private readonly ICoreStateMachine _coreStateMachine;
+
+    private CompositeDisposable _compositeDisposable = new CompositeDisposable();
+
+    public int RaceTimer = 0;
+
     private void Awake()
     {
-        _timeText = GetComponent<TMP_Text>();
+        _timeText = GetComponentInChildren<TMP_Text>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        StartCoroutine(UpdateTime());
+        RaceTimer = 0;
+        _coreStateMachine.LevelGameStateMachine.GameState.TakeUntilDisable(this).Subscribe(ChangeGameState);
     }
 
-    private IEnumerator UpdateTime()
+    private void OnDisable()
     {
-        while (true)
+        _compositeDisposable.Clear();
+    }
+
+    #region Subs
+
+    private void ChangeGameState(GameStateEnum gameStateEnum)
+    {
+        if (gameStateEnum == GameStateEnum.Play)
         {
-            var raceTime = GameManager.Instance.GetRaceTime();
-
-            if (_lastRaceTimeUpdate != raceTime)
-            {
-                int raceTimeMinutes = (int)Mathf.Floor(raceTime / 60);
-                int raceTimeSeconds = (int)Mathf.Floor(raceTime % 60);
-
-                _timeText.text = $"{raceTimeMinutes.ToString("00")}:{raceTimeSeconds.ToString("00")}";
-
-                _lastRaceTimeUpdate = raceTime;
-            }
-
-            yield return new WaitForSeconds(0.1f);
+            RaceTimer = 0;
+            Observable.Timer(System.TimeSpan.FromSeconds(1))
+                .Repeat()
+                .Subscribe(_ =>
+                {
+                    RaceTimer++;
+                    SetLabel(RaceTimer);
+                }).AddTo(_compositeDisposable);
         }
+    }
+
+    #endregion
+
+    private void SetLabel(int value)
+    {
+        int raceTimeMinutes = (int)Mathf.Floor(value / 60);
+        int raceTimeSeconds = (int)Mathf.Floor(value % 60);
+
+        _timeText.text = $"{raceTimeMinutes.ToString("00")}:{raceTimeSeconds.ToString("00")}";
     }
 }

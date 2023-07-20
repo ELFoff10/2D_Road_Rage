@@ -1,8 +1,5 @@
-﻿namespace Enums
+﻿public enum RunTimeStateEnum
 {
-    public enum RunTimeStateEnum
-    {
-        Play, 
-        Pause
-    }
+    Play,
+    Pause
 }

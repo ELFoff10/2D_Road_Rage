@@ -93,7 +93,7 @@ public class CarAIHandler : MonoBehaviour
         vectorToTarget.Normalize();
 
         var angleToTarget = Vector2.SignedAngle(transform.up, vectorToTarget) * -1 / 45.0f;
-
+        
         var steerAmount = Mathf.Clamp(angleToTarget, -1.0f, 1.0f);
 
         return steerAmount;

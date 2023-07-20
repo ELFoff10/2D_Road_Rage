@@ -8,7 +8,7 @@ public class CarUIInputHandler : MonoBehaviour
     private void Awake()
     {
         CarInputHandler[] carInputHandlers = FindObjectsOfType<CarInputHandler>();
-        
+
         foreach (CarInputHandler carInputHandler in carInputHandlers)
         {
             if (carInputHandler.IsUIInput == true)

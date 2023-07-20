@@ -1,10 +1,15 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using VContainer;
 
 public class CarSpawner : MonoBehaviour
 {
     [SerializeField]
     private CameraController _cameraController;
+
+    [Inject] private readonly PrefabInject _prefabInject;
+
+    public readonly float DefaultMaxSpeed;
 
     private void Start()
     {
@@ -22,6 +27,9 @@ public class CarSpawner : MonoBehaviour
                 if (carData.CarUniqueID == playerSelectedCarID)
                 {
                     var car = Instantiate(carData.CarPrefab, spawnPoint.position, spawnPoint.rotation);
+                   
+                    _prefabInject.InjectGameObject(car);
+                  
                     var playerNumber = i + 1;
 
                     if (PlayerPrefs.GetInt($"P{playerNumber}_IsAI") == 1)
@@ -30,9 +38,9 @@ public class CarSpawner : MonoBehaviour
                         {
                             light2D.enabled = false;
                         }
-                        
+
                         car.GetComponentInChildren<SpriteRenderer>().material = new Material(carData.Material);
-                        
+
                         car.GetComponent<CarSfxHandler>().enabled = false;
                         car.GetComponent<CarInputHandler>().enabled = false;
                         car.name = "AI";
@@ -41,9 +49,10 @@ public class CarSpawner : MonoBehaviour
                     else
                     {
                         car.GetComponent<CarAIHandler>().enabled = false;
+                        // car.GetComponent<CarController>().MaxSpeed = DefaultMaxSpeed;
                         car.name = "Player";
                         car.tag = "Player";
-                        
+
                         if (_cameraController != null)
                         {
                             _cameraController.SetTarget(car.transform);

@@ -1,6 +1,4 @@
 using System;
-using Enums;
-using RoadRage.StateMachines;
 using Tools.UiManager;
 using Ui.Windows;
 using UniRx;
@@ -41,12 +39,18 @@ namespace RoadRage.Controllers
                 case GameStateEnum.None:
                     break;
                 case GameStateEnum.PrePlay:
+                    break;
+                case GameStateEnum.CountDown:
                     _windowManager.Show<GameMenuWindow>();
                     break;
                 case GameStateEnum.Play:
                     break;
                 case GameStateEnum.Dead:
                     break;
+                case GameStateEnum.RaceOver:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(gameState), gameState, null);
             }
         }
 

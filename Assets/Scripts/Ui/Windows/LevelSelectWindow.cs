@@ -1,6 +1,4 @@
 ﻿using Enums;
-using RoadRage.Controllers;
-using RoadRage.StateMachines;
 using Tools.UiManager;
 using Ui.Common.Tools;
 using UnityEngine;
@@ -8,107 +6,100 @@ using VContainer;
 
 namespace Ui.Windows
 {
-    public class LevelSelectWindow : Window
-    {
-        [SerializeField]
-        private UiButton _backButton;
+	public class LevelSelectWindow : Window
+	{
+		[SerializeField]
+		private UiButton _backButton;
+		[SerializeField]
+		private UiButton _level1Button;
+		[SerializeField]
+		private UiButton _level2Button;
+		[SerializeField]
+		private UiButton _level3Button;
+		[SerializeField]
+		private UiButton _level4Button;
+		[SerializeField]
+		private UiButton _level5Button;
 
-        [SerializeField]
-        private UiButton _level1Button;
+		[Inject]
+		private readonly ICoreStateMachine _coreStateMachine;
+		[Inject]
+		private readonly AudioManager _audioManager;
+		[Inject]
+		private readonly FMOD_Events _fmodEvents;
 
-        [SerializeField]
-        private UiButton _level2Button;
+		protected override void OnActivate()
+		{
+			base.OnActivate();
+			_backButton.OnClick += OnBackButton;
+			_level1Button.OnClick += OnLevel1Button;
+			_level2Button.OnClick += OnLevel2Button;
+			_level3Button.OnClick += OnLevel3Button;
+			_level4Button.OnClick += OnLevel4Button;
+			_level5Button.OnClick += OnLevel5Button;
+		}
 
-        [SerializeField]
-        private UiButton _level3Button;
+		protected override void OnDeactivate()
+		{
+			base.OnDeactivate();
+			_backButton.OnClick -= OnBackButton;
+			_level1Button.OnClick -= OnLevel1Button;
+			_level2Button.OnClick -= OnLevel2Button;
+			_level3Button.OnClick -= OnLevel3Button;
+			_level4Button.OnClick -= OnLevel4Button;
+			_level5Button.OnClick -= OnLevel5Button;
+			_coreStateMachine.SceneEndLoad -= OnSceneEndLoad;
+		}
 
-        [SerializeField]
-        private UiButton _level4Button;
+		private void OnBackButton()
+		{
+			_manager.Hide<LevelSelectWindow>();
+			_manager.Show<CarSelectWindow>();
+		}
 
-        [SerializeField]
-        private UiButton _level5Button;
-        // [SerializeField] private AudioSource _clickClip;
+		private void OnLevel1Button()
+		{
+			LoadLevel(ScenesStateEnum.Level1);
+		}
 
-        [Inject]
-        private readonly ICoreStateMachine _coreStateMachine;
-        // [Inject] private readonly WindowManager _windowManager;
+		private void OnLevel2Button()
+		{
+			LoadLevel(ScenesStateEnum.Level2);
+		}
 
-        protected override void OnActivate()
-        {
-            base.OnActivate();
-            _backButton.OnClick += OnBackButton;
-            _level1Button.OnClick += OnLevel1Button;
-            _level2Button.OnClick += OnLevel2Button;
-            _level3Button.OnClick += OnLevel3Button;
-            _level4Button.OnClick += OnLevel4Button;
-            _level5Button.OnClick += OnLevel5Button;
-        }
+		private void OnLevel3Button()
+		{
+			LoadLevel(ScenesStateEnum.Level3);
+		}
 
-        protected override void OnDeactivate()
-        {
-            base.OnDeactivate();
-            _backButton.OnClick -= OnBackButton;
-            _level1Button.OnClick -= OnLevel1Button;
-            _level2Button.OnClick -= OnLevel2Button;
-            _level3Button.OnClick -= OnLevel3Button;
-            _level4Button.OnClick -= OnLevel4Button;
-            _level5Button.OnClick -= OnLevel5Button;
-            _coreStateMachine.SceneEndLoad -= OnSceneEndLoad;
-        }
+		private void OnLevel4Button()
+		{
+			LoadLevel(ScenesStateEnum.Level4);
+		}
 
-        private void OnBackButton()
-        {
-            _manager.Hide<LevelSelectWindow>();
-            _manager.Show<CarSelectWindow>();
-        }
+		private void OnLevel5Button()
+		{
+			LoadLevel(ScenesStateEnum.Level5);
+		}
 
-        private void OnLevel1Button()
-        {
-            _manager.Hide<MainMenuWindow>();
-            // _windowManager.gameObject.SetActive(false);
-            LoadLevel(ScenesStateEnum.Level1);
-        }
+		private void LoadLevel(ScenesStateEnum scenesStateEnum)
+		{
+			PlayClip();
+			_coreStateMachine.SceneEndLoad += OnSceneEndLoad;
+			_coreStateMachine.SetScenesState(scenesStateEnum);
+		}
 
-        private void OnLevel2Button()
-        {
-            _manager.Hide<MainMenuWindow>();
-            LoadLevel(ScenesStateEnum.Level2);
-        }
+		private void OnSceneEndLoad(ScenesStateEnum scenesStateEnum)
+		{
+			_manager.Hide(this);
+			_manager.Show<GameMenuWindow>();
+			_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.CountDown);
+		}
 
-        private void OnLevel3Button()
-        {
-            _manager.Hide<MainMenuWindow>();
-            LoadLevel(ScenesStateEnum.Level3);
-        }
-
-        private void OnLevel4Button()
-        {
-            _manager.Hide<MainMenuWindow>();
-            LoadLevel(ScenesStateEnum.Level4);
-        }
-
-        private void OnLevel5Button()
-        {
-            _manager.Hide<MainMenuWindow>();
-            LoadLevel(ScenesStateEnum.Level5);
-        }
-
-        private void LoadLevel(ScenesStateEnum scenesStateEnum)
-        {
-            PlayClip();
-            _coreStateMachine.SceneEndLoad += OnSceneEndLoad;
-            _coreStateMachine.SetScenesState(scenesStateEnum);
-        }
-
-        private void OnSceneEndLoad(ScenesStateEnum scenesStateEnum)
-        {
-            _manager.Hide(this);
-        }
-
-        private void PlayClip()
-        {
-            AudioManager.Instance.MenuBgmEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            AudioManager.Instance.PlayOneShot(FMOD_Events.Instance.GameBackgroundMusic);
-        }
-    }
+		private void PlayClip()
+		{
+			_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].start();
+		}
+	}
 }

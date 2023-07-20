@@ -3,7 +3,11 @@ using UnityEngine.EventSystems;
 
 public class MobileButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public enum ButtonType { Left, Right }
+    public enum ButtonType
+    {
+        Left,
+        Right
+    }
 
     public ButtonType buttonType;
 

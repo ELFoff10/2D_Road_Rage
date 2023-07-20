@@ -4,7 +4,7 @@ using VContainer.Unity;
 
 namespace RoadRage.LifeTimeScopes
 {
-    public class LevelTimeScope : LifetimeScope
+    public class LevelLifeTimeScope : LifetimeScope
     {
         protected override void Configure(IContainerBuilder builder)
         {

@@ -1,15 +1,14 @@
-﻿namespace Enums
+﻿public enum ScenesStateEnum
 {
-    public enum ScenesStateEnum
-    {
-        Base,
-        Level1,
-        Level2,
-        Level3,
-        Level4,
-        Level5,
-        Level6,
-        Level7,
-        Menu
-    }
+    Base,
+    Level1,
+    Level2,
+    Level3,
+    Level4,
+    Level5,
+    Level6,
+    Level7,
+    Level8,
+    Level9,
+    Menu
 }

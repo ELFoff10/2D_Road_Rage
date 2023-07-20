@@ -5,6 +5,7 @@ public class DistanceUIHandler : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text _distanceText;
+
     private Transform _carTransform;
     private float _startingPosition;
     private float _distanceTraveled;

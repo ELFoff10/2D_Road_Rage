@@ -5,13 +5,16 @@ public class CarData : ScriptableObject
 {
     [SerializeField]
     private int _carUniqueID;
+
     [SerializeField]
     private Sprite _carUISprite;
+
     [SerializeField]
     private GameObject _carPrefab;
+
     [SerializeField]
     private Material _material;
-    
+
     public int CarUniqueID => _carUniqueID;
     public Sprite CarUISprite => _carUISprite;
     public GameObject CarPrefab => _carPrefab;

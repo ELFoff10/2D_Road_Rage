@@ -1,10 +1,9 @@
-namespace Enums
+public enum GameStateEnum
 {
-    public enum GameStateEnum
-    {
-        None,
-        PrePlay,
-        Play,
-        Dead
-    }
+    None,
+    PrePlay,
+    CountDown,
+    Play,
+    RaceOver,
+    Dead
 }

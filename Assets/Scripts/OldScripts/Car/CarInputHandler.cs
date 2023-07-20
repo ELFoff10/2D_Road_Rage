@@ -6,7 +6,6 @@ public class CarInputHandler : MonoBehaviour
     private CarController _carController;
     private ButtonInputAggregator _buttonInputAggregator;
     private Vector2 _inputVector = Vector2.zero;
-    
 
     private void Awake()
     {
@@ -18,7 +17,7 @@ public class CarInputHandler : MonoBehaviour
     {
         if (IsUIInput == true)
         {
-            if(_buttonInputAggregator != null)
+            if (_buttonInputAggregator != null)
                 _inputVector.x = _buttonInputAggregator.GetHorizontalInput();
         }
         else

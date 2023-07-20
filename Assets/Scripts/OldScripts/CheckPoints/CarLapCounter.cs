@@ -1,14 +1,12 @@
 using System;
 using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using VContainer;
 
 public class CarLapCounter : MonoBehaviour
 {
-    // [SerializeField]
-    // private TMP_Text _carPositionText;
-
+    // [Inject]
+    // private readonly TestTimer _testTimer;
     public event Action<CarLapCounter> OnPassCheckPoint;
 
     private int _passedCheckPointNumber;
@@ -70,11 +68,14 @@ public class CarLapCounter : MonoBehaviour
 
                 if (_isRaceCompleted == true)
                 {
-                    StartCoroutine(ShowPositionCO(100));
+                    StartCoroutine(ShowPositionCO(300));
 
                     if (CompareTag("Player"))
                     {
-                        GameManager.Instance.OnRaceCompleted();
+                        // Вопрос!!! Если удалить GameManager, то я перекинул таймеры в TestTimer. Как правильно?
+                        // _testTimer.OnRaceCompleted();
+                        
+                        // GameManager.Instance.OnRaceCompleted();
 
                         GetComponent<CarInputHandler>().enabled = false;
                         GetComponent<CarAIHandler>().enabled = true;
@@ -87,7 +88,7 @@ public class CarLapCounter : MonoBehaviour
             }
         }
     }
-
+    
     IEnumerator ShowPositionCO(float delayUntilHidePosition)
     {
         _hideUIDelayTime += delayUntilHidePosition;

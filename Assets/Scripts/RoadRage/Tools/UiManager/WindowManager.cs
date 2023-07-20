@@ -1,8 +1,4 @@
-﻿using System;
-using FMODUnity;
-using Models.Controllers;
-using RoadRage.Tools.UiManager;
-using UniRx;
+﻿using UniRx;
 using UnityEngine;
 using VContainer;
 
@@ -25,11 +21,11 @@ namespace Tools.UiManager
         
 
         [Inject]
-        private readonly UiFabric _uiFabric;
+        private readonly PrefabInject prefabInject;
 
         private void Awake()
         {
-            _finder = new WindowFinder(_nonActiveParent, _uiFabric);
+            _finder = new WindowFinder(_nonActiveParent, prefabInject);
             _stack = new WindowStack(_menuCanvas.transform, _nonActiveParent);
         }
 
