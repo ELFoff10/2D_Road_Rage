@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 865500179011245682}
   - component: {fileID: 865500179011245683}
   - component: {fileID: 865500179011245680}
+  - component: {fileID: 865500179697932239}
   m_Layer: 5
   m_Name: UiGameCanvas
   m_TagString: Untagged
@@ -258,6 +259,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &865500179697932239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865500179011245681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cdc2bba9de445dbb3c7cf6727ac820a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isUndestroyable: 0
+  _isTransparent: 1
 --- !u!1 &2115836261447377736
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +694,6 @@ GameObject:
   - component: {fileID: 3681716046054459408}
   - component: {fileID: 6669100651366196021}
   - component: {fileID: 5917077189821930969}
-  - component: {fileID: 8159880381577246392}
   m_Layer: 5
   m_Name: HeaderText
   m_TagString: Untagged
@@ -804,18 +818,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8159880381577246392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4334764580621728427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1f2b8c1f5b2e5542a99cc9f1593c860, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4391606809049085586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _countDownText: {fileID: 302596215634105473}
+  _raceTimeUIHandler: {fileID: 865500179697932241}
 --- !u!1 &5427984568786446674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,8 +1886,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3127382729564875066}
+  - component: {fileID: 865500179697932241}
   m_Layer: 5
-  m_Name: TimeCanvas
+  m_Name: RaceTimeCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1912,6 +1916,18 @@ RectTransform:
   m_AnchoredPosition: {x: 1010.75, y: 450}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &865500179697932241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225085999799626956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f2b8c1f5b2e5542a99cc9f1593c860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6256684129215082579
 GameObject:
   m_ObjectHideFlags: 0

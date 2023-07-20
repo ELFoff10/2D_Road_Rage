@@ -1,8 +1,6 @@
 ﻿using System;
-using Enums;
 using UnityEngine.SceneManagement;
 using AsyncOperation = UnityEngine.AsyncOperation;
-using Debug = UnityEngine.Debug;
 
 namespace RoadRage.MultiScene
 {

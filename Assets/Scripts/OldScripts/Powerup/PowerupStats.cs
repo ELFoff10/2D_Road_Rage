@@ -10,6 +10,7 @@ public class PowerupStats : Powerup
 
     [SerializeField]
     private EffectType _effectType;
+
     [SerializeField]
     private float _value;
 

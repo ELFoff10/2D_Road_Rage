@@ -1,5 +1,4 @@
 ﻿using System;
-using RoadRage.Tools.UiManager;
 using UniRx;
 using UnityEngine;
 

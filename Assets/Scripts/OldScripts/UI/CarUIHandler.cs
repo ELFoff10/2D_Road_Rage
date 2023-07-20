@@ -5,6 +5,7 @@ public class CarUIHandler : MonoBehaviour
 {
     [Header("Car details")]
     public Image CarImage;
+
     private Animator _animator;
 
     private void Awake()

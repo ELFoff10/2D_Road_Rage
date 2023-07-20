@@ -1,47 +1,34 @@
-using System.Collections;
-using UnityEngine;
+using Tools.UiManager;
 using UnityEngine.SceneManagement;
+using VContainer;
+using UniRx;
 
-public class InGameMenuUIHandler : MonoBehaviour
+public class InGameMenuUIHandler : UIBehaviour
 {
-    private Canvas _canvas;
+    [Inject] private readonly ICoreStateMachine _coreStateMachine;
 
-    private void Awake()
+    protected override void OnEnable()
     {
-        _canvas = GetComponent<Canvas>();
-
-        _canvas.enabled = false;
-
-        GameManager.Instance.OnGameStateChanged += OnGameStateChanged;
+        base.OnEnable();
+        _coreStateMachine.LevelGameStateMachine.GameState.TakeUntilDisable(this).Subscribe(OnGameStateChanged);
     }
 
     public void OnRaceAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        _coreStateMachine.SetScenesState(ScenesStateEnum.Level1);
     }
 
     public void OnExitToMainMenu()
     {
-        SceneManager.LoadScene("Menu");
+        _coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
     }
 
-    private IEnumerator ShowMenu()
+    private void OnGameStateChanged(GameStateEnum gameStateEnum)
     {
-        yield return new WaitForSeconds(0);
-
-        _canvas.enabled = true;
-    }
-
-    private void OnGameStateChanged(GameManager gameManager)
-    {
-        if (GameManager.Instance.GetGameState() == GameStates.RaceOver)
+        if (gameStateEnum == GameStateEnum.RaceOver)
         {
-            StartCoroutine(ShowMenu());
+            gameObject.SetActive(true);
         }
-    }
-
-    private void OnDestroy()
-    {
-        GameManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
 }

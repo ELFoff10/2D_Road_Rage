@@ -1,72 +1,66 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using VContainer;
 
 public class LeaderBoardUIHandler : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _leaderBoardItemPrefab;
+	[Inject]
+	private readonly ICoreStateMachine _coreStateMachine;
 
-    private SetLeaderBoardItemInfo[] _setLeaderBoardItemInfo;
+	[SerializeField]
+	private GameObject _leaderBoardItemPrefab;
 
-    private bool _isInitialized;
+	private SetLeaderBoardItemInfo[] _setLeaderBoardItemInfo;
 
-    private Canvas _canvas;
+	private bool _isInitialized;
 
-    private void Awake()
-    {
-        _canvas = GetComponent<Canvas>();
-        _canvas.enabled = false;
+	private void Awake()
+	{
+		gameObject.SetActive(false);
+	}
 
-        GameManager.Instance.OnGameStateChanged += OnGameStateChanged;
-    }
+	private void Start()
+	{
+		VerticalLayoutGroup leaderBoardLayoutGroup = GetComponentInChildren<VerticalLayoutGroup>();
 
-    private void Start()
-    {
-        VerticalLayoutGroup leaderBoardLayoutGroup = GetComponentInChildren<VerticalLayoutGroup>();
+		CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
 
-        CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
+		_setLeaderBoardItemInfo = new SetLeaderBoardItemInfo[carLapCounterArray.Length];
 
-        _setLeaderBoardItemInfo = new SetLeaderBoardItemInfo[carLapCounterArray.Length];
+		for (int i = 0; i < carLapCounterArray.Length; i++)
+		{
+			GameObject leaderBoardInfoGameObject =
+				Instantiate(_leaderBoardItemPrefab, leaderBoardLayoutGroup.transform);
 
-        for (int i = 0; i < carLapCounterArray.Length; i++)
-        {
-            GameObject leaderBoardInfoGameObject =
-                Instantiate(_leaderBoardItemPrefab, leaderBoardLayoutGroup.transform);
+			_setLeaderBoardItemInfo[i] = leaderBoardInfoGameObject.GetComponent<SetLeaderBoardItemInfo>();
 
-            _setLeaderBoardItemInfo[i] = leaderBoardInfoGameObject.GetComponent<SetLeaderBoardItemInfo>();
+			_setLeaderBoardItemInfo[i].SetPositionText($"{i + 1}.");
+		}
 
-            _setLeaderBoardItemInfo[i].SetPositionText($"{i + 1}.");
-        }
+		Canvas.ForceUpdateCanvases();
 
-        Canvas.ForceUpdateCanvases();
+		_isInitialized = true;
+	}
 
-        _isInitialized = true;
-    }
+	private void Update()
+	{
+		if (_coreStateMachine.LevelGameStateMachine.GameState.Value == GameStateEnum.RaceOver)
+		{
+			gameObject.SetActive(true);
+		}
+	}
 
-    private void OnDestroy()
-    {
-        GameManager.Instance.OnGameStateChanged -= OnGameStateChanged;
-    }
+	public void UpdateList(List<CarLapCounter> lapCounters)
+	{
+		if (!_isInitialized)
+		{
+			return;
+		}
 
-    private void OnGameStateChanged(GameManager gameManager)
-    {
-        if (GameManager.Instance.GetGameState() == GameStates.RaceOver)
-        {
-            _canvas.enabled = true;
-        }
-    }
-
-    public void UpdateList(List<CarLapCounter> lapCounters)
-    {
-        if (!_isInitialized)
-        {
-            return;
-        }
-
-        for (int i = 0; i < lapCounters.Count; i++)
-        {
-            _setLeaderBoardItemInfo[i].SetDriverNameText(lapCounters[i].gameObject.name);
-        }
-    }
+		for (int i = 0; i < lapCounters.Count; i++)
+		{
+			_setLeaderBoardItemInfo[i].SetDriverNameText(lapCounters[i].gameObject.name);
+		}
+	}
 }

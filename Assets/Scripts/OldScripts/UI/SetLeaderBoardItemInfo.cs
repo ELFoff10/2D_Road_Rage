@@ -5,6 +5,7 @@ public class SetLeaderBoardItemInfo : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text _positionText;
+
     [SerializeField]
     private TMP_Text _driverNameText;
 

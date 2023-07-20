@@ -7,7 +7,6 @@ namespace Ui.Windows
     public class OptionsWindow : Window
     {
         [SerializeField] private UiButton _backButton;
-        // [SerializeField] private AudioSource _clickClip;
 
         protected override void OnActivate()
         {
@@ -23,11 +22,8 @@ namespace Ui.Windows
 
         private void OnBackButton()
         {
-            // PlayClip();
             _manager.Hide<OptionsWindow>();
             _manager.Show<MainMenuWindow>();
         }
-
-        // private void PlayClip() => _clickClip.Play();
     }
 }

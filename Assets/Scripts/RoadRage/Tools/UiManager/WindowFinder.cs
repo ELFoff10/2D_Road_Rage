@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Models.Controllers;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -10,11 +9,11 @@ namespace Tools.UiManager
     {
         private readonly List<Window> _stackWindows;
         private readonly Transform _stock;
-        private readonly UiFabric _uiFabric;
+        private readonly PrefabInject prefabInject;
 
-        public WindowFinder(Transform stock, UiFabric uiFabric)
+        public WindowFinder(Transform stock, PrefabInject prefabInject)
         {
-            _uiFabric = uiFabric;
+            this.prefabInject = prefabInject;
             _stock = stock;
             _stackWindows = new List<Window>();
         }
@@ -70,7 +69,7 @@ namespace Tools.UiManager
                 MakeHierarchyHidden(go, lastHideFlags);
             }
 
-            _uiFabric.InjectGameObject(windowGo);
+            prefabInject.InjectGameObject(windowGo);
             return windowGo.GetComponent<T>();
         }
 

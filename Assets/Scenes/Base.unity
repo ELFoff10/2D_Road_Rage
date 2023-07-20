@@ -123,6 +123,105 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &123048905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 123048906}
+  - component: {fileID: 123048908}
+  - component: {fileID: 123048907}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &123048906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123048905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 243866776}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &123048907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123048905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a0161db9daa9d4fb5ebd3404c9260f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ClickButton>k__BackingField:
+    Guid:
+      Data1: 1068764656
+      Data2: 1150857244
+      Data3: 307555484
+      Data4: 1779609788
+    Path: event:/UI/ClickButton
+  <MenuBackgroundMusic>k__BackingField:
+    Guid:
+      Data1: 44591312
+      Data2: 1230533440
+      Data3: -573948536
+      Data4: 437812662
+    Path: event:/BackgroundMusic/Menu/BackgroundMusic
+  <GameBackgroundMusic>k__BackingField:
+    Guid:
+      Data1: -1390882490
+      Data2: 1162567132
+      Data3: 1937155494
+      Data4: 1628798210
+    Path: event:/BackgroundMusic/Game/RaceMusic
+  <CarEngine>k__BackingField:
+    Guid:
+      Data1: 113039488
+      Data2: 1326468582
+      Data3: -1726659670
+      Data4: 163441829
+    Path: event:/Car/Engine
+  <CarSkid>k__BackingField:
+    Guid:
+      Data1: -188037760
+      Data2: 1317008628
+      Data3: 9903768
+      Data4: -402638604
+    Path: event:/Car/Skid
+  <CarHit>k__BackingField:
+    Guid:
+      Data1: 450890048
+      Data2: 1191947658
+      Data3: 2055141548
+      Data4: -139248438
+    Path: event:/Car/Hit
+--- !u!114 &123048908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123048905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a175a4c666450e409d2361eb384447a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &243866774
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,8 +263,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1531887436}
+  - {fileID: 123048906}
   - {fileID: 1329479476}
+  - {fileID: 1531887436}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -436,7 +536,7 @@ Transform:
   - {fileID: 1706541948}
   - {fileID: 1830546286}
   m_Father: {fileID: 243866776}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1531887437
 MonoBehaviour:
