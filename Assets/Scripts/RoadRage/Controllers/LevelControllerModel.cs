@@ -4,66 +4,71 @@ using Ui.Windows;
 using UniRx;
 using VContainer.Unity;
 
-namespace RoadRage.Controllers
+public class LevelControllerModel : IInitializable, IDisposable
 {
-    public class LevelControllerModel : IInitializable, IDisposable
-    {
-        private readonly ICoreStateMachine _coreStateMachine;
-        private readonly IWindowManager _windowManager;
-        private CompositeDisposable _compositeDisposable = new CompositeDisposable();
+	private readonly ICoreStateMachine _coreStateMachine;
+	private readonly IWindowManager _windowManager;
+	private CompositeDisposable _compositeDisposable = new CompositeDisposable();
 
-        public LevelControllerModel(ICoreStateMachine coreStateMachine, IWindowManager windowManager)
-        {
-            _coreStateMachine = coreStateMachine;
-            _windowManager = windowManager;
-        }
-        public void Initialize()
-        {
-            _coreStateMachine.SceneEndLoadFade += OnSceneEndLoad;
-            _coreStateMachine.LevelGameStateMachine.GameState.SkipLatestValueOnSubscribe().Subscribe(GameStateChange)
-                .AddTo(_compositeDisposable);
-        }
+	public LevelControllerModel(ICoreStateMachine coreStateMachine, IWindowManager windowManager)
+	{
+		_coreStateMachine = coreStateMachine;
+		_windowManager = windowManager;
+	}
 
-        public void Dispose()
-        {
-            _coreStateMachine.SceneEndLoadFade -= OnSceneEndLoad;
-            _compositeDisposable.Clear();
-        }
+	public void Initialize()
+	{
+		_coreStateMachine.SceneEndLoadFade += OnSceneEndLoad;
+		_coreStateMachine.LevelGameStateMachine.GameState/*.SkipLatestValueOnSubscribe()*/.Subscribe(GameStateChange)
+			.AddTo(_compositeDisposable);
+	}
 
-        #region Subs
+	public void Dispose()
+	{
+		_coreStateMachine.SceneEndLoadFade -= OnSceneEndLoad;
+		_compositeDisposable.Clear();
+	}
 
-        private void GameStateChange(GameStateEnum gameState)
-        {
-            switch (gameState)
-            {
-                case GameStateEnum.None:
-                    break;
-                case GameStateEnum.PrePlay:
-                    break;
-                case GameStateEnum.CountDown:
-                    _windowManager.Show<GameMenuWindow>();
-                    break;
-                case GameStateEnum.Play:
-                    break;
-                case GameStateEnum.Dead:
-                    break;
-                case GameStateEnum.RaceOver:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(gameState), gameState, null);
-            }
-        }
+	#region Subs
 
-        #endregion
-        #region SceneLoad
+	private void GameStateChange(GameStateEnum gameState)
+	{
+		switch (gameState)
+		{
+			case GameStateEnum.None:
+				_windowManager.Hide<GameMenuWindow>();
+				_windowManager.Show<BackgroundMenuWindow>();
+				_windowManager.Show<MainMenuWindow>();
+				break;
+			case GameStateEnum.PrePlay:
+				// TODO: Educational game level
+				break;
+			case GameStateEnum.CountDown:
+				_windowManager.Hide<GameMenuWindow>();
+				_windowManager.Hide<BackgroundMenuWindow>();
+				_windowManager.Hide<MainMenuWindow>();
+				_windowManager.Show<GameMenuWindow>();
+				break;
+			case GameStateEnum.Play:
+				break;
+			case GameStateEnum.Dead:
+				break;
+			case GameStateEnum.RaceOver:
+				break;
+			default:
+				throw new ArgumentOutOfRangeException(nameof(gameState), gameState, null);
+		}
+	}
 
-        private void OnSceneEndLoad(ScenesStateEnum scenesStateEnum)
-        {
-            _coreStateMachine.SceneEndLoadFade -= OnSceneEndLoad;
-            // _coreStateMachine.GameStateMachine.SetGameState(GameStateEnum.Play);
-        }
+	#endregion
 
-        #endregion
-        
-    }
+	#region SceneLoad
+
+	private void OnSceneEndLoad(ScenesStateEnum scenesStateEnum)
+	{
+		_coreStateMachine.SceneEndLoadFade -= OnSceneEndLoad;
+		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.CountDown);
+	}
+
+	#endregion
 }

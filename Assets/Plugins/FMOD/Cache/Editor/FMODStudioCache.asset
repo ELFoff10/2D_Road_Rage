@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 638252139097818249
+  lastModified: 638255344043062148
   FileSizes: []
   Exists: 1
 --- !u!114 &-4370062422497096226
@@ -92,19 +92,19 @@ MonoBehaviour:
   - {fileID: -4570545060714157095}
   - {fileID: 2323984196151291718}
   EditorEvents:
-  - {fileID: 1970533513476859859}
   - {fileID: 6214815640147872676}
   - {fileID: 5913003511187598890}
   - {fileID: -7994612286141387914}
   - {fileID: 5191227606189374348}
   - {fileID: 2910660103727062437}
   - {fileID: -4370062422497096226}
+  - {fileID: 3828143101057795218}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5000420950123511134}
   StringsBanks:
   - {fileID: 8114129698339839814}
-  cacheTime: 638252139097818249
+  cacheTime: 638255580470869481
   cacheVersion: 131605
 --- !u!114 &1234583097017917922
 MonoBehaviour:
@@ -121,36 +121,9 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/GameBackgroundMusic.bank
   Name: GameBackgroundMusic
   StudioPath: bank:/GameBackgroundMusic
-  lastModified: 638252139097442469
+  lastModified: 638255580470869481
   FileSizes: []
   Exists: 1
---- !u!114 &1970533513476859859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/ClickButton
-  m_EditorClassIdentifier: 
-  Path: event:/UI/ClickButton
-  Guid:
-    Data1: 1068764656
-    Data2: 1150857244
-    Data3: 307555484
-    Data4: 1779609788
-  Banks:
-  - {fileID: -4570545060714157095}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &2323984196151291718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +139,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Car.bank
   Name: Car
   StudioPath: bank:/Car
-  lastModified: 638252139097058937
+  lastModified: 638255580470269346
   FileSizes: []
   Exists: 1
 --- !u!114 &2910660103727062437
@@ -196,6 +169,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3828143101057795218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/ClickButton
+  m_EditorClassIdentifier: 
+  Path: event:/UI/ClickButton
+  Guid:
+    Data1: 431299423
+    Data2: 1076667037
+    Data3: 1157301925
+    Data4: 997598556
+  Banks:
+  - {fileID: -4570545060714157095}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5000420950123511134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638252139097532492
+  lastModified: 638255326874660884
   FileSizes: []
   Exists: 1
 --- !u!114 &5191227606189374348
@@ -310,7 +310,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638252139097597249
+  lastModified: 638255326874686806
   FileSizes:
   - Name: 
     Value: 1474
@@ -330,6 +330,6 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/MenuBackgroundMusic.bank
   Name: MenuBackgroundMusic
   StudioPath: bank:/MenuBackgroundMusic
-  lastModified: 638252139097738229
+  lastModified: 638254680666943637
   FileSizes: []
   Exists: 1

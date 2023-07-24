@@ -9,6 +9,7 @@ public interface ILevelGameStateMachine
 
 public class LevelGameStateMachine : ILevelGameStateMachine
 {
+    
     private GameStateEnum _lastGameState = GameStateEnum.None;
 
     private ReactiveProperty<GameStateEnum> _gameState =

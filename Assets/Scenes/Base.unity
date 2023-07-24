@@ -170,10 +170,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ClickButton>k__BackingField:
     Guid:
-      Data1: 1068764656
-      Data2: 1150857244
-      Data3: 307555484
-      Data4: 1779609788
+      Data1: 431299423
+      Data2: 1076667037
+      Data3: 1157301925
+      Data4: 997598556
     Path: event:/UI/ClickButton
   <MenuBackgroundMusic>k__BackingField:
     Guid:
@@ -648,9 +648,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!1 &1830546285
 GameObject:
