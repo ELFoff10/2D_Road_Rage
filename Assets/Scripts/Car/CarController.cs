@@ -18,11 +18,16 @@ public class CarController : MonoBehaviour
 	[SerializeField]
 	private float _maxSpeed = 7f;
 
+	private float _defaultMaxSpeed;
+	
 	[SerializeField]
 	private bool _isEndlessMap;
 
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
+
+	// [Inject]
+	// private readonly CarSpawner _carSpawner;
 
 	public float MaxSpeed
 	{
@@ -48,6 +53,7 @@ public class CarController : MonoBehaviour
 	private void Awake()
 	{
 		_carRigidbody2D = GetComponent<Rigidbody2D>();
+		_defaultMaxSpeed = _maxSpeed;
 	}
 
 	private void FixedUpdate()
@@ -139,26 +145,26 @@ public class CarController : MonoBehaviour
 
 	public void AddSpeed(float speed)
 	{
-		// _maxSpeed = _carSpawner.DefaultMaxSpeed + speed;
+		_maxSpeed = _defaultMaxSpeed + speed;
 		StartCoroutine(AddSpeedCoroutine());
 	}
 
 	public void SlowSpeed(float speed)
 	{
-		// _maxSpeed = _carSpawner.DefaultMaxSpeed - speed;
+		_maxSpeed = _defaultMaxSpeed - speed;
 		StartCoroutine(SlowSpeedCoroutine());
 	}
 
 	private IEnumerator AddSpeedCoroutine()
 	{
 		yield return new WaitForSeconds(2f);
-		// _maxSpeed = _carSpawner.DefaultMaxSpeed;
+		_maxSpeed = _defaultMaxSpeed;
 	}
 
 	private IEnumerator SlowSpeedCoroutine()
 	{
 		yield return new WaitForSeconds(2f);
-		// _maxSpeed = _carSpawner.DefaultMaxSpeed;
+		_maxSpeed = _defaultMaxSpeed;
 	}
 
 	internal float GetVelocityMagnitude()

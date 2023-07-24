@@ -47,6 +47,7 @@ public class GameMenuWindow : Window
 		_menuButton.OnClick += OnMenuButton;
 		_raceAgainButton.OnClick += OnRaceAgainButton;
 		_exitToMenuButton.OnClick += OnExitToMenuButton;
+		_coreStateMachine.LevelGameStateMachine.OnSetGameState += ShowMenu;
 	}
 
 	protected override void OnDeactivate()
@@ -56,6 +57,7 @@ public class GameMenuWindow : Window
 		_menuButton.OnClick -= OnMenuButton;
 		_raceAgainButton.OnClick -= OnRaceAgainButton;
 		_exitToMenuButton.OnClick -= OnExitToMenuButton;
+		_coreStateMachine.LevelGameStateMachine.OnSetGameState -= ShowMenu;
 		// _coreStateMachine.SceneEndLoad -= OnSceneEndLoad;
 	}
 
@@ -77,6 +79,7 @@ public class GameMenuWindow : Window
 	private void OnExitToMenuButton()
 	{
 		// LoadLevel(ScenesStateEnum.Menu);
+		_viewMenuUI.gameObject.SetActive(false);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.None);
 		_coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
 		PlayClip();
@@ -101,5 +104,13 @@ public class GameMenuWindow : Window
 	{
 		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
+	}
+
+	private void ShowMenu(GameStateEnum gameStateEnum)
+	{
+		if (gameStateEnum == GameStateEnum.RaceOver)
+		{
+			_viewMenuUI.gameObject.SetActive(true);
+		}
 	}
 }

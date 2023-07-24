@@ -30,7 +30,7 @@ public class CarSpawner : MonoBehaviour
 					var car = Instantiate(carData.CarPrefab, spawnPoint.position, spawnPoint.rotation);
 
 					_prefabInject.InjectGameObject(car);
-
+					
 					var playerNumber = i + 1;
 
 					if (PlayerPrefs.GetInt($"P{playerNumber}_IsAI") == 1)
