@@ -1,7 +1,13 @@
 using UnityEngine;
+using VContainer;
 
 public class LevelGeneration : MonoBehaviour
 {
+	// [Inject]
+	// private readonly PrefabInject _prefabInject;	
+	[Inject]
+	private readonly RaceTimeUIHandler _raceTimeUIHandler;
+	
 	[SerializeField]
 	private GameObject _roadPrefab;
 
@@ -37,17 +43,20 @@ public class LevelGeneration : MonoBehaviour
 			SpawnPart();
 		}
 
-		// var time = _raceTimeUIHandler.RaceTimer;
-		//
-		// if (time > 0 && (int)time % 5 == 0)
-		// {
-		// 	_carController.MaxSpeed += 0.001f;
-		// }
+		var time = _raceTimeUIHandler.RaceTimer;
+		
+		if (time > 0 && (int)time % 5 == 0)
+		{
+			_carController.MaxSpeed += 0.001f;
+		}
 	}
 
 	private void SpawnPart()
 	{
 		var part = Instantiate(_roadPrefab, new Vector3(0, _lastEndPosition.y + _offset, 0), Quaternion.identity);
+		
+		// _prefabInject.InjectGameObject(part);
+		
 		_lastEndPosition = part.transform.Find("EndPosition").position;
 	}
 }

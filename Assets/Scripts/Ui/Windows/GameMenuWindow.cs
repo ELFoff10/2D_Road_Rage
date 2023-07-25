@@ -67,8 +67,8 @@ public class GameMenuWindow : Window
 	{
 		_viewMenuUI.gameObject.SetActive(true);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.PrePlay);
-		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
-		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
+		// _audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
+		// _audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
 	}
 
 	private void OnRaceAgainButton()
@@ -82,6 +82,9 @@ public class GameMenuWindow : Window
 	{
 		// LoadLevel(ScenesStateEnum.Menu);
 		_viewMenuUI.gameObject.SetActive(false);
+		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
+		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
+		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.None);
 		_coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
 		PlayClip();

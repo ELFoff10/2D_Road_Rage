@@ -9,9 +9,7 @@ public class CarSpawner : MonoBehaviour
 
 	[Inject]
 	private readonly PrefabInject _prefabInject;
-
-	// public readonly float DefaultMaxSpeed;
-
+    
 	private void Awake()
 	{
 		var spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
@@ -50,7 +48,6 @@ public class CarSpawner : MonoBehaviour
 					else
 					{
 						car.GetComponent<CarAIHandler>().enabled = false;
-						// car.GetComponent<CarController>().MaxSpeed = DefaultMaxSpeed;
 						car.name = "Player";
 						car.tag = "Player";
 
