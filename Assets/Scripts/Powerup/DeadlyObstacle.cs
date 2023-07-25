@@ -3,8 +3,8 @@ using VContainer;
 
 public class DeadlyObstacle : MonoBehaviour
 {
-    [Inject]
-    private readonly ICoreStateMachine _coreStateMachine;
+    // [Inject]
+    // private readonly ICoreStateMachine _coreStateMachine;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -12,7 +12,7 @@ public class DeadlyObstacle : MonoBehaviour
 
         if (car != null && car.CompareTag("Player"))
         {
-            _coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
+            // _coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
             car.GetComponent<CarInputHandler>().enabled = false;
         }
     }
