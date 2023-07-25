@@ -670,6 +670,7 @@ MonoBehaviour:
   _menuButton: {fileID: 4497648421612366030}
   _exitToMenuButton: {fileID: 5040403929770263965}
   _raceAgainButton: {fileID: 5188639384168904671}
+  _leaderBoardUI: {fileID: 6207516109162399008}
   _viewMenuUI: {fileID: 7021165162723325148}
   _distanceUI: {fileID: 292874005411855946}
   _raceTimeUI: {fileID: 2732237584011287265}
@@ -791,6 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _leaderBoardItemPrefab: {fileID: 6071836808728528503, guid: 805ddf6603438364f9331c5ea5ca333d, type: 3}
+  Canvas: {fileID: 0}
 --- !u!1 &3797926013291097720
 GameObject:
   m_ObjectHideFlags: 0

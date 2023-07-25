@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VContainer;
 
-
 public class GameMenuWindow : Window
 {
 	[Inject]
@@ -25,6 +24,8 @@ public class GameMenuWindow : Window
 	[SerializeField]
 	private UiButton _raceAgainButton;
 	[SerializeField]
+	private LeaderBoardUIHandler _leaderBoardUI;	
+	[SerializeField]
 	private GameObject _viewMenuUI;
 	[SerializeField]
 	private DistanceUIHandler _distanceUI;
@@ -34,6 +35,7 @@ public class GameMenuWindow : Window
 	protected override void OnActivate()
 	{
 		base.OnActivate();
+		
 		if (_coreStateMachine.ScenesState.Value == ScenesStateEnum.Level4)
 		{
 			_raceTimeUI.gameObject.SetActive(false);
@@ -111,6 +113,7 @@ public class GameMenuWindow : Window
 		if (gameStateEnum == GameStateEnum.RaceOver)
 		{
 			_viewMenuUI.gameObject.SetActive(true);
+			_leaderBoardUI.Canvas.enabled = true;
 		}
 	}
 }
