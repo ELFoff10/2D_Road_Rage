@@ -8,7 +8,7 @@ public class LeaderBoardUIHandler : MonoBehaviour
 {
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
-	
+
 	[SerializeField]
 	private GameObject _leaderBoardItemPrefab;
 
@@ -16,12 +16,12 @@ public class LeaderBoardUIHandler : MonoBehaviour
 
 	private bool _isInitialized;
 
-	private Canvas _canvas;
+	public Canvas Canvas;
 
 	private void Awake()
 	{
-		_canvas = GetComponent<Canvas>();
-		_canvas.enabled = false;
+		Canvas = GetComponent<Canvas>();
+		Canvas.enabled = false;
 	}
 
 	private void Start()
@@ -47,18 +47,23 @@ public class LeaderBoardUIHandler : MonoBehaviour
 		_isInitialized = true;
 	}
 
-	private void Update()
+	private void OnDisable()
 	{
-		OnGameStateChanged();
+		Canvas.enabled = false;
 	}
 
-	private void OnGameStateChanged()
-	{
-		if (_coreStateMachine.LevelGameStateMachine.GameState.Value == GameStateEnum.RaceOver)
-		{
-			_canvas.enabled = true;
-		}
-	}
+	// private void Update()
+	// {
+	// 	OnGameStateChanged();
+	// }
+	//
+	// private void OnGameStateChanged()
+	// {
+	// 	if (_coreStateMachine.LevelGameStateMachine.GameState.Value == GameStateEnum.RaceOver)
+	// 	{
+	// 		_canvas.enabled = true;
+	// 	}
+	// }
 
 	public void UpdateList(List<CarLapCounter> lapCounters)
 	{

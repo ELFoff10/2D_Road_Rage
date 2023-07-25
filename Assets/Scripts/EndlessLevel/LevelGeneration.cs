@@ -1,5 +1,4 @@
 using UnityEngine;
-using VContainer;
 
 public class LevelGeneration : MonoBehaviour
 {
@@ -8,9 +7,6 @@ public class LevelGeneration : MonoBehaviour
 
 	[SerializeField]
 	private Transform _startRoad;
-
-	[Inject]
-	private readonly RaceTimeUIHandler _raceTimeUIHandler;
 
 	private Vector3 _lastEndPosition;
 	private float _offset;
@@ -41,12 +37,12 @@ public class LevelGeneration : MonoBehaviour
 			SpawnPart();
 		}
 
-		var time = _raceTimeUIHandler.RaceTimer;
-
-		if (time > 0 && (int)time % 5 == 0)
-		{
-			_carController.MaxSpeed += 0.001f;
-		}
+		// var time = _raceTimeUIHandler.RaceTimer;
+		//
+		// if (time > 0 && (int)time % 5 == 0)
+		// {
+		// 	_carController.MaxSpeed += 0.001f;
+		// }
 	}
 
 	private void SpawnPart()
