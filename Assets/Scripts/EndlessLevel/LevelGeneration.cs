@@ -33,7 +33,7 @@ public class LevelGeneration : MonoBehaviour
 		_carTransform = GameObject.FindGameObjectWithTag("Player").transform;
 		_carTransform.GetComponent<CarAIHandler>().enabled = false;
 		_carController = _carTransform.GetComponent<CarController>();
-		_carController.IsEndlessMap = true;
+		// _carController.IsEndlessMap = true;
 	}
 
 	private void Update()
@@ -47,7 +47,7 @@ public class LevelGeneration : MonoBehaviour
 		
 		if (time > 0 && (int)time % 5 == 0)
 		{
-			_carController.MaxSpeed += 0.001f;
+			// _carController.MaxSpeed += 0.001f;
 		}
 	}
 

@@ -8,6 +8,7 @@ namespace RoadRage.LifeTimeScopes
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterEntryPoint<LevelControllerModel>();
+            builder.RegisterComponent(FindObjectOfType<CameraController>());
         }
     }
 }

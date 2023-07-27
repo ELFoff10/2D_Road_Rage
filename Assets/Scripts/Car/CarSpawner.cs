@@ -1,23 +1,26 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using VContainer;
 
 public class CarSpawner : MonoBehaviour
 {
-	[SerializeField]
+	[Inject]
 	private CameraController _cameraController;
 
+	[SerializeField]
+	private List<GameObject> _spawnPoints;
+	
 	[Inject]
 	private readonly PrefabInject _prefabInject;
     
 	private void Awake()
 	{
-		var spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
 		CarData[] carDatas = Resources.LoadAll<CarData>("CarData/");
 
-		for (var i = 0; i < spawnPoints.Length; i++)
+		for (var i = 0; i < _spawnPoints.Count; i++)
 		{
-			var spawnPoint = spawnPoints[i].transform;
+			var spawnPoint = _spawnPoints[i].transform;
 
 			var playerSelectedCarID = PlayerPrefs.GetInt($"P{i + 1}SelectedCarID");
 

@@ -5,43 +5,21 @@ using VContainer;
 [RequireComponent(typeof(Rigidbody2D))]
 public class CarController : MonoBehaviour
 {
-	[Header("Car settings")]
-	[SerializeField]
-	private float _driftFactor = 0.93f;
-
-	[SerializeField]
-	private float _accelerationFactor = 5f;
-
-	[SerializeField]
-	private float _turnFactor = 3f;
-
-	[SerializeField]
-	private float _maxSpeed = 7f;
-
-	private float _defaultMaxSpeed;
-	
-	[SerializeField]
-	private bool _isEndlessMap;
-
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 
-	// [Inject]
-	// private readonly CarSpawner _carSpawner;
+	[Header("Car settings")]
+	[SerializeField]
+	private float _driftFactor = 0.93f;
+	[SerializeField]
+	private float _accelerationFactor = 5f;
+	[SerializeField]
+	private float _turnFactor = 3f;
+	[SerializeField]
+	private float _maxSpeed = 7f;
 
-	public float MaxSpeed
-	{
-		get => _maxSpeed;
-		set => _maxSpeed = value;
-	}
-
-	public bool IsEndlessMap
-	{
-		get => _isEndlessMap;
-		set => _isEndlessMap = value;
-	}
-
-	private readonly float _accelerationInput = 1;
+	private float _accelerationInput = 1;
+	private float _defaultMaxSpeed;
 	private float _defaultSpeedBeforeAddSpeed;
 	private float _defaultSpeedBeforeSlowSpeed;
 	private float _steeringInput;
@@ -57,10 +35,14 @@ public class CarController : MonoBehaviour
 	}
 
 	private void FixedUpdate()
-	{		
-		if (_coreStateMachine.LevelGameStateMachine.GameState.Value == GameStateEnum.None) return;
-		if (_coreStateMachine.LevelGameStateMachine.GameState.Value == GameStateEnum.PrePlay) return;
-		if (_coreStateMachine.LevelGameStateMachine.GameState.Value == GameStateEnum.CountDown) return;
+	{
+		switch (_coreStateMachine.LevelGameStateMachine.GameState.Value)
+		{
+			case GameStateEnum.None:
+			case GameStateEnum.PrePlay:
+			case GameStateEnum.CountDown:
+				return;
+		}
 
 		ApplyEngineForce();
 		KillOrthogonalVelocity();

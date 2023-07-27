@@ -15,7 +15,7 @@ public class CarInputHandler : MonoBehaviour
 
     private void Update()
     {
-        if (IsUIInput == true)
+        if (IsUIInput)
         {
             if (_buttonInputAggregator != null)
                 _inputVector.x = _buttonInputAggregator.GetHorizontalInput();

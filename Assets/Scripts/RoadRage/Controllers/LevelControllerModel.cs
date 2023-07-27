@@ -44,7 +44,6 @@ public class LevelControllerModel : IInitializable, IDisposable
 				// TODO: Educational game level
 				break;
 			case GameStateEnum.CountDown:
-				_windowManager.Hide<GameMenuWindow>();
 				_windowManager.Hide<BackgroundMenuWindow>();
 				_windowManager.Hide<MainMenuWindow>();
 				_windowManager.Show<GameMenuWindow>();

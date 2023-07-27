@@ -10,7 +10,7 @@ public class CountDownUIHandler : MonoBehaviour
 
 	[Inject]
 	private readonly ITimerService _timerService;
-	
+
 	[SerializeField]
 	private TMP_Text _countDownText;
 
@@ -20,7 +20,6 @@ public class CountDownUIHandler : MonoBehaviour
 
 	private void OnEnable()
 	{
-		_countDownText.gameObject.SetActive(true);
 		_countDownTimer = 3;
 		_coreStateMachine.LevelGameStateMachine.GameState.TakeUntilDisable(this).Subscribe(ChangeGameState);
 	}
@@ -29,7 +28,7 @@ public class CountDownUIHandler : MonoBehaviour
 	{
 		_disposable.Clear();
 	}
-	
+
 	private void ChangeGameState(GameStateEnum gameStateEnum)
 	{
 		if (gameStateEnum == GameStateEnum.CountDown)
@@ -42,19 +41,18 @@ public class CountDownUIHandler : MonoBehaviour
 				{
 					_countDownTimer--;
 					_countDownText.text = _countDownTimer.ToString();
-					
+
 					switch (_countDownTimer)
 					{
 						case 0:
 							_countDownText.text = "GO!";
 							break;
 						case < 0:
-							_countDownText.gameObject.SetActive(false);
 							_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.Play);
 							_disposable.Clear();
+							gameObject.SetActive(false);
 							break;
 					}
-					
 				}).AddTo(_disposable);
 		}
 	}

@@ -39,10 +39,4 @@ public class AudioManager : MonoBehaviour
 		EventInstances.Add(eventInstance);
 		return eventInstance;
 	}
-
-	// public float DecibelToLinear(float dB)
-	// {
-	//     float linear = Mathf.Pow(10.0f, dB / 20f);
-	//     return linear;
-	// }
 }
