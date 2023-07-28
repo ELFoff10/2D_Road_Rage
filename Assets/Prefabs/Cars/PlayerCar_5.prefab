@@ -89,7 +89,7 @@ MonoBehaviour:
   m_ApplyToSortingLayers: b1ffb8a8d7b2cd54000000006d8215d4
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
+  m_LightOrder: 10
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_ApplyToSortingLayers: b1ffb8a8d7b2cd54000000006d8215d4
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
+  m_LightOrder: 10
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_ApplyToSortingLayers: b1ffb8a8
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
+  m_LightOrder: 10
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
@@ -264,8 +264,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0034500062, y: 0.054499984, z: 0}
-    m_Extent: {x: 0.85365, y: 1.2983, z: 0}
+    m_Center: {x: -0.0015999973, y: 0.0485, z: 0}
+    m_Extent: {x: 0.85169995, y: 1.303, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

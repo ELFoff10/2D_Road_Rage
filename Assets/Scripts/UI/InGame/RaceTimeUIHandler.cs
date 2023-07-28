@@ -47,6 +47,7 @@ public class RaceTimeUIHandler : MonoBehaviour
 				break;
 			case GameStateEnum.CountDown:
 				_compositeDisposable.Clear();
+				SetLabel(RaceTimer);
 				break;
 		}
 	}

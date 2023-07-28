@@ -17,7 +17,7 @@ public class GameInstance : MonoBehaviour
 
 	private void Awake()
 	{
-		// Time.timeScale = 5f;
+		// Time.timeScale = 10f;
 		DontDestroyOnLoad(this);
 		RegServices();
 		SetupFrameTimes();

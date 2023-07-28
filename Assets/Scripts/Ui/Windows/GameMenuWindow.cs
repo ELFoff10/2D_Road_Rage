@@ -1,6 +1,7 @@
 using Enums;
 using FMOD.Studio;
 using RoadRage.MultiScene;
+using TMPro;
 using Tools.UiManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,30 +11,31 @@ public class GameMenuWindow : Window
 {
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
-
 	[Inject]
 	private readonly AudioManager _audioManager;
-
 	[Inject]
 	private readonly IMultiSceneManager _multiSceneManager;
-
 	[SerializeField]
 	private UiButton _menuButton;
 	[SerializeField]
 	private UiButton _resumeButton;
 	[SerializeField]
-	private UiButton _raceAgainButton;	
+	private UiButton _raceAgainButton;
 	[SerializeField]
 	private UiButton _exitToMenuButton;
 	[SerializeField]
-	private LeaderBoardUIHandler _leaderBoardUI;	
+	private LeaderBoardUIHandler _leaderBoardUI;
 	[SerializeField]
-	private MenuUI _menuUI;	
+	private MenuUI _menuUI;
 	[SerializeField]
 	private RaceTimeUIHandler _raceTimeUIHandler;
 	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
-	
+	[SerializeField]
+	private TMP_Text _menuUITextMenu;
+	[SerializeField]
+	private TMP_Text _menuUITextRaceOver;
+
 	// [SerializeField]
 	// private DistanceUIHandler _distanceUI;
 	// [SerializeField]
@@ -42,7 +44,7 @@ public class GameMenuWindow : Window
 	protected override void OnActivate()
 	{
 		base.OnActivate();
-		
+
 		// if (_coreStateMachine.ScenesState.Value == ScenesStateEnum.Level4)
 		// {
 		// 	_raceTimeUI.gameObject.SetActive(false);
@@ -74,12 +76,14 @@ public class GameMenuWindow : Window
 	private void OnMenuButton()
 	{
 		Time.timeScale = 0;
+		_menuUITextRaceOver.gameObject.SetActive(false);
 		_menuUI.gameObject.SetActive(true);
+		_resumeButton.gameObject.SetActive(true);
+		_menuUITextMenu.gameObject.SetActive(true);
 		_countDownUIHandler.gameObject.SetActive(true);
-		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
-		
+		_audioManager.EventInstances[(int)AudioNameEnum.CarHit].stop(STOP_MODE.IMMEDIATE);
 	}
 
 	private void OnResumeGame()
@@ -88,14 +92,15 @@ public class GameMenuWindow : Window
 		_menuUI.gameObject.SetActive(false);
 		_countDownUIHandler.gameObject.SetActive(false);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.Play);
-		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].start();
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].start();
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].start();
+		_audioManager.EventInstances[(int)AudioNameEnum.CarHit].start();
 	}
 
 	private void OnRaceAgainButton()
 	{
 		Time.timeScale = 1;
+		_menuButton.gameObject.SetActive(true);
 		_raceTimeUIHandler.RaceTimer = 0;
 		_menuUI.gameObject.SetActive(false);
 		_leaderBoardUI.gameObject.SetActive(false);
@@ -105,15 +110,18 @@ public class GameMenuWindow : Window
 		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].start();
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].start();
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].start();
+		_audioManager.EventInstances[(int)AudioNameEnum.CarHit].start();
 	}
 
 	private void OnExitToMenuButton()
 	{
 		Time.timeScale = 1;
+		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
 		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
+		_audioManager.EventInstances[(int)AudioNameEnum.CarHit].stop(STOP_MODE.IMMEDIATE);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.None);
 		_coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -133,13 +141,21 @@ public class GameMenuWindow : Window
 	//     _manager.Hide(this);
 	//     _manager.Show<MainMenuWindow>();
 	// }
-    
 
 	private void ShowMenu(GameStateEnum gameStateEnum)
 	{
 		if (gameStateEnum == GameStateEnum.RaceOver)
 		{
+			Time.timeScale = 0;
+			_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
+			_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
+			_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
+			_audioManager.EventInstances[(int)AudioNameEnum.CarHit].stop(STOP_MODE.IMMEDIATE);
 			_menuUI.gameObject.SetActive(true);
+			_menuButton.gameObject.SetActive(false);
+			_resumeButton.gameObject.SetActive(false);
+			_menuUITextMenu.gameObject.SetActive(false);
+			_menuUITextRaceOver.gameObject.SetActive(true);
 			_leaderBoardUI.Canvas.enabled = true;
 		}
 	}
