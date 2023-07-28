@@ -264,8 +264,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0053499937, y: 0.04464996, z: 0}
-    m_Extent: {x: 0.85105, y: 1.30205, z: 0}
+    m_Center: {x: 0.0034500062, y: 0.054499984, z: 0}
+    m_Extent: {x: 0.85365, y: 1.2983, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10509,7 +10509,6 @@ MonoBehaviour:
   _accelerationFactor: 5
   _turnFactor: 3
   _maxSpeed: 7
-  _isEndlessMap: 0
 --- !u!114 &123624552495262655
 MonoBehaviour:
   m_ObjectHideFlags: 0

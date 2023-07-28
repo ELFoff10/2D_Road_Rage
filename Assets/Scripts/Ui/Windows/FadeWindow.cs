@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using Tools.UiManager;
 using UnityEngine;
@@ -8,7 +9,15 @@ namespace Ui.Windows
     public class FadeWindow : Window
     {
         [SerializeField]
-        private DOTweenAnimation _doTweenAnimation;
+        private List<DOTweenAnimation> _doTweenAnimations;
+        // [SerializeField]
+        // private DOTweenAnimation _doTweenAnimationFade;      
+        // [SerializeField]
+        // private DOTweenAnimation _doTweenAnimationCar;    
+        // [SerializeField]
+        // private DOTweenAnimation _doTweenAnimationRoad;    
+        // [SerializeField]
+        // private DOTweenAnimation _doTweenAnimationFillImage;
 
         private Action _fadeSceneDelegate;
 
@@ -21,15 +30,21 @@ namespace Ui.Windows
         public void OpenFade(Action endBack = null)
         {
             _fadeSceneDelegate = endBack;
-            _doTweenAnimation.DORestartById(StringsStatic.Helper.Open);
-            _doTweenAnimation.DOPlayById(StringsStatic.Helper.Open);
+            foreach (var doTweenAnimation in _doTweenAnimations)
+            {
+                doTweenAnimation.DORestartById(StringsStatic.Helper.Open);
+                doTweenAnimation.DOPlayById(StringsStatic.Helper.Open);
+            }
         }
 
         public void CloseFade(Action endBack = null)
         {
             _fadeSceneDelegate = endBack;
-            _doTweenAnimation.DORestartById(StringsStatic.Helper.Close);
-            _doTweenAnimation.DOPlayById(StringsStatic.Helper.Close);
+            foreach (var doTweenAnimation in _doTweenAnimations)
+            {
+                doTweenAnimation.DORestartById(StringsStatic.Helper.Close);
+                doTweenAnimation.DOPlayById(StringsStatic.Helper.Close);
+            }
         }
 
         public void EndOpenFade()
