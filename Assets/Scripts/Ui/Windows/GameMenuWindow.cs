@@ -20,13 +20,17 @@ public class GameMenuWindow : Window
 	[SerializeField]
 	private UiButton _menuButton;
 	[SerializeField]
-	private UiButton _exitToMenuButton;
+	private UiButton _resumeButton;
 	[SerializeField]
-	private UiButton _raceAgainButton;
+	private UiButton _raceAgainButton;	
+	[SerializeField]
+	private UiButton _exitToMenuButton;
 	[SerializeField]
 	private LeaderBoardUIHandler _leaderBoardUI;	
 	[SerializeField]
-	private MenuUI _menuUI;
+	private MenuUI _menuUI;	
+	[SerializeField]
+	private RaceTimeUIHandler _raceTimeUIHandler;
 	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
 	
@@ -50,6 +54,7 @@ public class GameMenuWindow : Window
 		// }
 
 		_menuButton.OnClick += OnMenuButton;
+		_resumeButton.OnClick += OnResumeGame;
 		_raceAgainButton.OnClick += OnRaceAgainButton;
 		_exitToMenuButton.OnClick += OnExitToMenuButton;
 		_coreStateMachine.LevelGameStateMachine.OnSetGameState += ShowMenu;
@@ -58,8 +63,8 @@ public class GameMenuWindow : Window
 	protected override void OnDeactivate()
 	{
 		base.OnDeactivate();
-		_menuUI.gameObject.SetActive(false);
 		_menuButton.OnClick -= OnMenuButton;
+		_resumeButton.OnClick += OnResumeGame;
 		_raceAgainButton.OnClick -= OnRaceAgainButton;
 		_exitToMenuButton.OnClick -= OnExitToMenuButton;
 		_coreStateMachine.LevelGameStateMachine.OnSetGameState -= ShowMenu;
@@ -68,32 +73,51 @@ public class GameMenuWindow : Window
 
 	private void OnMenuButton()
 	{
+		Time.timeScale = 0;
 		_menuUI.gameObject.SetActive(true);
 		_countDownUIHandler.gameObject.SetActive(true);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.PrePlay);
-		// _audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
-		// _audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
+		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
+		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
+		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
+		
+	}
+
+	private void OnResumeGame()
+	{
+		Time.timeScale = 1;
+		_menuUI.gameObject.SetActive(false);
+		_countDownUIHandler.gameObject.SetActive(false);
+		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.Play);
+		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].start();
+		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].start();
+		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].start();
 	}
 
 	private void OnRaceAgainButton()
 	{
+		Time.timeScale = 1;
+		_raceTimeUIHandler.RaceTimer = 0;
 		_menuUI.gameObject.SetActive(false);
 		_leaderBoardUI.gameObject.SetActive(false);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.CountDown);
 		_countDownUIHandler.gameObject.SetActive(true);
+		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].start();
+		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].start();
+		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].start();
 	}
 
 	private void OnExitToMenuButton()
 	{
-		// LoadLevel(ScenesStateEnum.Menu);
+		Time.timeScale = 1;
 		_menuUI.gameObject.SetActive(false);
 		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.None);
 		_coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
-		PlayClip();
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
 	// private void LoadLevel(ScenesStateEnum scenesStateEnum)
@@ -110,12 +134,7 @@ public class GameMenuWindow : Window
 	//     _manager.Hide(this);
 	//     _manager.Show<MainMenuWindow>();
 	// }
-
-	private void PlayClip()
-	{
-		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
-		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
-	}
+    
 
 	private void ShowMenu(GameStateEnum gameStateEnum)
 	{

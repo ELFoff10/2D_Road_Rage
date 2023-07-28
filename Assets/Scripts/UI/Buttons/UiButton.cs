@@ -23,6 +23,7 @@ public class UiButton : UIBehaviour
 	protected override void OnEnable()
 	{
 		base.OnEnable();
+		_doTweenAnimation.isIndependentUpdate = true;
 		_button.OnClickAsObservable().TakeUntilDisable(this).Subscribe(_ => OnButtonClick());
 	}
 

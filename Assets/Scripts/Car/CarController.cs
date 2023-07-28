@@ -18,6 +18,7 @@ public class CarController : MonoBehaviour
 	[SerializeField]
 	private float _maxSpeed = 7f;
 
+	private float _withoutPressingAcceleration = 3f;
 	private float _accelerationInput = 1;
 	private float _defaultMaxSpeed;
 	private float _defaultSpeedBeforeAddSpeed;
@@ -58,7 +59,7 @@ public class CarController : MonoBehaviour
 		if (_velocityVsUp > _maxSpeed && _accelerationInput > 0) return;
 
 		// Limit so we cannot go faster than the 25% of max speed in the "reverse" direction
-		if (_velocityVsUp < _maxSpeed * 0.25f && _accelerationInput < 0) return;
+		// if (_velocityVsUp < _maxSpeed * 0.25f && _accelerationInput < 0) return;
 
 		// Limit so we cannot go faster in any direction while accelerating
 		if (_carRigidbody2D.velocity.sqrMagnitude > _maxSpeed * _maxSpeed && _accelerationInput > 0) return;
@@ -66,7 +67,7 @@ public class CarController : MonoBehaviour
 		// Apply drag if there is no accelerationInput so the car stops when the player lets go of the accelerator
 		if (_accelerationInput == 0)
 		{
-			_carRigidbody2D.drag = Mathf.Lerp(_carRigidbody2D.drag, 3.0f, Time.fixedDeltaTime * 3);
+			_carRigidbody2D.drag = Mathf.Lerp(_carRigidbody2D.drag, _withoutPressingAcceleration, Time.fixedDeltaTime * _withoutPressingAcceleration);
 		}
 		else
 		{
