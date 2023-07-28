@@ -54,3 +54,6 @@ TagManager:
   - name: Particles
     uniqueID: 3558179437
     locked: 0
+  - name: Lamp
+    uniqueID: 1616737165
+    locked: 0

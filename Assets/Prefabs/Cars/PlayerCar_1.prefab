@@ -81,12 +81,12 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.462
+  m_FalloffIntensity: 0.45
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 9.6
+  m_Intensity: 2.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: b1ffb8a8d7b2cd54000000006d8215d4
+  m_ApplyToSortingLayers: b1ffb8a8d7b2cd546d8215d4
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 10
@@ -102,10 +102,10 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 56.47808
-  m_PointLightOuterAngle: 72.486626
-  m_PointLightInnerRadius: 0.46
-  m_PointLightOuterRadius: 2.98
+  m_PointLightInnerAngle: 28
+  m_PointLightOuterAngle: 45
+  m_PointLightInnerRadius: 1
+  m_PointLightOuterRadius: 5.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -163,12 +163,12 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.462
+  m_FalloffIntensity: 0.45
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 9.6
+  m_Intensity: 2.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: b1ffb8a8d7b2cd54000000006d8215d4
+  m_ApplyToSortingLayers: b1ffb8a8d7b2cd546d8215d4
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 10
@@ -184,10 +184,10 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 56.47808
-  m_PointLightOuterAngle: 72.486626
-  m_PointLightInnerRadius: 0.46
-  m_PointLightOuterRadius: 2.98
+  m_PointLightInnerAngle: 28
+  m_PointLightOuterAngle: 45
+  m_PointLightInnerRadius: 1
+  m_PointLightOuterRadius: 5.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -10974,8 +10974,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00074997544, y: 0.050300002, z: 0}
-    m_Extent: {x: 0.85755, y: 1.3032, z: 0}
+    m_Center: {x: 0.0028999746, y: 0.049849987, z: 0}
+    m_Extent: {x: 0.85580003, y: 1.30715, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
