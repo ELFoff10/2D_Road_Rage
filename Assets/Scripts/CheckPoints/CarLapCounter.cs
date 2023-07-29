@@ -7,6 +7,11 @@ public class CarLapCounter : MonoBehaviour
 {
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
+	
+	[Inject]
+	private readonly AudioManager _audioManager;
+	[Inject]
+	private readonly FMOD_Events _fmodEvents;
 
 	public event Action<CarLapCounter> OnPassCheckPoint;
 
@@ -73,6 +78,7 @@ public class CarLapCounter : MonoBehaviour
 
 					if (CompareTag("Player"))
 					{
+						_audioManager.PlayOneShot(_fmodEvents.Finish);
 						_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
 						GetComponent<CarInputHandler>().enabled = false;
 						GetComponent<CarAIHandler>().enabled = true;

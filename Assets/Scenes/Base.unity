@@ -210,6 +210,13 @@ MonoBehaviour:
       Data3: 2055141548
       Data4: -139248438
     Path: event:/Car/Hit
+  <Finish>k__BackingField:
+    Guid:
+      Data1: 499386866
+      Data2: 1213483037
+      Data3: -212023925
+      Data4: 788851814
+    Path: event:/Other/Finish
 --- !u!114 &123048908
 MonoBehaviour:
   m_ObjectHideFlags: 0
