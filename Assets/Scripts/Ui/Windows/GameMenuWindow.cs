@@ -82,7 +82,6 @@ public class GameMenuWindow : Window
 		_menuUITextMenu.gameObject.SetActive(true);
 		_countDownUIHandler.gameObject.SetActive(true);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
-		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
 	}
 
 	private void OnResumeGame()
@@ -92,7 +91,6 @@ public class GameMenuWindow : Window
 		_countDownUIHandler.gameObject.SetActive(false);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.Play);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].start();
-		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].start();
 	}
 
 	private void OnRaceAgainButton()
@@ -106,7 +104,6 @@ public class GameMenuWindow : Window
 		_countDownUIHandler.gameObject.SetActive(true);
 		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].start();
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].start();
-		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].start();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
@@ -119,7 +116,6 @@ public class GameMenuWindow : Window
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.None);
 		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
-		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
 		_multiSceneManager.LoadScene(ScenesStateEnum.Menu);
 	}
 
@@ -144,7 +140,6 @@ public class GameMenuWindow : Window
 			Time.timeScale = 0;
 			_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
 			_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
-			_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
 			_menuUI.gameObject.SetActive(true);
 			_menuButton.gameObject.SetActive(false);
 			_resumeButton.gameObject.SetActive(false);
