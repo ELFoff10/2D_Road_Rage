@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _carUniqueID: 1
   _carUISprite: {fileID: 21300000, guid: b0eb055af4069d143ad4817c733709a5, type: 3}
+  _carSelectSprite: {fileID: 21300000, guid: b0eb055af4069d143ad4817c733709a5, type: 3}
   _carPrefab: {fileID: 6115639297621940794, guid: 2f2e020c6eb862e40b6a72692ef6b292, type: 3}
   _material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}

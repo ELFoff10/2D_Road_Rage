@@ -10518,7 +10518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75d8e9ef1771724fb36d509e5d1cc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsUIInput: 0
+  IsUIInput: 1
 --- !u!114 &1020832703983588081
 MonoBehaviour:
   m_ObjectHideFlags: 0

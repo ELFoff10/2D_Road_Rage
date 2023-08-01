@@ -1258,7 +1258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _leaderBoardItemPrefab: {fileID: 6071836808728528503, guid: 805ddf6603438364f9331c5ea5ca333d, type: 3}
-  Canvas: {fileID: 0}
+  Canvas: {fileID: 6207516109162399013}
 --- !u!1 &3797926013291097720
 GameObject:
   m_ObjectHideFlags: 0

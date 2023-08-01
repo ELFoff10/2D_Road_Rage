@@ -15,7 +15,7 @@ public class CarUIHandler : MonoBehaviour
 
     public void SetupCar(CarData carData)
     {
-        CarImage.sprite = carData.CarUISprite;
+        CarImage.sprite = carData.CarSelectSprite;
     }
 
     public void StartCarEntranceAnimation(bool isAppearingOnRightSide)
