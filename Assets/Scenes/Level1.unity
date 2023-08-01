@@ -238,7 +238,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1323785528}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -153.353}
 --- !u!212 &7929334
 SpriteRenderer:
@@ -323,7 +323,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1199217129}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &59500629
 SpriteRenderer:
@@ -443,8 +443,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0037499666, y: 0.007600069, z: 0}
-    m_Extent: {x: 3.5018501, y: 3.5021, z: 0}
+    m_Center: {x: 0.0049500465, y: 0.0010499954, z: 0}
+    m_Extent: {x: 3.49715, y: 3.50255, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -637,8 +637,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0018999577, y: -0.0034499168, z: 0}
-    m_Extent: {x: 3.4975, y: 3.49245, z: 0}
+    m_Center: {x: 0.0038501024, y: -0.007550001, z: 0}
+    m_Extent: {x: 2.6217499, y: 2.62085, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.12
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -747,8 +747,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0053499937, y: 0.00080001354, z: 0}
-    m_Extent: {x: 1.84405, y: 1.8354, z: 0}
+    m_Center: {x: -0.004600048, y: 0.00054997206, z: 0}
+    m_Extent: {x: 1.8413, y: 1.83635, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -822,7 +822,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1427145952}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -333.353}
 --- !u!212 &150708905
 SpriteRenderer:
@@ -905,58 +905,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 739932050}
-  - {fileID: 1410452281}
-  - {fileID: 1412924640}
-  - {fileID: 1605816801}
-  - {fileID: 1297167434}
-  - {fileID: 959239993}
-  - {fileID: 59500628}
-  - {fileID: 472058809}
-  - {fileID: 185530039}
-  - {fileID: 732099000}
-  - {fileID: 1449985860}
-  - {fileID: 1251552199}
-  - {fileID: 1388659215}
-  - {fileID: 1600758850}
-  - {fileID: 1601344114}
-  - {fileID: 660012266}
-  - {fileID: 2100905356}
-  - {fileID: 1288768665}
-  - {fileID: 564299173}
-  - {fileID: 1612191844}
-  - {fileID: 967630284}
-  - {fileID: 176616000}
-  - {fileID: 7929333}
-  - {fileID: 326408672}
-  - {fileID: 1557282920}
-  - {fileID: 1096631362}
-  - {fileID: 1291307820}
-  - {fileID: 819788312}
-  - {fileID: 1901678783}
-  - {fileID: 1144367057}
-  - {fileID: 654099162}
-  - {fileID: 2098796102}
-  - {fileID: 1363578678}
-  - {fileID: 472094046}
-  - {fileID: 1842283144}
-  - {fileID: 1010512113}
-  - {fileID: 783205657}
-  - {fileID: 399087556}
-  - {fileID: 1322647212}
-  - {fileID: 1437010001}
-  - {fileID: 1884153545}
-  - {fileID: 1030694682}
-  - {fileID: 347671998}
-  - {fileID: 1217445561}
-  - {fileID: 320969975}
-  - {fileID: 500572146}
-  - {fileID: 920467530}
-  - {fileID: 847318268}
-  - {fileID: 150708904}
-  - {fileID: 2013414411}
-  - {fileID: 1499499217}
-  - {fileID: 235114141}
+  - {fileID: 226302602}
+  - {fileID: 903951951}
   m_Father: {fileID: 1799035998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176615999
@@ -990,7 +940,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1024146977}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -183.353}
 --- !u!212 &176616001
 SpriteRenderer:
@@ -1159,7 +1109,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 139078499}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &185530040
 SpriteRenderer:
@@ -1279,8 +1229,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003700018, y: -0.0023999214, z: 0}
-    m_Extent: {x: 3.5018, y: 3.4984, z: 0}
+    m_Center: {x: 0.001650095, y: -0.0019500256, z: 0}
+    m_Extent: {x: 3.49895, y: 3.50645, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1407,6 +1357,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &226302601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226302602}
+  m_Layer: 0
+  m_Name: LampsWithScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &226302602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226302601}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 847318268}
+  - {fileID: 472094046}
+  - {fileID: 1010512113}
+  - {fileID: 1884153545}
+  m_Father: {fileID: 156898084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &235114140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1423,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2136575406}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -361.686}
 --- !u!212 &235114142
 SpriteRenderer:
@@ -1541,7 +1526,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: b1ffb8a8d7b2cd546d8215d48d735d6000000000
@@ -1558,8 +1543,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.007949948, y: -0.0036500692, z: 0}
-    m_Extent: {x: 3.24935, y: 3.2495499, z: 0}
+    m_Center: {x: -0.0054000616, y: 0.0023499727, z: 0}
+    m_Extent: {x: 3.2505999, y: 3.2532501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1668,8 +1653,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0042500496, y: 0.0023499727, z: 0}
-    m_Extent: {x: 3.49335, y: 3.5009499, z: 0}
+    m_Center: {x: 0.006899953, y: 0.0033499002, z: 0}
+    m_Extent: {x: 3.5024, y: 3.49535, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1743,7 +1728,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1281489476}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -258.353}
 --- !u!212 &320969976
 SpriteRenderer:
@@ -1828,7 +1813,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 941669847}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -228.353}
 --- !u!212 &326408673
 SpriteRenderer:
@@ -1913,7 +1898,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 190903820}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &347671999
 SpriteRenderer:
@@ -2055,7 +2040,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2059527492}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -315}
 --- !u!212 &399087557
 SpriteRenderer:
@@ -2242,7 +2227,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: b1ffb8a8d7b2cd546d8215d48d735d6000000000
@@ -2259,8 +2244,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0041000843, y: 0.0055999756, z: 0}
-    m_Extent: {x: 3.5007, y: 3.5017, z: 0}
+    m_Center: {x: 0.003000021, y: 0.0041999817, z: 0}
+    m_Extent: {x: 2.8697, y: 2.8662, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2268,7 +2253,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.37
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -2369,8 +2354,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00084996223, y: 0.005100012, z: 0}
-    m_Extent: {x: 3.49735, y: 3.4984, z: 0}
+    m_Center: {x: -0.001949966, y: 0.0052500367, z: 0}
+    m_Extent: {x: 1.11425, y: 1.1106501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2378,7 +2363,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 0.61
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -2444,7 +2429,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 583681982}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!212 &472058810
 SpriteRenderer:
@@ -2508,6 +2493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 472094046}
   - component: {fileID: 472094047}
+  - component: {fileID: 472094048}
   m_Layer: 0
   m_Name: lampOffLight (50)
   m_TagString: Untagged
@@ -2529,7 +2515,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1359709371}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 226302602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &472094047
 SpriteRenderer:
@@ -2583,6 +2569,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &472094048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472094045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a51940c84deed4aa81ae480bec6104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lampLight2D: {fileID: 1359709372}
+  _time: 0.002
 --- !u!1 &473006961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,8 +2649,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0077500343, y: 0.00030004978, z: 0}
-    m_Extent: {x: 3.50075, y: 3.5029001, z: 0}
+    m_Center: {x: 0.007099986, y: -0.002350092, z: 0}
+    m_Extent: {x: 3.2508998, y: 3.24595, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2658,7 +2658,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.75
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -2846,7 +2846,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 654977344}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -288.353}
 --- !u!212 &500572147
 SpriteRenderer:
@@ -2966,8 +2966,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0040500164, y: -0.0029999018, z: 0}
-    m_Extent: {x: 3.50335, y: 3.4970999, z: 0}
+    m_Center: {x: 0.0029500723, y: -0.0040000677, z: 0}
+    m_Extent: {x: 3.14215, y: 3.1367002, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2975,7 +2975,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.64
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -3076,8 +3076,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.002550006, y: 0.0013000965, z: 0}
-    m_Extent: {x: 3.4967499, y: 3.4956, z: 0}
+    m_Center: {x: 0.0017999411, y: -0.0046499968, z: 0}
+    m_Extent: {x: 2.2540998, y: 2.24465, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3085,7 +3085,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 1.75
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -3151,7 +3151,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2126466366}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -78.353}
 --- !u!212 &564299174
 SpriteRenderer:
@@ -3254,7 +3254,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: b1ffb8a8d7b2cd546d8215d48d735d6000000000
@@ -3271,8 +3271,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0032999516, y: -0.0019999743, z: 0}
-    m_Extent: {x: 3.5021, y: 3.4966998, z: 0}
+    m_Center: {x: -0.0022000074, y: 0.002949953, z: 0}
+    m_Extent: {x: 2.5558, y: 2.56165, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3280,7 +3280,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.06
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -3346,7 +3346,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1126617776}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -135}
 --- !u!212 &654099163
 SpriteRenderer:
@@ -3466,8 +3466,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.007349968, y: -0.0020999908, z: 0}
-    m_Extent: {x: 3.49805, y: 3.5048, z: 0}
+    m_Center: {x: -0.00049996376, y: -0.00035011768, z: 0}
+    m_Extent: {x: 3.0787, y: 3.08225, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3475,7 +3475,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.58
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -3541,7 +3541,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 473006962}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &660012267
 SpriteRenderer:
@@ -3626,7 +3626,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 564082869}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -270}
 --- !u!212 &732099001
 SpriteRenderer:
@@ -3711,7 +3711,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1170904858}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &739932051
 SpriteRenderer:
@@ -3915,8 +3915,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0033000708, y: 0.0055999756, z: 0}
-    m_Extent: {x: 3.4983, y: 3.4959, z: 0}
+    m_Center: {x: -0.00040006638, y: -0.003450036, z: 0}
+    m_Extent: {x: 2.4972, y: 2.4995499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3924,7 +3924,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -3990,7 +3990,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1332693753}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -315}
 --- !u!212 &783205658
 SpriteRenderer:
@@ -4110,8 +4110,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0041999817, y: 0.0036000013, z: 0}
-    m_Extent: {x: 3.5, y: 3.5036998, z: 0}
+    m_Center: {x: 0.002350092, y: -0.001850009, z: 0}
+    m_Extent: {x: 3.49805, y: 3.49655, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4232,7 +4232,7 @@ Transform:
   m_GameObject: {fileID: 813560903}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.1, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4304,8 +4304,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003000021, y: -0.0032500029, z: 0}
-    m_Extent: {x: 3.4954, y: 3.49645, z: 0}
+    m_Center: {x: -0.0012999773, y: 0.00014996529, z: 0}
+    m_Extent: {x: 3.4963999, y: 3.50225, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4379,7 +4379,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1497292232}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &819788313
 SpriteRenderer:
@@ -4499,8 +4499,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00034999847, y: 0.0024000406, z: 0}
-    m_Extent: {x: 3.50435, y: 3.4976, z: 0}
+    m_Center: {x: 0.0042499304, y: -0.00014996529, z: 0}
+    m_Extent: {x: 2.9014502, y: 2.90805, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4508,7 +4508,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.4
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -4609,8 +4609,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0026500225, y: -0.00074994564, z: 0}
-    m_Extent: {x: 3.50615, y: 3.49855, z: 0}
+    m_Center: {x: 0.004400015, y: -0.0059500933, z: 0}
+    m_Extent: {x: 3.5035, y: 3.5018501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4663,6 +4663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 847318268}
   - component: {fileID: 847318269}
+  - component: {fileID: 847318270}
   m_Layer: 0
   m_Name: lampOffLight (39)
   m_TagString: Untagged
@@ -4684,7 +4685,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1481187821}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 226302602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -363.353}
 --- !u!212 &847318269
 SpriteRenderer:
@@ -4738,6 +4739,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &847318270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847318267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a51940c84deed4aa81ae480bec6104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lampLight2D: {fileID: 1481187822}
+  _time: 0.002
 --- !u!1 &898729768
 GameObject:
   m_ObjectHideFlags: 0
@@ -4804,8 +4819,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.000100016594, y: 0.006399989, z: 0}
-    m_Extent: {x: 3.499, y: 3.4977999, z: 0}
+    m_Center: {x: -0.0023999214, y: 0.004999995, z: 0}
+    m_Extent: {x: 3.5051, y: 3.5028, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4848,6 +4863,85 @@ MonoBehaviour:
   - {x: 0.4157348, y: -0.27778515, z: 0}
   - {x: 0.46193978, y: -0.19134171, z: 0}
   - {x: 0.49039266, y: -0.09754512, z: 0}
+--- !u!1 &903951950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903951951}
+  m_Layer: 0
+  m_Name: LampsWithOutScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &903951951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903951950}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 739932050}
+  - {fileID: 1410452281}
+  - {fileID: 1412924640}
+  - {fileID: 1605816801}
+  - {fileID: 1297167434}
+  - {fileID: 959239993}
+  - {fileID: 59500628}
+  - {fileID: 472058809}
+  - {fileID: 185530039}
+  - {fileID: 732099000}
+  - {fileID: 1449985860}
+  - {fileID: 1251552199}
+  - {fileID: 1388659215}
+  - {fileID: 1600758850}
+  - {fileID: 1601344114}
+  - {fileID: 660012266}
+  - {fileID: 2100905356}
+  - {fileID: 1288768665}
+  - {fileID: 564299173}
+  - {fileID: 1612191844}
+  - {fileID: 967630284}
+  - {fileID: 176616000}
+  - {fileID: 7929333}
+  - {fileID: 326408672}
+  - {fileID: 1557282920}
+  - {fileID: 1096631362}
+  - {fileID: 1291307820}
+  - {fileID: 819788312}
+  - {fileID: 1901678783}
+  - {fileID: 1144367057}
+  - {fileID: 654099162}
+  - {fileID: 2098796102}
+  - {fileID: 1363578678}
+  - {fileID: 1842283144}
+  - {fileID: 783205657}
+  - {fileID: 399087556}
+  - {fileID: 1322647212}
+  - {fileID: 1437010001}
+  - {fileID: 1030694682}
+  - {fileID: 347671998}
+  - {fileID: 1217445561}
+  - {fileID: 320969975}
+  - {fileID: 500572146}
+  - {fileID: 920467530}
+  - {fileID: 150708904}
+  - {fileID: 2013414411}
+  - {fileID: 1499499217}
+  - {fileID: 235114141}
+  m_Father: {fileID: 156898084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909096794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,7 +5055,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1676034057}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -333.353}
 --- !u!212 &920467531
 SpriteRenderer:
@@ -5081,8 +5175,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.008050084, y: 0.003199935, z: 0}
-    m_Extent: {x: 3.5004501, y: 3.4952002, z: 0}
+    m_Center: {x: -0.00069999695, y: -0.0026500225, z: 0}
+    m_Extent: {x: 2.5007, y: 2.50505, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5090,7 +5184,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -5156,7 +5250,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1164653158}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &959239994
 SpriteRenderer:
@@ -5241,7 +5335,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2130446526}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -153.353}
 --- !u!212 &967630285
 SpriteRenderer:
@@ -5305,6 +5399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1010512113}
   - component: {fileID: 1010512114}
+  - component: {fileID: 1010512115}
   m_Layer: 0
   m_Name: lampOffLight (51)
   m_TagString: Untagged
@@ -5326,7 +5421,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1234857304}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 226302602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -198.352}
 --- !u!212 &1010512114
 SpriteRenderer:
@@ -5380,6 +5475,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1010512115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010512112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a51940c84deed4aa81ae480bec6104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lampLight2D: {fileID: 1234857305}
+  _time: 0.005
 --- !u!1 &1024146976
 GameObject:
   m_ObjectHideFlags: 0
@@ -5446,8 +5555,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0016499758, y: 0.0031499863, z: 0}
-    m_Extent: {x: 3.5058498, y: 3.49845, z: 0}
+    m_Center: {x: 0.0035500526, y: -0.0032999516, z: 0}
+    m_Extent: {x: 2.50245, y: 2.5042, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5455,7 +5564,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -5521,7 +5630,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 63720084}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &1030694683
 SpriteRenderer:
@@ -5690,7 +5799,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1104455772}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -232.89499}
 --- !u!212 &1096631363
 SpriteRenderer:
@@ -5810,8 +5919,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003899932, y: 0.0009499788, z: 0}
-    m_Extent: {x: 3.5029001, y: 3.49865, z: 0}
+    m_Center: {x: -0.0024000406, y: 0.0035500526, z: 0}
+    m_Extent: {x: 2.5001001, y: 2.49775, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5819,7 +5928,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -5920,8 +6029,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0011000633, y: 0.000100016594, z: 0}
-    m_Extent: {x: 3.4986, y: 3.4954, z: 0}
+    m_Center: {x: 0.0025000572, y: 0.0010499954, z: 0}
+    m_Extent: {x: 3.5002, y: 3.49525, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5995,7 +6104,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1907047583}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -150}
 --- !u!212 &1144367058
 SpriteRenderer:
@@ -6098,7 +6207,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 1.04
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: b1ffb8a8d7b2cd546d8215d48d735d6000000000
@@ -6115,8 +6224,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0027000904, y: -0.0036000013, z: 0}
-    m_Extent: {x: 3.5056, y: 3.5001001, z: 0}
+    m_Center: {x: -0.003000021, y: -0.0028998852, z: 0}
+    m_Extent: {x: 3.0929, y: 3.0862, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6124,7 +6233,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.59
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -6225,8 +6334,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.008599997, y: 0.0015999079, z: 0}
-    m_Extent: {x: 3.4984, y: 3.4963999, z: 0}
+    m_Center: {x: -0.007150054, y: -0.0036000013, z: 0}
+    m_Extent: {x: 2.7888498, y: 2.7875, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6234,7 +6343,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.29
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -6335,8 +6444,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.004400015, y: 0.0042500496, z: 0}
-    m_Extent: {x: 3.5014, y: 3.49565, z: 0}
+    m_Center: {x: 0.001150012, y: -0.0025999546, z: 0}
+    m_Extent: {x: 2.85925, y: 2.856, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6344,7 +6453,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.36
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -6445,8 +6554,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0016499758, y: 0.0018000603, z: 0}
-    m_Extent: {x: 3.49435, y: 3.5039, z: 0}
+    m_Center: {x: -0.0051499605, y: 0.0014499426, z: 0}
+    m_Extent: {x: 2.92705, y: 2.9247499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6454,7 +6563,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.43
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -6520,7 +6629,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1695812733}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -223.257}
 --- !u!212 &1217445562
 SpriteRenderer:
@@ -6640,8 +6749,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00485003, y: -0.0017000437, z: 0}
-    m_Extent: {x: 3.5022502, y: 3.5029001, z: 0}
+    m_Center: {x: -0.0021500587, y: -0.0036000013, z: 0}
+    m_Extent: {x: 3.00405, y: 2.9977002, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6649,7 +6758,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -6731,9 +6840,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.371
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 1.2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: b1ffb8a8d7b2cd546d8215d48d735d6000000000
@@ -6750,8 +6859,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0015499592, y: -0.002499938, z: 0}
-    m_Extent: {x: 3.49865, y: 3.5003, z: 0}
+    m_Center: {x: -0.0012999773, y: -0.0026499033, z: 0}
+    m_Extent: {x: 2.9329, y: 2.94585, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6759,7 +6868,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.44
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -6825,7 +6934,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1480644388}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -135}
 --- !u!212 &1251552200
 SpriteRenderer:
@@ -6945,8 +7054,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0054500103, y: -0.0054500103, z: 0}
-    m_Extent: {x: 3.49845, y: 3.49855, z: 0}
+    m_Center: {x: 0.0059999228, y: 0.0042999983, z: 0}
+    m_Extent: {x: 3.4969, y: 3.5015998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7020,7 +7129,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1823136367}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -43.257}
 --- !u!212 &1288768666
 SpriteRenderer:
@@ -7105,7 +7214,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 276818045}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -181.686}
 --- !u!212 &1291307821
 SpriteRenderer:
@@ -7190,7 +7299,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1235978256}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
 --- !u!212 &1297167435
 SpriteRenderer:
@@ -7359,7 +7468,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1362180580}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -270}
 --- !u!212 &1322647213
 SpriteRenderer:
@@ -7479,8 +7588,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0020999908, y: 0.002300024, z: 0}
-    m_Extent: {x: 3.4976, y: 3.5044, z: 0}
+    m_Center: {x: -0.001850009, y: 0.00024998188, z: 0}
+    m_Extent: {x: 2.50485, y: 2.49535, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7488,7 +7597,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -7589,8 +7698,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0028500557, y: -0.0027000904, z: 0}
-    m_Extent: {x: 3.49565, y: 3.5037, z: 0}
+    m_Center: {x: -0.001850009, y: 0.0018000603, z: 0}
+    m_Extent: {x: 3.5054498, y: 3.4974, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7699,8 +7808,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0014500618, y: -0.001850009, z: 0}
-    m_Extent: {x: 3.49875, y: 3.50605, z: 0}
+    m_Center: {x: -0.0010499954, y: -0.000050008297, z: 0}
+    m_Extent: {x: 1.44015, y: 1.44185, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7708,7 +7817,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 0.94
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -7809,8 +7918,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0047500134, y: 0.0011000633, z: 0}
-    m_Extent: {x: 3.50225, y: 3.4972, z: 0}
+    m_Center: {x: 0.0012500286, y: 0.0043999553, z: 0}
+    m_Extent: {x: 1.99675, y: 1.9970999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7818,7 +7927,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 1.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -7919,8 +8028,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0017499924, y: -0.0026500225, z: 0}
-    m_Extent: {x: 3.49595, y: 3.49695, z: 0}
+    m_Center: {x: 0.0048999786, y: -0.009199977, z: 0}
+    m_Extent: {x: 3.4979, y: 3.5008001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7988,13 +8097,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363578677}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0030294138, y: -0.029724801, z: -0.99440265, w: 0.101344906}
+  m_LocalRotation: {x: 0.0030294138, y: -0.029724797, z: -0.99440265, w: 0.10134489}
   m_LocalPosition: {x: -44.55, y: -9.9, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 814858772}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: -3.354, y: -0.692, z: -168.341}
 --- !u!212 &1363578679
 SpriteRenderer:
@@ -8079,7 +8188,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 435137113}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &1388659216
 SpriteRenderer:
@@ -8164,7 +8273,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 835240258}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 35.858}
 --- !u!212 &1410452282
 SpriteRenderer:
@@ -8249,7 +8358,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 536919206}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.65}
 --- !u!212 &1412924641
 SpriteRenderer:
@@ -8369,8 +8478,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00039994717, y: 0.0048999786, z: 0}
-    m_Extent: {x: 3.4980001, y: 3.504, z: 0}
+    m_Center: {x: -0.0071001053, y: 0.0033999681, z: 0}
+    m_Extent: {x: 3.5, y: 3.501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8444,7 +8553,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 288666241}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -270}
 --- !u!212 &1437010002
 SpriteRenderer:
@@ -8613,7 +8722,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 784397736}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -135}
 --- !u!212 &1449985861
 SpriteRenderer:
@@ -8855,8 +8964,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0036000013, y: -0.00065004826, z: 0}
-    m_Extent: {x: 2.3059, y: 2.29595, z: 0}
+    m_Center: {x: 0.008200049, y: 0.0019499063, z: 0}
+    m_Extent: {x: 2.2998, y: 2.2971501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8965,8 +9074,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00059998035, y: 0.0038000345, z: 0}
-    m_Extent: {x: 3.5054998, y: 3.4966998, z: 0}
+    m_Center: {x: 0.00024998188, y: 0.0020999908, z: 0}
+    m_Extent: {x: 1.49875, y: 1.4993, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8974,7 +9083,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 1
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -9075,8 +9184,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0010000467, y: 0.005300045, z: 0}
-    m_Extent: {x: 3.5047002, y: 3.5002, z: 0}
+    m_Center: {x: -0.00084996223, y: -0.00059998035, z: 0}
+    m_Extent: {x: 3.49565, y: 3.4983, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9150,7 +9259,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1602111542}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -438.353}
 --- !u!212 &1499499218
 SpriteRenderer:
@@ -9235,7 +9344,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 772696095}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -258.353}
 --- !u!212 &1557282921
 SpriteRenderer:
@@ -9355,8 +9464,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00030004978, y: 0.0051499605, z: 0}
-    m_Extent: {x: 3.4994001, y: 3.49655, z: 0}
+    m_Center: {x: -0.005100012, y: -0.0048999786, z: 0}
+    m_Extent: {x: 2.5033, y: 2.5025, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9364,7 +9473,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -9430,7 +9539,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1338554598}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &1600758851
 SpriteRenderer:
@@ -9515,7 +9624,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 136961314}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!212 &1601344115
 SpriteRenderer:
@@ -9635,8 +9744,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00090003014, y: -0.0015999079, z: 0}
-    m_Extent: {x: 3.0867, y: 3.0904999, z: 0}
+    m_Center: {x: 0.0044499636, y: -0.00074994564, z: 0}
+    m_Extent: {x: 3.0938501, y: 3.08855, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9794,7 +9903,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 453074358}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
 --- !u!212 &1605816802
 SpriteRenderer:
@@ -9879,7 +9988,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1571954401}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -108.353}
 --- !u!212 &1612191845
 SpriteRenderer:
@@ -9999,8 +10108,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00034999847, y: -0.003000021, z: 0}
-    m_Extent: {x: 3.50755, y: 3.4987, z: 0}
+    m_Center: {x: -0.002049923, y: 0.0072000027, z: 0}
+    m_Extent: {x: 3.49805, y: 3.4998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10193,8 +10302,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0009499788, y: 0.001850009, z: 0}
-    m_Extent: {x: 2.69845, y: 2.7045498, z: 0}
+    m_Center: {x: -0.00274992, y: 0.0066999197, z: 0}
+    m_Extent: {x: 2.70275, y: 2.7031999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10347,7 +10456,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 0.45
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: b1ffb8a8d7b2cd546d8215d48d735d6000000000
@@ -10364,8 +10473,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0022000074, y: -0.003000021, z: 0}
-    m_Extent: {x: 3.4936, y: 3.4951, z: 0}
+    m_Center: {x: 0.0041999817, y: -0.0029500723, z: 0}
+    m_Extent: {x: 3.5017, y: 3.5018501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10558,8 +10667,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0029000044, y: 0.00090003014, z: 0}
-    m_Extent: {x: 3.4973998, y: 3.4974, z: 0}
+    m_Center: {x: 0.0074999332, y: -0.0040500164, z: 0}
+    m_Extent: {x: 3.5014, y: 3.50415, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10703,8 +10812,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0022000074, y: 0.0017499924, z: 0}
-    m_Extent: {x: 3.4987998, y: 3.49865, z: 0}
+    m_Center: {x: 0.0014001131, y: -0.0040000677, z: 0}
+    m_Extent: {x: 3.4562001, y: 3.4495, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10712,7 +10821,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.95
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -10778,7 +10887,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 898729769}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -225}
 --- !u!212 &1842283145
 SpriteRenderer:
@@ -10926,6 +11035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884153545}
   - component: {fileID: 1884153546}
+  - component: {fileID: 1884153547}
   m_Layer: 0
   m_Name: lampOffLight (25)
   m_TagString: Untagged
@@ -10947,7 +11057,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2128562623}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 226302602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -225}
 --- !u!212 &1884153546
 SpriteRenderer:
@@ -11001,6 +11111,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1884153547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884153544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a51940c84deed4aa81ae480bec6104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lampLight2D: {fileID: 2128562624}
+  _time: 0.002
 --- !u!1 &1901678782
 GameObject:
   m_ObjectHideFlags: 0
@@ -11032,7 +11156,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838055508}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -170.35}
 --- !u!212 &1901678784
 SpriteRenderer:
@@ -11152,8 +11276,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0010999441, y: 0.00024998188, z: 0}
-    m_Extent: {x: 3.4966002, y: 3.4988499, z: 0}
+    m_Center: {x: -0.0013999939, y: -0.00395, z: 0}
+    m_Extent: {x: 3.5038, y: 3.49645, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11311,7 +11435,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1785151669}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -408.353}
 --- !u!212 &2013414412
 SpriteRenderer:
@@ -11431,8 +11555,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0041000843, y: -0.0036500692, z: 0}
-    m_Extent: {x: 2.7414, y: 2.74255, z: 0}
+    m_Center: {x: -0.00065004826, y: 0.003000021, z: 0}
+    m_Extent: {x: 2.7392502, y: 2.74, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11506,7 +11630,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1750596339}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
 --- !u!212 &2098796103
 SpriteRenderer:
@@ -11591,7 +11715,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1216571035}
-  m_Father: {fileID: 156898084}
+  m_Father: {fileID: 903951951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2100905357
 SpriteRenderer:
@@ -11711,8 +11835,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0065000057, y: 0.0059000254, z: 0}
-    m_Extent: {x: 3.5009, y: 3.5008001, z: 0}
+    m_Center: {x: -0.0030500889, y: 0.0042500496, z: 0}
+    m_Extent: {x: 2.49805, y: 2.49705, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11720,7 +11844,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -11821,8 +11945,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00034999847, y: -0.0033000708, z: 0}
-    m_Extent: {x: 3.49895, y: 3.5019999, z: 0}
+    m_Center: {x: -0.001349926, y: -0.0047000647, z: 0}
+    m_Extent: {x: 2.49755, y: 2.5017, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11830,7 +11954,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -11931,8 +12055,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0002501011, y: -0.0017999411, z: 0}
-    m_Extent: {x: 3.49825, y: 3.4973001, z: 0}
+    m_Center: {x: -0.0027000904, y: -0.0009999275, z: 0}
+    m_Extent: {x: 2.9842, y: 2.9863, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -11940,7 +12064,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 3
+  m_ShapeLightFalloffSize: 2.49
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -12041,8 +12165,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0012500286, y: -0.008299947, z: 0}
-    m_Extent: {x: 2.64555, y: 2.6392999, z: 0}
+    m_Center: {x: 0.0013999939, y: -0.0038000345, z: 0}
+    m_Extent: {x: 2.6463, y: 2.6419, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

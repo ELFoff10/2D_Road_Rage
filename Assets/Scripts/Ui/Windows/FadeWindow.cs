@@ -10,14 +10,6 @@ namespace Ui.Windows
     {
         [SerializeField]
         private List<DOTweenAnimation> _doTweenAnimations;
-        // [SerializeField]
-        // private DOTweenAnimation _doTweenAnimationFade;      
-        // [SerializeField]
-        // private DOTweenAnimation _doTweenAnimationCar;    
-        // [SerializeField]
-        // private DOTweenAnimation _doTweenAnimationRoad;    
-        // [SerializeField]
-        // private DOTweenAnimation _doTweenAnimationFillImage;
 
         private Action _fadeSceneDelegate;
 
