@@ -40,7 +40,7 @@ public class CarController : MonoBehaviour
 		switch (_coreStateMachine.LevelGameStateMachine.GameState.Value)
 		{
 			case GameStateEnum.None:
-			case GameStateEnum.PrePlay:
+			case GameStateEnum.TrainingCheckPoint1:
 			case GameStateEnum.CountDown:
 				return;
 		}

@@ -50,6 +50,12 @@ namespace UnityToolbarExtender.Examples
                 SceneHelper.OpenScene("Menu");
             }
 
+            if (GUILayout.Button(new GUIContent("TL", "Training level"), ToolbarStyles.CommandButtonStyle))
+            {
+                //SceneHelper.OpenLastLaunchScene();
+                SceneHelper.OpenScene("TrainingLevel");
+            }            
+
             if (GUILayout.Button(new GUIContent("1", "Level 1"), ToolbarStyles.CommandButtonStyle))
             {
                 //SceneHelper.OpenLastLaunchScene();

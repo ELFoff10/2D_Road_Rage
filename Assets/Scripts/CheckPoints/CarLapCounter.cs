@@ -15,6 +15,9 @@ public class CarLapCounter : MonoBehaviour
 	private readonly FMOD_Events _fmodEvents;
 
 	public event Action<CarLapCounter> OnPassCheckPoint;
+	public event Action<CarLapCounter> OnPassTrainigCheckPoint1;
+	public event Action<CarLapCounter> OnPassTrainigCheckPoint2;
+	public event Action<CarLapCounter> OnPassTrainigCheckPoint3;
 
 	private int _passedCheckPointNumber;
 	private float _timeAtLastPassedCheckPoint;
@@ -69,6 +72,19 @@ public class CarLapCounter : MonoBehaviour
 					{
 						_isRaceCompleted = true;
 					}
+				}
+
+				if (checkPoint.IsTrainingPause1)
+				{
+					OnPassTrainigCheckPoint1?.Invoke(this);
+				}			
+				if (checkPoint.IsTrainingPause2)
+				{
+					OnPassTrainigCheckPoint2?.Invoke(this);
+				}			
+				if (checkPoint.IsTrainingPause3)
+				{
+					OnPassTrainigCheckPoint3?.Invoke(this);
 				}
 
 				OnPassCheckPoint?.Invoke(this);

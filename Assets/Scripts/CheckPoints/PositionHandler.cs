@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using VContainer;
 
 public class PositionHandler : MonoBehaviour
 {
 	public List<CarLapCounter> CarLapCounters = new List<CarLapCounter>();
 	private LeaderBoardUIHandler _leaderBoardUIHandler;
+	[Inject]
+	private ICoreStateMachine _coreStateMachine;
 
 	private void Start()
 	{
@@ -15,6 +18,9 @@ public class PositionHandler : MonoBehaviour
 		foreach (CarLapCounter lapCounters in CarLapCounters)
 		{
 			lapCounters.OnPassCheckPoint += OnPassCheckPoint;
+			lapCounters.OnPassTrainigCheckPoint1 += OnPassTrainingCheckPoint1;
+			lapCounters.OnPassTrainigCheckPoint2 += OnPassTrainingCheckPoint2;
+			lapCounters.OnPassTrainigCheckPoint3 += OnPassTrainingCheckPoint3;
 		}
 
 		_leaderBoardUIHandler = FindObjectOfType<LeaderBoardUIHandler>();
@@ -22,6 +28,15 @@ public class PositionHandler : MonoBehaviour
 		if (_leaderBoardUIHandler != null)
 		{
 			_leaderBoardUIHandler.UpdateList(CarLapCounters);
+		}
+	}
+
+	private void OnDestroy()
+	{
+		foreach (CarLapCounter lapCounters in CarLapCounters)
+		{
+			lapCounters.OnPassCheckPoint -= OnPassCheckPoint;
+			lapCounters.OnPassTrainigCheckPoint1 -= OnPassTrainingCheckPoint1;
 		}
 	}
 
@@ -41,5 +56,18 @@ public class PositionHandler : MonoBehaviour
 		{
 			_leaderBoardUIHandler.UpdateList(CarLapCounters);
 		}
+	}
+
+	private void OnPassTrainingCheckPoint1(CarLapCounter carLapCounter)
+	{
+		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.TrainingCheckPoint1);
+	}	
+	private void OnPassTrainingCheckPoint2(CarLapCounter carLapCounter)
+	{
+		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.TrainingCheckPoint2);
+	}	
+	private void OnPassTrainingCheckPoint3(CarLapCounter carLapCounter)
+	{
+		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.TrainingCheckPoint3);
 	}
 }

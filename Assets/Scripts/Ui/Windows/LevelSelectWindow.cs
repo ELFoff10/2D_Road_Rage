@@ -7,8 +7,9 @@ public class LevelSelectWindow : Window
 {
 	[SerializeField]
 	private UiButton _backButton;
+
 	[SerializeField]
-	private UiButton _level1Button, _level2Button, _level3Button, _level4Button, _level5Button;
+	private UiButton _trainingLevelButton, _level1Button, _level2Button, _level4Button, _level5Button;
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
@@ -20,9 +21,9 @@ public class LevelSelectWindow : Window
 	{
 		base.OnActivate();
 		_backButton.OnClick += OnBackButton;
+		_trainingLevelButton.OnClick += OnTrainingLevelButton;
 		_level1Button.OnClick += OnLevel1Button;
 		_level2Button.OnClick += OnLevel2Button;
-		_level3Button.OnClick += OnLevel3Button;
 		_level4Button.OnClick += OnLevel4Button;
 		_level5Button.OnClick += OnLevel5Button;
 	}
@@ -31,9 +32,9 @@ public class LevelSelectWindow : Window
 	{
 		base.OnDeactivate();
 		_backButton.OnClick -= OnBackButton;
+		_trainingLevelButton.OnClick -= OnTrainingLevelButton;
 		_level1Button.OnClick -= OnLevel1Button;
 		_level2Button.OnClick -= OnLevel2Button;
-		_level3Button.OnClick -= OnLevel3Button;
 		_level4Button.OnClick -= OnLevel4Button;
 		_level5Button.OnClick -= OnLevel5Button;
 		_coreStateMachine.SceneEndLoad -= OnSceneEndLoad;
@@ -44,7 +45,12 @@ public class LevelSelectWindow : Window
 		_manager.Hide<LevelSelectWindow>();
 		_manager.Show<CarSelectWindow>();
 	}
-
+	
+	private void OnTrainingLevelButton()
+	{
+		LoadLevel(ScenesStateEnum.TrainingLevel);
+	}
+	
 	private void OnLevel1Button()
 	{
 		LoadLevel(ScenesStateEnum.Level1);
@@ -55,10 +61,6 @@ public class LevelSelectWindow : Window
 		LoadLevel(ScenesStateEnum.Level2);
 	}
 
-	private void OnLevel3Button()
-	{
-		LoadLevel(ScenesStateEnum.Level3);
-	}
 
 	private void OnLevel4Button()
 	{

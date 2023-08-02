@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3112793098316017391}
   - component: {fileID: 9103306457894943336}
   - component: {fileID: 2741227745955412812}
+  - component: {fileID: 3861129333816522716}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2571465402840432720}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.290444, y: -42.06216, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -405,3 +406,15 @@ PolygonCollider2D:
       - {x: 0.034914065, y: -0.45996878}
       - {x: 0.049648438, y: -0.4535625}
   m_UseDelaunayMesh: 0
+--- !u!114 &3861129333816522716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2571465402840432720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c403f68e0a13843a9d700d9f65edb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

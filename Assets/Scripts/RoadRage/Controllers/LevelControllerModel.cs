@@ -40,8 +40,7 @@ public class LevelControllerModel : IInitializable, IDisposable
 				_windowManager.Show<BackgroundMenuWindow>();
 				_windowManager.Show<MainMenuWindow>();
 				break;
-			case GameStateEnum.PrePlay:
-				// TODO: Educational game level
+			case GameStateEnum.TrainingCheckPoint1:
 				break;
 			case GameStateEnum.CountDown:
 				_windowManager.Hide<BackgroundMenuWindow>();
@@ -54,8 +53,6 @@ public class LevelControllerModel : IInitializable, IDisposable
 				break;
 			case GameStateEnum.RaceOver:
 				break;
-			default:
-				throw new ArgumentOutOfRangeException(nameof(gameState), gameState, null);
 		}
 	}
 
