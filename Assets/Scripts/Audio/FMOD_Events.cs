@@ -23,4 +23,8 @@ public class FMOD_Events : MonoBehaviour
 
 	[field: SerializeField]
 	public EventReference CarHit { get; private set; }
+
+	[field: Header("Other")]
+	[field: SerializeField]
+	public EventReference Finish { get; private set; }
 }

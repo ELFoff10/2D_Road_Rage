@@ -8,16 +8,7 @@ public class LevelSelectWindow : Window
 	[SerializeField]
 	private UiButton _backButton;
 	[SerializeField]
-	private UiButton _level1Button;
-	[SerializeField]
-	private UiButton _level2Button;
-	[SerializeField]
-	private UiButton _level3Button;
-	[SerializeField]
-	private UiButton _level4Button;
-	[SerializeField]
-	private UiButton _level5Button;
-
+	private UiButton _level1Button, _level2Button, _level3Button, _level4Button, _level5Button;
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
@@ -57,31 +48,26 @@ public class LevelSelectWindow : Window
 	private void OnLevel1Button()
 	{
 		LoadLevel(ScenesStateEnum.Level1);
-		_coreStateMachine.SetScenesState(ScenesStateEnum.Level1);
 	}
 
 	private void OnLevel2Button()
 	{
 		LoadLevel(ScenesStateEnum.Level2);
-		_coreStateMachine.SetScenesState(ScenesStateEnum.Level2);
 	}
 
 	private void OnLevel3Button()
 	{
 		LoadLevel(ScenesStateEnum.Level3);
-		_coreStateMachine.SetScenesState(ScenesStateEnum.Level3);
 	}
 
 	private void OnLevel4Button()
 	{
 		LoadLevel(ScenesStateEnum.Level4);
-		_coreStateMachine.SetScenesState(ScenesStateEnum.Level4);
 	}
 
 	private void OnLevel5Button()
 	{
 		LoadLevel(ScenesStateEnum.Level5);
-		_coreStateMachine.SetScenesState(ScenesStateEnum.Level5);
 	}
 
 	private void LoadLevel(ScenesStateEnum scenesStateEnum)
