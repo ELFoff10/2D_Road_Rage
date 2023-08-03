@@ -720,6 +720,10 @@ PrefabInstance:
       propertyPath: endValueFloat
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 2570907342545824478, guid: 4af81533e076c234ca34159a3f3d6d40, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.5771484
+      objectReference: {fileID: 0}
     - target: {fileID: 4789475566493432126, guid: 4af81533e076c234ca34159a3f3d6d40, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
