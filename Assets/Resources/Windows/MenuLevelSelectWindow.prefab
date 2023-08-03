@@ -726,7 +726,7 @@ MonoBehaviour:
   _trainingLevelButton: {fileID: 1410834847306097184}
   _level1Button: {fileID: 2573060534918940878}
   _level2Button: {fileID: 713413456415316738}
-  _level3Button: {fileID: 0}
+  _level3Button: {fileID: 1922259364835205619}
   _level4Button: {fileID: 1922259364835205619}
   _level5Button: {fileID: 4223936315497698947}
 --- !u!1 &3733362569738093915

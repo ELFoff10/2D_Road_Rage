@@ -288,7 +288,7 @@ MonoBehaviour:
   IsTrainingPause1: 0
   IsTrainingPause2: 0
   IsTrainingPause3: 0
-  CheckPointNumber: 3
+  CheckPointNumber: 4
 --- !u!61 &280094321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08123994, y: 0}
+  m_Offset: {x: 0.1776675, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -332,7 +332,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3161435, y: 1.98}
+  m_Size: {x: 5.6786213, y: 1.98}
   m_EdgeRadius: 0
 --- !u!212 &280094322
 SpriteRenderer:
@@ -528,7 +528,7 @@ Transform:
   m_GameObject: {fileID: 552768310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.25, y: -9.630001, z: 0}
+  m_LocalPosition: {x: -0.75, y: 58.37, z: 0}
   m_LocalScale: {x: 4, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -583,7 +583,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010343552, y: 0}
+  m_Offset: {x: 0.8704301, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -594,7 +594,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9652872, y: 1.98}
+  m_Size: {x: 6.6862335, y: 1.98}
   m_EdgeRadius: 0
 --- !u!212 &552768314
 SpriteRenderer:
@@ -699,6 +699,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 752225739}
+  - {fileID: 6911566924654518432}
 --- !u!4 &571636114
 Transform:
   m_ObjectHideFlags: 0
@@ -739,7 +740,7 @@ Transform:
   m_GameObject: {fileID: 648236683}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.98, y: -24.35, z: 0}
+  m_LocalPosition: {x: -2.98, y: -24.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -797,6 +798,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoints:
   - {fileID: 592353772589873485}
+  - {fileID: 1518634495}
+  - {fileID: 276250494}
+  - {fileID: 1730144181}
+  - {fileID: 648236683}
+  - {fileID: 1706418590}
 --- !u!114 &797061749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,7 +1014,7 @@ Transform:
   m_GameObject: {fileID: 942879895}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.75, y: 9.369999, z: 0}
+  m_LocalPosition: {x: 1.25, y: 28.619999, z: 0}
   m_LocalScale: {x: 4, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1030,7 +1036,7 @@ MonoBehaviour:
   IsTrainingPause1: 0
   IsTrainingPause2: 0
   IsTrainingPause3: 0
-  CheckPointNumber: 3
+  CheckPointNumber: 2
 --- !u!61 &942879898
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1063,7 +1069,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010343552, y: 0}
+  m_Offset: {x: -0.30462742, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1074,7 +1080,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9652872, y: 1.98}
+  m_Size: {x: 5.70858, y: 1.98}
   m_EdgeRadius: 0
 --- !u!212 &942879899
 SpriteRenderer:
@@ -1267,7 +1273,7 @@ Transform:
   m_GameObject: {fileID: 1518634495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.99, y: -24.35, z: 0}
+  m_LocalPosition: {x: 4.99, y: -24.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1298,7 +1304,7 @@ Transform:
   m_GameObject: {fileID: 1706418590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.97, y: -24.35, z: 0}
+  m_LocalPosition: {x: -5.2200003, y: -24.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1398,7 +1404,7 @@ Transform:
   m_GameObject: {fileID: 2050216857}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.25, y: -6.130001, z: 0}
+  m_LocalPosition: {x: 0.5, y: -19.630001, z: 0}
   m_LocalScale: {x: 4, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1420,7 +1426,7 @@ MonoBehaviour:
   IsTrainingPause1: 0
   IsTrainingPause2: 0
   IsTrainingPause3: 0
-  CheckPointNumber: 3
+  CheckPointNumber: 1
 --- !u!61 &2050216860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1453,7 +1459,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010343552, y: 0}
+  m_Offset: {x: -0.08241624, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1464,7 +1470,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9652872, y: 1.98}
+  m_Size: {x: 2.5658932, y: 1.98}
   m_EdgeRadius: 0
 --- !u!212 &2050216861
 SpriteRenderer:
