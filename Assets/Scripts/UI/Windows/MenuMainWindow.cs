@@ -1,7 +1,7 @@
 ﻿using Tools.UiManager;
 using UnityEngine;
 
-public class MainMenuWindow : Window
+public class MenuMainWindow : Window
 {
 	[SerializeField]
 	private UiButton _playButton;
@@ -35,20 +35,20 @@ public class MainMenuWindow : Window
 
 	private void OnPlayButton()
 	{
-		_manager.Hide<MainMenuWindow>();
-		_manager.Show<CarSelectWindow>();
+		_manager.Hide<MenuMainWindow>();
+		_manager.Show<MenuCarSelectWindow>();
 	}
 
 	private void OnStatusButton()
 	{
-		_manager.Hide<MainMenuWindow>();
-		_manager.Show<StatusWindow>();
+		_manager.Hide<MenuMainWindow>();
+		_manager.Show<MenuStatusWindow>();
 	}
 
 	private void OnOptionsButton()
 	{
-		_manager.Hide<MainMenuWindow>();
-		_manager.Show<OptionsWindow>();
+		_manager.Hide<MenuMainWindow>();
+		_manager.Show<MenuOptionsWindow>();
 	}
 
 	private void OnQuitButton()

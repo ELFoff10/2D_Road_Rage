@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
 		CreateInstance(_fmodEvents.CarEngine);
 		CreateInstance(_fmodEvents.CarSkid);
 		CreateInstance(_fmodEvents.CarHit);
+		CreateInstance(_fmodEvents.Finish);
 
 		EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 	}

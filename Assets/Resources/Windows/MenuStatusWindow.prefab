@@ -1002,7 +1002,7 @@ GameObject:
   - component: {fileID: 6343973023826029782}
   - component: {fileID: 3655958726687382257}
   m_Layer: 5
-  m_Name: StatusWindow
+  m_Name: MenuStatusWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,7 +2,7 @@
 using UnityEngine;
 
 
-public class CarSelectWindow : Window
+public class MenuCarSelectWindow : Window
 {
 	[SerializeField]
 	private UiButton _backButton;
@@ -33,14 +33,14 @@ public class CarSelectWindow : Window
 
 	private void OnBackButton()
 	{
-		_manager.Hide<CarSelectWindow>();
-		_manager.Show<MainMenuWindow>();
+		_manager.Hide<MenuCarSelectWindow>();
+		_manager.Show<MenuMainWindow>();
 	}
 
 	private void OnSelectButton()
 	{
-		_manager.Hide<CarSelectWindow>();
-		_manager.Show<LevelSelectWindow>();
+		_manager.Hide<MenuCarSelectWindow>();
+		_manager.Show<MenuLevelSelectWindow>();
 	}
 
 	private void OnLeftButton()

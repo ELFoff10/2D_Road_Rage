@@ -3,21 +3,21 @@ using System.Collections;
 using Enums;
 using UnityEngine;
 using VContainer;
+using Debug = FMOD.Debug;
 
 public class CarLapCounter : MonoBehaviour
 {
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
-	
 	[Inject]
 	private readonly AudioManager _audioManager;
 	[Inject]
 	private readonly FMOD_Events _fmodEvents;
 
 	public event Action<CarLapCounter> OnPassCheckPoint;
-	public event Action<CarLapCounter> OnPassTrainigCheckPoint1;
-	public event Action<CarLapCounter> OnPassTrainigCheckPoint2;
-	public event Action<CarLapCounter> OnPassTrainigCheckPoint3;
+	public event Action<CarLapCounter> OnPassTrainingCheckPoint1;
+	public event Action<CarLapCounter> OnPassTrainingCheckPoint2;
+	public event Action<CarLapCounter> OnPassTrainingCheckPoint3;
 
 	private int _passedCheckPointNumber;
 	private float _timeAtLastPassedCheckPoint;
@@ -76,15 +76,15 @@ public class CarLapCounter : MonoBehaviour
 
 				if (checkPoint.IsTrainingPause1)
 				{
-					OnPassTrainigCheckPoint1?.Invoke(this);
+					OnPassTrainingCheckPoint1?.Invoke(this);
 				}			
 				if (checkPoint.IsTrainingPause2)
 				{
-					OnPassTrainigCheckPoint2?.Invoke(this);
+					OnPassTrainingCheckPoint2?.Invoke(this);
 				}			
 				if (checkPoint.IsTrainingPause3)
 				{
-					OnPassTrainigCheckPoint3?.Invoke(this);
+					OnPassTrainingCheckPoint3?.Invoke(this);
 				}
 
 				OnPassCheckPoint?.Invoke(this);
@@ -95,7 +95,7 @@ public class CarLapCounter : MonoBehaviour
 
 					if (CompareTag("Player"))
 					{
-						_audioManager.PlayOneShot(_fmodEvents.Finish);
+						_audioManager.EventInstances[(int)AudioNameEnum.Finish].start();
 						_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
 						GetComponent<CarInputHandler>().enabled = false;
 						GetComponent<CarAIHandler>().enabled = true;

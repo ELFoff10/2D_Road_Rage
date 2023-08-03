@@ -13,15 +13,15 @@ public class MenuSceneController : MonoBehaviour
 	private void OnEnable()
 	{
 		_coreStateMachine.SceneEndLoadFade += OnSceneEndLoadFade;
-		_windowManager.Show<MainMenuWindow>();
-		_windowManager.Show<BackgroundMenuWindow>(WindowPriority.Bg);
+		_windowManager.Show<MenuMainWindow>();
+		_windowManager.Show<MenuBackgroundWindow>(WindowPriority.Bg);
 	}
 
 	private void OnDisable()
 	{
 		_coreStateMachine.SceneEndLoadFade -= OnSceneEndLoadFade;
-		_windowManager.Hide<MainMenuWindow>();
-		_windowManager.Hide<BackgroundMenuWindow>();
+		_windowManager.Hide<MenuMainWindow>();
+		_windowManager.Hide<MenuBackgroundWindow>();
 	}
 
 	private void OnSceneEndLoadFade(ScenesStateEnum scenesStateEnum)

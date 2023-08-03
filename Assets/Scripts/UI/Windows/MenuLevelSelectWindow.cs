@@ -3,13 +3,12 @@ using Tools.UiManager;
 using UnityEngine;
 using VContainer;
 
-public class LevelSelectWindow : Window
+public class MenuLevelSelectWindow : Window
 {
 	[SerializeField]
 	private UiButton _backButton;
-
 	[SerializeField]
-	private UiButton _trainingLevelButton, _level1Button, _level2Button, _level4Button, _level5Button;
+	private UiButton _trainingLevelButton, _level1Button, _level2Button, _level3Button, _level4Button, _level5Button;
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
@@ -24,6 +23,7 @@ public class LevelSelectWindow : Window
 		_trainingLevelButton.OnClick += OnTrainingLevelButton;
 		_level1Button.OnClick += OnLevel1Button;
 		_level2Button.OnClick += OnLevel2Button;
+		_level3Button.OnClick += OnLevel3Button;
 		_level4Button.OnClick += OnLevel4Button;
 		_level5Button.OnClick += OnLevel5Button;
 	}
@@ -35,6 +35,7 @@ public class LevelSelectWindow : Window
 		_trainingLevelButton.OnClick -= OnTrainingLevelButton;
 		_level1Button.OnClick -= OnLevel1Button;
 		_level2Button.OnClick -= OnLevel2Button;
+		_level3Button.OnClick -= OnLevel3Button;
 		_level4Button.OnClick -= OnLevel4Button;
 		_level5Button.OnClick -= OnLevel5Button;
 		_coreStateMachine.SceneEndLoad -= OnSceneEndLoad;
@@ -42,8 +43,8 @@ public class LevelSelectWindow : Window
 
 	private void OnBackButton()
 	{
-		_manager.Hide<LevelSelectWindow>();
-		_manager.Show<CarSelectWindow>();
+		_manager.Hide<MenuLevelSelectWindow>();
+		_manager.Show<MenuCarSelectWindow>();
 	}
 	
 	private void OnTrainingLevelButton()
@@ -60,7 +61,11 @@ public class LevelSelectWindow : Window
 	{
 		LoadLevel(ScenesStateEnum.Level2);
 	}
-
+	
+	private void OnLevel3Button()
+	{
+		LoadLevel(ScenesStateEnum.Level3);
+	}
 
 	private void OnLevel4Button()
 	{

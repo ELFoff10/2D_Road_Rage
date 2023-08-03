@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 1867329635927621513}
   - component: {fileID: 462673035599847326}
   m_Layer: 5
-  m_Name: CarSelectWindow
+  m_Name: MenuCarSelectWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -18,9 +18,9 @@ public class PositionHandler : MonoBehaviour
 		foreach (CarLapCounter lapCounters in CarLapCounters)
 		{
 			lapCounters.OnPassCheckPoint += OnPassCheckPoint;
-			lapCounters.OnPassTrainigCheckPoint1 += OnPassTrainingCheckPoint1;
-			lapCounters.OnPassTrainigCheckPoint2 += OnPassTrainingCheckPoint2;
-			lapCounters.OnPassTrainigCheckPoint3 += OnPassTrainingCheckPoint3;
+			lapCounters.OnPassTrainingCheckPoint1 += OnPassTrainingCheckPoint1;
+			lapCounters.OnPassTrainingCheckPoint2 += OnPassTrainingCheckPoint2;
+			lapCounters.OnPassTrainingCheckPoint3 += OnPassTrainingCheckPoint3;
 		}
 
 		_leaderBoardUIHandler = FindObjectOfType<LeaderBoardUIHandler>();
@@ -36,7 +36,7 @@ public class PositionHandler : MonoBehaviour
 		foreach (CarLapCounter lapCounters in CarLapCounters)
 		{
 			lapCounters.OnPassCheckPoint -= OnPassCheckPoint;
-			lapCounters.OnPassTrainigCheckPoint1 -= OnPassTrainingCheckPoint1;
+			lapCounters.OnPassTrainingCheckPoint1 -= OnPassTrainingCheckPoint1;
 		}
 	}
 

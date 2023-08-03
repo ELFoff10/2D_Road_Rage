@@ -140,13 +140,13 @@ public class CarController : MonoBehaviour
 
 	private IEnumerator AddSpeedCoroutine()
 	{
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(3f);
 		_maxSpeed = _defaultMaxSpeed;
 	}
 
 	private IEnumerator SlowSpeedCoroutine()
 	{
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(3f);
 		_maxSpeed = _defaultMaxSpeed;
 	}
 

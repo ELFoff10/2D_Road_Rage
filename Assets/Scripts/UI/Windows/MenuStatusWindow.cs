@@ -1,7 +1,7 @@
 ﻿using Tools.UiManager;
 using UnityEngine;
 
-public class OptionsWindow : Window
+public class MenuStatusWindow : Window
 {
 	[SerializeField]
 	private UiButton _backButton;
@@ -20,7 +20,7 @@ public class OptionsWindow : Window
 
 	private void OnBackButton()
 	{
-		_manager.Hide<OptionsWindow>();
-		_manager.Show<MainMenuWindow>();
+		_manager.Hide<MenuStatusWindow>();
+		_manager.Show<MenuMainWindow>();
 	}
 }
