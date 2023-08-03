@@ -23,6 +23,8 @@ public class GameTrainingLevelWindow : Window
 	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
 	[SerializeField]
+	private CongratulationPanel _congratulationPanel;
+	[SerializeField]
 	private TMP_Text _trainingTextLeft1;
 	[SerializeField]
 	private TMP_Text _trainingTextLeft2;
@@ -30,8 +32,6 @@ public class GameTrainingLevelWindow : Window
 	private TMP_Text _trainingTextRight1;
 	[SerializeField]
 	private TMP_Text _trainingTextRight2;
-	[SerializeField]
-	private GameObject _congratulationPanel;
 	[SerializeField]
 	private TMP_Text _trainingHeaderText;
 

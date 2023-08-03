@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2046272051963758416}
   - component: {fileID: 1017420666985171119}
   m_Layer: 0
-  m_Name: Fade
+  m_Name: FadeImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 8546204036345920045}
   - component: {fileID: 6492244450503819699}
   m_Layer: 0
-  m_Name: Car
+  m_Name: CarImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1414,7 +1414,7 @@ GameObject:
   - component: {fileID: 2524394503367124958}
   - component: {fileID: 8501494761353888651}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: LoadingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1766,7 +1766,7 @@ GameObject:
   - component: {fileID: 8614201754777639097}
   - component: {fileID: 2947520491180822457}
   m_Layer: 0
-  m_Name: Road
+  m_Name: RoadImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

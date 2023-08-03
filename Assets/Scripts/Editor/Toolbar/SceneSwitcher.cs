@@ -36,6 +36,7 @@ namespace UnityToolbarExtender.Examples
             {
                 //SceneHelper.OpenLastLaunchScene();
                 SceneHelper.StartScene("Base");
+                
             }
             
             if (GUILayout.Button(new GUIContent("BA", "Base"), ToolbarStyles.CommandButtonStyle))
