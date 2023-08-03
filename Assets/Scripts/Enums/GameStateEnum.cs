@@ -1,7 +1,9 @@
 public enum GameStateEnum
 {
     None,
-    PrePlay,
+    TrainingCheckPoint1,
+    TrainingCheckPoint2,
+    TrainingCheckPoint3,
     CountDown,
     Play,
     RaceOver,

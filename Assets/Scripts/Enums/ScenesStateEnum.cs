@@ -1,6 +1,7 @@
 ﻿public enum ScenesStateEnum
 {
     Base,
+    TrainingLevel,
     Level1,
     Level2,
     Level3,

@@ -7,13 +7,14 @@ using VContainer.Unity;
 
 public class ScenesControllerModel : IInitializable
 {
-	private ScenesStateEnum _scene = ScenesStateEnum.Base;
 	[Inject]
 	private readonly IMultiSceneManager _multiSceneManager;
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
 	private readonly IWindowManager _windowManager;
+	
+	private ScenesStateEnum _scene = ScenesStateEnum.Base;
 
 	public void Initialize()
 	{
