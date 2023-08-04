@@ -1,8 +1,8 @@
-﻿using RoadRage.MultiScene;
+﻿using System;
+using RoadRage.MultiScene;
 using Tools.UiManager;
 using UnityEngine;
 using VContainer;
-
 
 public class GameInstance : MonoBehaviour
 {
@@ -19,12 +19,15 @@ public class GameInstance : MonoBehaviour
 
 	private void Awake()
 	{
-		
-		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 		// Time.timeScale = 10f;
 		DontDestroyOnLoad(this);
 		RegServices();
 		SetupFrameTimes();
+	}
+
+	private void Start()
+	{
+		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 	}
 
 	private async void RegServices()

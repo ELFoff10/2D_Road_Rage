@@ -8,15 +8,12 @@ public class LeaderBoardUIHandler : MonoBehaviour
 {
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
-
 	[SerializeField]
 	private GameObject _leaderBoardItemPrefab;
-
-	private SetLeaderBoardItemInfo[] _setLeaderBoardItemInfo;
-
-	private bool _isInitialized;
-
 	public Canvas Canvas;
+	
+	private SetLeaderBoardItemInfo[] _setLeaderBoardItemInfo;
+	private bool _isInitialized;
 
 	private void Awake()
 	{
@@ -26,15 +23,15 @@ public class LeaderBoardUIHandler : MonoBehaviour
 
 	private void Start()
 	{
-		VerticalLayoutGroup leaderBoardLayoutGroup = GetComponentInChildren<VerticalLayoutGroup>();
+		var leaderBoardLayoutGroup = GetComponentInChildren<VerticalLayoutGroup>();
 
-		CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
+		var carLapCounterArray = FindObjectsOfType<CarLapCounter>();
 
 		_setLeaderBoardItemInfo = new SetLeaderBoardItemInfo[carLapCounterArray.Length];
 
-		for (int i = 0; i < carLapCounterArray.Length; i++)
+		for (var i = 0; i < carLapCounterArray.Length; i++)
 		{
-			GameObject leaderBoardInfoGameObject =
+			var leaderBoardInfoGameObject =
 				Instantiate(_leaderBoardItemPrefab, leaderBoardLayoutGroup.transform);
 
 			_setLeaderBoardItemInfo[i] = leaderBoardInfoGameObject.GetComponent<SetLeaderBoardItemInfo>();
@@ -52,19 +49,6 @@ public class LeaderBoardUIHandler : MonoBehaviour
 		Canvas.enabled = false;
 	}
 
-	// private void Update()
-	// {
-	// 	OnGameStateChanged();
-	// }
-	//
-	// private void OnGameStateChanged()
-	// {
-	// 	if (_coreStateMachine.LevelGameStateMachine.GameState.Value == GameStateEnum.RaceOver)
-	// 	{
-	// 		_canvas.enabled = true;
-	// 	}
-	// }
-
 	public void UpdateList(List<CarLapCounter> lapCounters)
 	{
 		if (!_isInitialized)
@@ -72,7 +56,7 @@ public class LeaderBoardUIHandler : MonoBehaviour
 			return;
 		}
 
-		for (int i = 0; i < lapCounters.Count; i++)
+		for (var i = 0; i < lapCounters.Count; i++)
 		{
 			_setLeaderBoardItemInfo[i].SetDriverNameText(lapCounters[i].gameObject.name);
 		}

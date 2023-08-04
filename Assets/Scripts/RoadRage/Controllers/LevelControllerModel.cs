@@ -1,7 +1,5 @@
 using System;
-using FMOD;
 using Tools.UiManager;
-using Ui.Windows;
 using UniRx;
 using VContainer.Unity;
 
@@ -85,7 +83,7 @@ public class LevelControllerModel : IInitializable, IDisposable
 	private void OnSceneEndLoad(ScenesStateEnum scenesStateEnum)
 	{
 		_coreStateMachine.SceneEndLoadFade -= OnSceneEndLoad;
-		// _coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.CountDown);
+		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.CountDown);
 	}
 
 	#endregion

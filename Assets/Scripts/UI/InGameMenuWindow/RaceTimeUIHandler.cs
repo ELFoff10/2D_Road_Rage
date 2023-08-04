@@ -56,8 +56,8 @@ public class RaceTimeUIHandler : MonoBehaviour
 
 	private void SetLabel(int value)
 	{
-		int raceTimeMinutes = (int)Mathf.Floor(value / 60);
-		int raceTimeSeconds = (int)Mathf.Floor(value % 60);
+		var raceTimeMinutes = (int)Mathf.Floor(value / 60);
+		var raceTimeSeconds = (int)Mathf.Floor(value % 60);
 
 		_timeText.text = $"{raceTimeMinutes.ToString("00")}:{raceTimeSeconds.ToString("00")}";
 	}
