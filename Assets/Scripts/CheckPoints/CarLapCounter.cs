@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
-using Enums;
 using UnityEngine;
 using VContainer;
-using Debug = FMOD.Debug;
 
 public class CarLapCounter : MonoBehaviour
 {
@@ -46,86 +44,78 @@ public class CarLapCounter : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag("CheckPoint"))
+		if (!collision.CompareTag("CheckPoint")) return;
+
+		if (_isRaceCompleted)
 		{
-			if (_isRaceCompleted == true)
+			return;
+		}
+
+		var checkPoint = collision.GetComponent<CheckPoint>();
+
+		if (_passedCheckPointNumber + 1 != checkPoint.CheckPointNumber) return;
+
+		_passedCheckPointNumber = checkPoint.CheckPointNumber;
+
+		_numberOfPassedCheckPoints++;
+
+		_timeAtLastPassedCheckPoint = Time.time;
+
+		if (checkPoint.IsFinishLine)
+		{
+			_passedCheckPointNumber = 0;
+			_lapsCompleted++;
+
+			if (_lapsCompleted >= LapsToComplete)
 			{
-				return;
+				_isRaceCompleted = true;
 			}
+		}
 
-			CheckPoint checkPoint = collision.GetComponent<CheckPoint>();
+		if (checkPoint.IsTrainingPause1)
+		{
+			OnPassTrainingCheckPoint1?.Invoke(this);
+		}
 
-			if (_passedCheckPointNumber + 1 == checkPoint.CheckPointNumber)
-			{
-				_passedCheckPointNumber = checkPoint.CheckPointNumber;
+		if (checkPoint.IsTrainingPause2)
+		{
+			OnPassTrainingCheckPoint2?.Invoke(this);
+		}
 
-				_numberOfPassedCheckPoints++;
+		if (checkPoint.IsTrainingPause3)
+		{
+			OnPassTrainingCheckPoint3?.Invoke(this);
+		}
 
-				_timeAtLastPassedCheckPoint = Time.time;
+		OnPassCheckPoint?.Invoke(this);
 
-				if (checkPoint.IsFinishLine)
-				{
-					_passedCheckPointNumber = 0;
-					_lapsCompleted++;
+		if (_isRaceCompleted == true)
+		{
+			StartCoroutine(ShowPositionCo(300));
 
-					if (_lapsCompleted >= LapsToComplete)
-					{
-						_isRaceCompleted = true;
-					}
-				}
+			if (!CompareTag("Player")) return;
 
-				if (checkPoint.IsTrainingPause1)
-				{
-					OnPassTrainingCheckPoint1?.Invoke(this);
-				}			
-				if (checkPoint.IsTrainingPause2)
-				{
-					OnPassTrainingCheckPoint2?.Invoke(this);
-				}			
-				if (checkPoint.IsTrainingPause3)
-				{
-					OnPassTrainingCheckPoint3?.Invoke(this);
-				}
-
-				OnPassCheckPoint?.Invoke(this);
-
-				if (_isRaceCompleted == true)
-				{
-					StartCoroutine(ShowPositionCO(300));
-
-					if (CompareTag("Player"))
-					{
-						_audioManager.EventInstances[(int)AudioNameEnum.Finish].start();
-						_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
-						GetComponent<CarInputHandler>().enabled = false;
-						GetComponent<CarAIHandler>().enabled = true;
-					}
-				}
-				else if (checkPoint.IsFinishLine)
-				{
-					StartCoroutine(ShowPositionCO(1.5f));
-				}
-			}
+			_audioManager.EventInstances[(int)AudioNameEnum.Finish].start();
+			_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
+			GetComponent<CarInputHandler>().enabled = false;
+			GetComponent<CarAIHandler>().enabled = true;
+		}
+		else if (checkPoint.IsFinishLine)
+		{
+			StartCoroutine(ShowPositionCo(1.5f));
 		}
 	}
 
-	IEnumerator ShowPositionCO(float delayUntilHidePosition)
+	private IEnumerator ShowPositionCo(float delayUntilHidePosition)
 	{
 		_hideUIDelayTime += delayUntilHidePosition;
 
-		// _carPositionText.text = _carPosition.ToString();
-		//
-		// _carPositionText.gameObject.SetActive(true);
+		if (_isHideRoutineRunning) yield break;
 
-		if (!_isHideRoutineRunning)
-		{
-			_isHideRoutineRunning = true;
+		_isHideRoutineRunning = true;
 
-			yield return new WaitForSeconds(_hideUIDelayTime);
+		yield return new WaitForSeconds(_hideUIDelayTime);
 
-			// _carPositionText.gameObject.SetActive(false);
-
-			_isHideRoutineRunning = false;
-		}
+		_isHideRoutineRunning = false;
 	}
 }

@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-public class PowerupStats : Powerup
+public class PowerUpStats : Powerup
 {
     private enum EffectType
     {
@@ -24,6 +25,8 @@ public class PowerupStats : Powerup
             case EffectType.SlowSpeed:
                 car.SlowSpeed(_value);
                 break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
 }

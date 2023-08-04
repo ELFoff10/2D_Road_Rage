@@ -29,7 +29,7 @@ public class UiButton : UIBehaviour
 
 	private void OnButtonClick()
 	{
-		_audioManager.PlayOneShot(_fmodEvents.ClickButton);
+		AudioManager.PlayOneShot(_fmodEvents.ClickButton);
 		_doTweenAnimation.DORestart();
 		_doTweenAnimation.DOPlay();
 		_button.interactable = false;

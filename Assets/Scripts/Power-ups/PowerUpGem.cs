@@ -1,4 +1,4 @@
-public class PowerupСrystals : Powerup
+public class PowerUpGem : Powerup
 {
     protected override void OnPickedUp(CarController car)
     {

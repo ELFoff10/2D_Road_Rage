@@ -14,9 +14,13 @@ public class GameInstance : MonoBehaviour
 	private readonly IWindowManager _windowManager;
 	[Inject]
 	private readonly DataCentralService _dataCentralService;
+	[Inject]
+	private readonly AudioManager _audioManager;
 
 	private void Awake()
 	{
+		
+		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 		// Time.timeScale = 10f;
 		DontDestroyOnLoad(this);
 		RegServices();
@@ -32,5 +36,5 @@ public class GameInstance : MonoBehaviour
 		_coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
 	}
 
-	private void SetupFrameTimes() => Application.targetFrameRate = 90;
+	private static void SetupFrameTimes() => Application.targetFrameRate = 90;
 }
