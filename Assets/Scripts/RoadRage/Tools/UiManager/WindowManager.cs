@@ -18,14 +18,13 @@ namespace Tools.UiManager
         private WindowStack _stack;
         public Canvas MenuCanvas => _menuCanvas;
         public ReadOnlyReactiveProperty<Window> LastWindow => _stack.LastWindow;
-        
 
         [Inject]
-        private readonly PrefabInject prefabInject;
+        private readonly PrefabInject _prefabInject;
 
         private void Awake()
         {
-            _finder = new WindowFinder(_nonActiveParent, prefabInject);
+            _finder = new WindowFinder(_nonActiveParent, _prefabInject);
             _stack = new WindowStack(_menuCanvas.transform, _nonActiveParent);
         }
 

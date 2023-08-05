@@ -12,32 +12,34 @@ public class GameInstance : MonoBehaviour
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
 	private readonly IWindowManager _windowManager;
-	[Inject]
-	private readonly DataCentralService _dataCentralService;
+	// [Inject]
+	// private readonly DataCentralService _dataCentralService;
 	[Inject]
 	private readonly AudioManager _audioManager;
 
 	private void Awake()
 	{
-		// Time.timeScale = 10f;
-		DontDestroyOnLoad(this);
-		RegServices();
-		SetupFrameTimes();
+
 	}
 
 	private void Start()
 	{
+		// Time.timeScale = 10f;
+		DontDestroyOnLoad(this);
+		_coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
+		// RegServices();
+		SetupFrameTimes();
 		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 	}
 
-	private async void RegServices()
-	{
-		await _dataCentralService.LoadData();
-		_dataCentralService.SaveFull();
-		//_dataCentralService.Restart();
-
-		_coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
-	}
+	// private async void RegServices()
+	// {
+	// 	await _dataCentralService.LoadData();
+	// 	_dataCentralService.SaveFull();
+	// 	//_dataCentralService.Restart();
+	//
+	// 	_coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
+	// }
 
 	private static void SetupFrameTimes() => Application.targetFrameRate = 90;
 }

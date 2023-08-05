@@ -100,14 +100,14 @@ namespace Tools.UiManager
             ActivateDisposables?.Clear();
         }
 
-#if UNITY_EDITOR
-        protected override void OnValidate()
-        {
-            base.OnValidate();
-
-            if (Application.isPlaying)
-                return;
-        }
-#endif
+// #if UNITY_EDITOR
+//         protected override void OnValidate()
+//         {
+//             base.OnValidate();
+//
+//             if (Application.isPlaying)
+//                 return;
+//         }
+// #endif
     }
 }
