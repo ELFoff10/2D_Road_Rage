@@ -15,13 +15,6 @@ public class WheelTrail : MonoBehaviour
 
 	private void Update()
 	{
-		if (_carController.IsTireScreeching(out var lateralVelocity, out var isBraking))
-		{
-			_trailRenderer.emitting = true;
-		}
-		else
-		{
-			_trailRenderer.emitting = false;
-		}
+		_trailRenderer.emitting = _carController.IsTireScreeching(out var lateralVelocity, out var isBraking);
 	}
 }

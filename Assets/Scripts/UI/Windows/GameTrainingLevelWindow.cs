@@ -1,4 +1,3 @@
-using Enums;
 using FMOD.Studio;
 using RoadRage.MultiScene;
 using TMPro;
@@ -15,15 +14,15 @@ public class GameTrainingLevelWindow : Window
 	[Inject]
 	private readonly IMultiSceneManager _multiSceneManager;
 	[SerializeField]
-	private UiButton _resumeButtonTrainingUI;
-	[SerializeField]
-	private UiButton _exitButtonTraining;
-	[SerializeField]
 	private TrainingUI _trainingUI;
 	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
 	[SerializeField]
 	private CongratulationPanel _congratulationPanel;
+	[SerializeField]
+	private UiButton _resumeButtonTrainingUI;
+	[SerializeField]
+	private UiButton _exitButtonTraining;
 	[SerializeField]
 	private TMP_Text _trainingTextLeft1;
 	[SerializeField]
@@ -38,13 +37,11 @@ public class GameTrainingLevelWindow : Window
 	protected override void OnActivate()
 	{
 		base.OnActivate();
-
 		_countDownUIHandler.gameObject.SetActive(true);
 		_trainingTextLeft1.gameObject.SetActive(true);
 		_trainingTextLeft2.gameObject.SetActive(true);
 		_trainingTextRight1.gameObject.SetActive(false);
 		_trainingTextRight2.gameObject.SetActive(false);
-
 		_resumeButtonTrainingUI.OnClick += OnResumeTrainingGame;
 		_exitButtonTraining.OnClick += OnExitButton;
 		_coreStateMachine.LevelGameStateMachine.OnSetGameState += ShowMenu;

@@ -5,17 +5,20 @@ using VContainer;
 
 public class PositionHandler : MonoBehaviour
 {
-	public List<CarLapCounter> CarLapCounters = new List<CarLapCounter>();
-	private LeaderBoardUIHandler _leaderBoardUIHandler;
 	[Inject]
 	private ICoreStateMachine _coreStateMachine;
 
+	public List<CarLapCounter> CarLapCounters = new List<CarLapCounter>();
+
+	private LeaderBoardUIHandler _leaderBoardUIHandler;
+
 	private void Start()
 	{
-		CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
+		var carLapCounterArray = FindObjectsOfType<CarLapCounter>();
+
 		CarLapCounters = carLapCounterArray.ToList<CarLapCounter>();
 
-		foreach (CarLapCounter lapCounters in CarLapCounters)
+		foreach (var lapCounters in CarLapCounters)
 		{
 			lapCounters.OnPassCheckPoint += OnPassCheckPoint;
 			lapCounters.OnPassTrainingCheckPoint1 += OnPassTrainingCheckPoint1;
@@ -33,10 +36,12 @@ public class PositionHandler : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		foreach (CarLapCounter lapCounters in CarLapCounters)
+		foreach (var lapCounters in CarLapCounters)
 		{
 			lapCounters.OnPassCheckPoint -= OnPassCheckPoint;
 			lapCounters.OnPassTrainingCheckPoint1 -= OnPassTrainingCheckPoint1;
+			lapCounters.OnPassTrainingCheckPoint2 -= OnPassTrainingCheckPoint2;
+			lapCounters.OnPassTrainingCheckPoint3 -= OnPassTrainingCheckPoint3;
 		}
 	}
 
@@ -47,7 +52,7 @@ public class PositionHandler : MonoBehaviour
 			.ThenBy(s => s.GetTimeAtLastCheckPoint()).ToList();
 
 		// Get the cars position
-		int carPosition = CarLapCounters.IndexOf(carLapCounter) + 1;
+		var carPosition = CarLapCounters.IndexOf(carLapCounter) + 1;
 
 		// Tell the lap counter which position the car has
 		carLapCounter.SetCarPosition(carPosition);
@@ -61,11 +66,13 @@ public class PositionHandler : MonoBehaviour
 	private void OnPassTrainingCheckPoint1(CarLapCounter carLapCounter)
 	{
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.TrainingCheckPoint1);
-	}	
+	}
+
 	private void OnPassTrainingCheckPoint2(CarLapCounter carLapCounter)
 	{
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.TrainingCheckPoint2);
-	}	
+	}
+
 	private void OnPassTrainingCheckPoint3(CarLapCounter carLapCounter)
 	{
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.TrainingCheckPoint3);

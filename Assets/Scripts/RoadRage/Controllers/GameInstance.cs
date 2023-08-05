@@ -1,8 +1,8 @@
-﻿using RoadRage.MultiScene;
+﻿using System;
+using RoadRage.MultiScene;
 using Tools.UiManager;
 using UnityEngine;
 using VContainer;
-
 
 public class GameInstance : MonoBehaviour
 {
@@ -14,6 +14,8 @@ public class GameInstance : MonoBehaviour
 	private readonly IWindowManager _windowManager;
 	[Inject]
 	private readonly DataCentralService _dataCentralService;
+	[Inject]
+	private readonly AudioManager _audioManager;
 
 	private void Awake()
 	{
@@ -21,6 +23,11 @@ public class GameInstance : MonoBehaviour
 		DontDestroyOnLoad(this);
 		RegServices();
 		SetupFrameTimes();
+	}
+
+	private void Start()
+	{
+		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 	}
 
 	private async void RegServices()
@@ -32,5 +39,5 @@ public class GameInstance : MonoBehaviour
 		_coreStateMachine.SetScenesState(ScenesStateEnum.Menu);
 	}
 
-	private void SetupFrameTimes() => Application.targetFrameRate = 90;
+	private static void SetupFrameTimes() => Application.targetFrameRate = 90;
 }

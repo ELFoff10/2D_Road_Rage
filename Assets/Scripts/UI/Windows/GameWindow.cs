@@ -1,4 +1,3 @@
-using Enums;
 using FMOD.Studio;
 using RoadRage.MultiScene;
 using TMPro;
@@ -38,6 +37,8 @@ public class GameWindow : Window
 	{
 		base.OnActivate();
 
+		_countDownUIHandler.gameObject.SetActive(true);
+		
 		_menuButton.OnClick += OnMenuButton;
 		_resumeButton.OnClick += OnResumeGame;
 		_raceAgainButton.OnClick += OnRaceAgainButton;

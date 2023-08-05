@@ -1,5 +1,4 @@
-﻿using Enums;
-using Tools.UiManager;
+﻿using Tools.UiManager;
 using UnityEngine;
 using VContainer;
 
@@ -8,7 +7,7 @@ public class MenuLevelSelectWindow : Window
 	[SerializeField]
 	private UiButton _backButton;
 	[SerializeField]
-	private UiButton _trainingLevelButton, _level1Button, _level2Button, _level3Button, _level4Button, _level5Button;
+	private UiButton _trainingLevelButton, _level1Button, _level2Button, _level3Button, _level4Button;
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
@@ -25,7 +24,6 @@ public class MenuLevelSelectWindow : Window
 		_level2Button.OnClick += OnLevel2Button;
 		_level3Button.OnClick += OnLevel3Button;
 		_level4Button.OnClick += OnLevel4Button;
-		_level5Button.OnClick += OnLevel5Button;
 	}
 
 	protected override void OnDeactivate()
@@ -37,7 +35,6 @@ public class MenuLevelSelectWindow : Window
 		_level2Button.OnClick -= OnLevel2Button;
 		_level3Button.OnClick -= OnLevel3Button;
 		_level4Button.OnClick -= OnLevel4Button;
-		_level5Button.OnClick -= OnLevel5Button;
 		_coreStateMachine.SceneEndLoad -= OnSceneEndLoad;
 	}
 

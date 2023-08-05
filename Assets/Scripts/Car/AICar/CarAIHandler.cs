@@ -36,8 +36,6 @@ public class CarAIHandler : MonoBehaviour
             case AIMode.FollowWayPoints:
                 FollowWayPoints();
                 break;
-            default:
-                break;
         }
 
         inputVector.x = TurnTowardTarget();
@@ -46,6 +44,7 @@ public class CarAIHandler : MonoBehaviour
         _carController.SetInputVector(inputVector);
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private void FollowPlayer()
     {
         if (_targetTransform == null)
@@ -66,17 +65,16 @@ public class CarAIHandler : MonoBehaviour
             _currentWayPoint = FindClosestWayPoints();
         }
 
-        if (_currentWayPoint != null)
+        if (_currentWayPoint == null) return;
+        
+        _targetPosition = _currentWayPoint.transform.position;
+
+        var distanceToWayPoint = (_targetPosition - transform.position).magnitude;
+
+        if (distanceToWayPoint <= _currentWayPoint.MinDistanceToReachWayPoint)
         {
-            _targetPosition = _currentWayPoint.transform.position;
-
-            float distanceToWayPoint = (_targetPosition - transform.position).magnitude;
-
-            if (distanceToWayPoint <= _currentWayPoint.MinDistanceToReachWayPoint)
-            {
-                _currentWayPoint = _currentWayPoint.NextWayPointNode
-                    [Random.Range(0, _currentWayPoint.NextWayPointNode.Length)];
-            }
+            _currentWayPoint = _currentWayPoint.NextWayPointNode
+                [Random.Range(0, _currentWayPoint.NextWayPointNode.Length)];
         }
     }
 

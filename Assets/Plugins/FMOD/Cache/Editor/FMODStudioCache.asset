@@ -334,33 +334,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Other.bank
   m_EditorClassIdentifier: 
-  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638253751898086199
+  Path: Assets/Audio/FMOD/Build/Desktop/Other.bank
+  Name: Other
+  StudioPath: bank:/Other
+  lastModified: 638262562839495336
   FileSizes: []
   Exists: 1
---- !u!114 &5755320202631180638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Car.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FMOD/Build/Desktop/Car.bank
-  Name: Car
-  StudioPath: bank:/Car
-  lastModified: 638266668593755863
-  FileSizes: []
-  Exists: 1
---- !u!114 &8895456812025509570
+--- !u!114 &-7339547603507477861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,4 +361,319 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 1554
+  Exists: 1
+--- !u!114 &-7256249032770401273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Other/Finish
+  m_EditorClassIdentifier: 
+  Path: event:/Other/Finish
+  Guid:
+    Data1: 499386866
+    Data2: 1213483037
+    Data3: -212023925
+    Data4: 788851814
+  Banks:
+  - {fileID: -7549832729102720856}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5127154695945173074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BackgroundMusic/Game/RaceMusic
+  m_EditorClassIdentifier: 
+  Path: event:/BackgroundMusic/Game/RaceMusic
+  Guid:
+    Data1: -1390882490
+    Data2: 1162567132
+    Data3: 1937155494
+    Data4: 1628798210
+  Banks:
+  - {fileID: 2899942256390909064}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 277577
+--- !u!114 &-4123481962562052045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Car.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Car.bank
+  Name: Car
+  StudioPath: bank:/Car
+  lastModified: 638262562759287239
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3849073262000245780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BackgroundMusic/Menu/BackgroundMusic
+  m_EditorClassIdentifier: 
+  Path: event:/BackgroundMusic/Menu/BackgroundMusic
+  Guid:
+    Data1: 44591312
+    Data2: 1230533440
+    Data3: -573948536
+    Data4: 437812662
+  Banks:
+  - {fileID: -2509955511047624489}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 34968
+--- !u!114 &-3188592730804191185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Car/Engine
+  m_EditorClassIdentifier: 
+  Path: event:/Car/Engine
+  Guid:
+    Data1: 113039488
+    Data2: 1326468582
+    Data3: -1726659670
+    Data4: 163441829
+  Banks:
+  - {fileID: -4123481962562052045}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1926
+--- !u!114 &-2509955511047624489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MenuBackgroundMusic.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/MenuBackgroundMusic.bank
+  Name: MenuBackgroundMusic
+  StudioPath: bank:/MenuBackgroundMusic
+  lastModified: 638262562838415388
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1082165633444893088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/ClickButton
+  m_EditorClassIdentifier: 
+  Path: event:/UI/ClickButton
+  Guid:
+    Data1: 431299423
+    Data2: 1076667037
+    Data3: 1157301925
+    Data4: 997598556
+  Banks:
+  - {fileID: 5718213289537711665}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -7339547603507477861}
+  - {fileID: -4123481962562052045}
+  - {fileID: 2899942256390909064}
+  - {fileID: 7345892115867393413}
+  - {fileID: -2509955511047624489}
+  - {fileID: -7549832729102720856}
+  - {fileID: 5718213289537711665}
+  EditorEvents:
+  - {fileID: -8248378526325762520}
+  - {fileID: 4263501621299120089}
+  - {fileID: -3188592730804191185}
+  - {fileID: -5127154695945173074}
+  - {fileID: 4911054131409953196}
+  - {fileID: -3849073262000245780}
+  - {fileID: -7256249032770401273}
+  - {fileID: -1082165633444893088}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 7345892115867393413}
+  StringsBanks:
+  - {fileID: -7339547603507477861}
+  cacheTime: 638262562839495336
+  cacheVersion: 131605
+--- !u!114 &2899942256390909064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/GameBackgroundMusic.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/GameBackgroundMusic.bank
+  Name: GameBackgroundMusic
+  StudioPath: bank:/GameBackgroundMusic
+  lastModified: 638262562829863316
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4263501621299120089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Car/Skid
+  m_EditorClassIdentifier: 
+  Path: event:/Car/Skid
+  Guid:
+    Data1: -188037760
+    Data2: 1317008628
+    Data3: 9903768
+    Data4: -402638604
+  Banks:
+  - {fileID: -4123481962562052045}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3808
+--- !u!114 &4911054131409953196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/New Snapshot
+  m_EditorClassIdentifier: 
+  Path: snapshot:/New Snapshot
+  Guid:
+    Data1: 1779646186
+    Data2: 1166515818
+    Data3: 1757203609
+    Data4: -1312276249
+  Banks:
+  - {fileID: 7345892115867393413}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5718213289537711665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/UI.bank
+  Name: UI
+  StudioPath: bank:/UI
+  lastModified: 638262562838904547
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7345892115867393413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638262562829993348
+  FileSizes: []
   Exists: 1

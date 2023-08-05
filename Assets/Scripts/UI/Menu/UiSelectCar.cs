@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class UiSelectCar : MonoBehaviour
 {
@@ -16,7 +15,7 @@ public class UiSelectCar : MonoBehaviour
 
     private void Start()
     {
-        _carData = Resources.LoadAll<CarData>("CarData/");
+        _carData = Resources.LoadAll<CarData>(nameof(CarData) + "/");
 
         StartCoroutine(SpawnCar(true));
     }
@@ -99,7 +98,7 @@ public class UiSelectCar : MonoBehaviour
             _carUIHandler.StartCarExitAnimation(isCarAppearingOnRightSide);
         }
 
-        GameObject instantiatedCar = Instantiate(CarPrefab, SpawnOnTransform);
+        var instantiatedCar = Instantiate(CarPrefab, SpawnOnTransform);
 
         _carUIHandler = instantiatedCar.GetComponent<CarUIHandler>();
         _carUIHandler.SetupCar(_carData[_selectedCarIndex]);

@@ -16,7 +16,7 @@ public class CarSpawner : MonoBehaviour
     
 	private void Awake()
 	{
-		CarData[] carDatas = Resources.LoadAll<CarData>("CarData/");
+		var carDatabase = Resources.LoadAll<CarData>(nameof(CarData) + "/");
 
 		for (var i = 0; i < _spawnPoints.Count; i++)
 		{
@@ -24,44 +24,43 @@ public class CarSpawner : MonoBehaviour
 
 			var playerSelectedCarID = PlayerPrefs.GetInt($"P{i + 1}SelectedCarID");
 
-			foreach (var carData in carDatas)
+			foreach (var carData in carDatabase)
 			{
-				if (carData.CarUniqueID == playerSelectedCarID)
-				{
-					var car = Instantiate(carData.CarPrefab, spawnPoint.position, spawnPoint.rotation);
+				if (carData.CarUniqueID != playerSelectedCarID) continue;
+				
+				var car = Instantiate(carData.CarPrefab, spawnPoint.position, spawnPoint.rotation);
 
-					_prefabInject.InjectGameObject(car);
+				_prefabInject.InjectGameObject(car);
 					
-					var playerNumber = i + 1;
+				var playerNumber = i + 1;
 
-					if (PlayerPrefs.GetInt($"P{playerNumber}_IsAI") == 1)
+				if (PlayerPrefs.GetInt($"P{playerNumber}_IsAI") == 1)
+				{
+					foreach (var light2D in car.GetComponentsInChildren<Light2D>())
 					{
-						foreach (var light2D in car.GetComponentsInChildren<Light2D>())
-						{
-							light2D.enabled = false;
-						}
-
-						car.GetComponentInChildren<SpriteRenderer>().material = new Material(carData.Material);
-
-						car.GetComponent<CarSfxHandler>().enabled = false;
-						car.GetComponent<CarInputHandler>().enabled = false;
-						car.name = "AI";
-						car.tag = "AI";
-					}
-					else
-					{
-						car.GetComponent<CarAIHandler>().enabled = false;
-						car.name = "Player";
-						car.tag = "Player";
-
-						if (_cameraController != null)
-						{
-							_cameraController.SetTarget(car.transform);
-						}
+						light2D.enabled = false;
 					}
 
-					break;
+					car.GetComponentInChildren<SpriteRenderer>().material = new Material(carData.Material);
+
+					car.GetComponent<CarSfxHandler>().enabled = false;
+					car.GetComponent<CarInputHandler>().enabled = false;
+					car.name = "AI";
+					car.tag = "AI";
 				}
+				else
+				{
+					car.GetComponent<CarAIHandler>().enabled = false;
+					car.name = "Player";
+					car.tag = "Player";
+
+					if (_cameraController != null)
+					{
+						_cameraController.SetTarget(car.transform);
+					}
+				}
+
+				break;
 			}
 		}
 	}

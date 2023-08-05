@@ -2,41 +2,41 @@
 
 public interface ISubDataModel
 {
-    IReadOnlyReactiveProperty<bool> FirstLaunchTest { get; }
-    void SetFirstLaunchTest(bool value);
+	IReadOnlyReactiveProperty<bool> FirstLaunchTest { get; }
+	void SetFirstLaunchTest(bool value);
 }
 
 public class SubDataModel : ISubDataModel
 {
-    #region Fields
+	#region Fields
 
-    private ReactiveProperty<bool> _firstLaunchTest = new ReactiveProperty<bool>(false);
+	private ReactiveProperty<bool> _firstLaunchTest = new ReactiveProperty<bool>(false);
 
-    public IReadOnlyReactiveProperty<bool> FirstLaunchTest => _firstLaunchTest;
+	public IReadOnlyReactiveProperty<bool> FirstLaunchTest => _firstLaunchTest;
 
-    #endregion
+	#endregion
 
-    public void SetFirstLaunchTest(bool value)
-    {
-        _firstLaunchTest.Value = value;
-    }
+	public void SetFirstLaunchTest(bool value)
+	{
+		_firstLaunchTest.Value = value;
+	}
 
-    #region Storage
+	#region Storage
 
-    public SubData GetSubData() => new()
-    {
-        FirstLaunchTest = _firstLaunchTest.Value
-    };
+	public SubData GetSubData() => new()
+	{
+		FirstLaunchTest = _firstLaunchTest.Value
+	};
 
-    public void SetSubData(SubData subData)
-    {
-        _firstLaunchTest.Value = subData.FirstLaunchTest;
-    }
+	public void SetSubData(SubData subData)
+	{
+		_firstLaunchTest.Value = subData.FirstLaunchTest;
+	}
 
-    public void SetAndInitEmptySubData(SubData subData)
-    {
-        SetSubData(subData);
-    }
+	public void SetAndInitEmptySubData(SubData subData)
+	{
+		SetSubData(subData);
+	}
 
-    #endregion
+	#endregion
 }

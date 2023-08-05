@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Enums;
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
@@ -25,11 +24,9 @@ public class AudioManager : MonoBehaviour
 		CreateInstance(_fmodEvents.CarSkid);
 		CreateInstance(_fmodEvents.CarHit);
 		CreateInstance(_fmodEvents.Finish);
-
-		EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 	}
 
-	public void PlayOneShot(EventReference sound)
+	public static void PlayOneShot(EventReference sound)
 	{
 		RuntimeManager.PlayOneShot(sound);
 	}

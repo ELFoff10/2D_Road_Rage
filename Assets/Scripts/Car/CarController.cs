@@ -18,8 +18,8 @@ public class CarController : MonoBehaviour
 	[SerializeField]
 	private float _maxSpeed = 7f;
 
-	private float _withoutPressingAcceleration = 3f;
-	private float _accelerationInput = 1;
+	private readonly float _withoutPressingAcceleration = 3f;
+	private readonly float _accelerationInput = 1;
 	private float _defaultMaxSpeed;
 	private float _defaultSpeedBeforeAddSpeed;
 	private float _defaultSpeedBeforeSlowSpeed;
@@ -67,7 +67,8 @@ public class CarController : MonoBehaviour
 		// Apply drag if there is no accelerationInput so the car stops when the player lets go of the accelerator
 		if (_accelerationInput == 0)
 		{
-			_carRigidbody2D.drag = Mathf.Lerp(_carRigidbody2D.drag, _withoutPressingAcceleration, Time.fixedDeltaTime * _withoutPressingAcceleration);
+			_carRigidbody2D.drag = Mathf.Lerp(_carRigidbody2D.drag, _withoutPressingAcceleration,
+				Time.fixedDeltaTime * _withoutPressingAcceleration);
 		}
 		else
 		{
@@ -106,18 +107,9 @@ public class CarController : MonoBehaviour
 		lateralVelocity = GetLateralVelocity();
 		isBreaking = false;
 
-		if (_accelerationInput < 0 && _velocityVsUp > 0)
-		{
-			isBreaking = true;
-			return true;
-		}
-
-		if (Mathf.Abs(GetLateralVelocity()) > 1.0f)
-		{
-			return true;
-		}
-
-		return false;
+		if (!(_accelerationInput < 0) || !(_velocityVsUp > 0)) return Mathf.Abs(GetLateralVelocity()) > 1.0f;
+		isBreaking = true;
+		return true;
 	}
 
 	public void SetInputVector(Vector2 inputVector)

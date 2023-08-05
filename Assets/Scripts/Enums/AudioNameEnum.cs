@@ -1,12 +1,9 @@
-namespace Enums
+public enum AudioNameEnum
 {
-	public enum AudioNameEnum
-	{
-		MenuBackgroundMusic,
-		GameBackgroundMusic,
-		CarEngine,
-		CarSkid,
-		CarHit,
-		Finish
-	}
+	MenuBackgroundMusic,
+	GameBackgroundMusic,
+	CarEngine,
+	CarSkid,
+	CarHit,
+	Finish
 }

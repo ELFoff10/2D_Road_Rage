@@ -19,7 +19,7 @@ public class DistanceUIHandler : MonoBehaviour
 
     private void Update()
     {
-        float currentDistance = _carTransform.position.y - _startingPosition;
+        var currentDistance = _carTransform.position.y - _startingPosition;
 
         _distanceTraveled = (currentDistance <= 0) ? 0: currentDistance * 10;
         _distanceText.text = (_distanceTraveled > 1000) ? (_distanceTraveled / 1000).ToString("F2") + "km" : _distanceTraveled.ToString("F0") + "m";
