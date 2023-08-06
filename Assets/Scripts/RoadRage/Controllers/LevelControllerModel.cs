@@ -43,7 +43,7 @@ public class LevelControllerModel : IInitializable, IDisposable
 				case GameStateEnum.CountDown:
 					_windowManager.Hide<MenuBackgroundWindow>();
 					_windowManager.Hide<MenuMainWindow>();
-					_windowManager.Show<GameTrainingLevelWindow>();
+					_windowManager.Show<GameWindowLevelTraining>();
 					break;
 				case GameStateEnum.Play:
 					break;
@@ -53,7 +53,28 @@ public class LevelControllerModel : IInitializable, IDisposable
 					break;
 			}
 		}
-		else
+		if (_coreStateMachine.ScenesState.Value == ScenesStateEnum.Level3)
+		{
+			switch (gameState)
+			{
+				case GameStateEnum.None:
+					break;
+				case GameStateEnum.TrainingCheckPoint1:
+					break;
+				case GameStateEnum.CountDown:
+					_windowManager.Hide<MenuBackgroundWindow>();
+					_windowManager.Hide<MenuMainWindow>();
+					_windowManager.Show<GameWindowLevel3>();
+					break;
+				case GameStateEnum.Play:
+					break;
+				case GameStateEnum.Dead:
+					break;
+				case GameStateEnum.RaceOver:
+					break;
+			}
+		}
+		if (_coreStateMachine.ScenesState.Value == ScenesStateEnum.Level1 || _coreStateMachine.ScenesState.Value == ScenesStateEnum.Level2)
 		{
 			switch (gameState)
 			{

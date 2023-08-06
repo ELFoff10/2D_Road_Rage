@@ -44,6 +44,14 @@ public class LeaderBoardUIHandler : MonoBehaviour
 		_isInitialized = true;
 	}
 
+	private void Update()
+	{
+		if (_coreStateMachine.LevelGameStateMachine.GameState.Value == GameStateEnum.RaceOver)
+		{
+			Canvas.enabled = true;
+		}
+	}
+
 	private void OnDisable()
 	{
 		Canvas.enabled = false;

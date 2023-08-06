@@ -1,9 +1,13 @@
 using UnityEngine;
+using VContainer;
 
 public class RandomPrefabSpawner : MonoBehaviour
 {
     public GameObject[] PrefabList;
     public Transform[] SpawnPoints;
+    
+    [Inject]
+    private readonly PrefabInject _prefabInject;
 
     private void Start()
     {
@@ -34,7 +38,8 @@ public class RandomPrefabSpawner : MonoBehaviour
             {
                 int randomSpawnPointIndex = Random.Range(0, availableSpawnPoints.Length);
                 Transform spawnPoint = availableSpawnPoints[randomSpawnPointIndex];
-                Instantiate(prefabToSpawn, spawnPoint.position, Quaternion.identity);
+                var spawn = Instantiate(prefabToSpawn, spawnPoint.position, Quaternion.identity);
+                _prefabInject.InjectGameObject(spawn);
 
                 availableSpawnPoints[randomSpawnPointIndex] = availableSpawnPoints[availableSpawnPoints.Length - 1];
                 System.Array.Resize(ref availableSpawnPoints, availableSpawnPoints.Length - 1);

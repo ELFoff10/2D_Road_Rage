@@ -303,9 +303,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 7317259216097039494}
+  MinDistanceToReachWayPoint: 5
 --- !u!114 &525379087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,9 +318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 430902958}
+  MinDistanceToReachWayPoint: 5
 --- !u!114 &570413106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,11 +333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 1320783730}
   - {fileID: 525379087}
   - {fileID: 1050021027}
+  MinDistanceToReachWayPoint: 5
 --- !u!1 &571636112
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +373,8 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 1645138723}
   - {fileID: 6911566924654518432}
+  - {fileID: 1810743574}
+  - {fileID: 1799035997}
 --- !u!4 &571636114
 Transform:
   m_ObjectHideFlags: 0
@@ -484,11 +486,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 1320783730}
   - {fileID: 525379087}
   - {fileID: 1050021027}
+  MinDistanceToReachWayPoint: 5
 --- !u!1 &909096794
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,9 +669,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 430902958}
+  MinDistanceToReachWayPoint: 5
 --- !u!114 &1320783730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,9 +684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 430902958}
+  MinDistanceToReachWayPoint: 5
 --- !u!1001 &1613978235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2113,11 +2115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 1320783730}
   - {fileID: 525379087}
   - {fileID: 1050021027}
+  MinDistanceToReachWayPoint: 5
 --- !u!114 &7317259216097039491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2130,11 +2132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 7317259216097039490}
   - {fileID: 570413106}
   - {fileID: 797061749}
+  MinDistanceToReachWayPoint: 5
 --- !u!114 &7317259216097039492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2147,11 +2149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 7317259216097039490}
   - {fileID: 570413106}
   - {fileID: 797061749}
+  MinDistanceToReachWayPoint: 5
 --- !u!114 &7317259216097039493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2164,11 +2166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 5
   NextWayPointNode:
   - {fileID: 7317259216097039490}
   - {fileID: 570413106}
   - {fileID: 797061749}
+  MinDistanceToReachWayPoint: 5
 --- !u!114 &7317259216097039494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2181,11 +2183,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a76d0aaae3543e41bf3cb4f2a43386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinDistanceToReachWayPoint: 150
   NextWayPointNode:
   - {fileID: 7317259216097039493}
   - {fileID: 7317259216097039492}
   - {fileID: 7317259216097039491}
+  MinDistanceToReachWayPoint: 150
 --- !u!4 &7593786192333771267
 Transform:
   m_ObjectHideFlags: 0

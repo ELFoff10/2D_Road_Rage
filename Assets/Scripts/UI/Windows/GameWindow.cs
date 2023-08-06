@@ -48,7 +48,6 @@ public class GameWindow : Window
 
 	protected override void OnDeactivate()
 	{
-		
 		base.OnDeactivate();
 		_menuButton.OnClick -= OnMenuButton;
 		_resumeButton.OnClick -= OnResumeGame;

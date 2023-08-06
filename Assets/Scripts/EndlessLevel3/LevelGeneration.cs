@@ -1,4 +1,5 @@
 using UnityEngine;
+using VContainer;
 
 public class LevelGeneration : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class LevelGeneration : MonoBehaviour
 	private const float PlayerDistanceSpawn = 200f;
 	private Transform _carTransform;
 	// private CarController _carController;
+	
+	[Inject]
+	private readonly PrefabInject _prefabInject;
 
 	private void Awake()
 	{
@@ -45,6 +49,7 @@ public class LevelGeneration : MonoBehaviour
 	private void SpawnPart()
 	{
 		var part = Instantiate(_roadPrefab, new Vector3(0, _lastEndPosition.y, 0), Quaternion.identity);
+		_prefabInject.InjectGameObject(part);
 		_lastEndPosition = part.transform.Find("EndPosition").position;
 	}
 }

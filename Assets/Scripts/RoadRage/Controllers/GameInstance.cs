@@ -1,5 +1,4 @@
-﻿using System;
-using RoadRage.MultiScene;
+﻿using RoadRage.MultiScene;
 using Tools.UiManager;
 using UnityEngine;
 using VContainer;
@@ -16,11 +15,6 @@ public class GameInstance : MonoBehaviour
 	// private readonly DataCentralService _dataCentralService;
 	[Inject]
 	private readonly AudioManager _audioManager;
-
-	private void Awake()
-	{
-
-	}
 
 	private void Start()
 	{

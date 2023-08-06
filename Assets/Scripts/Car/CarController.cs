@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using VContainer;
@@ -17,7 +18,7 @@ public class CarController : MonoBehaviour
 	private float _turnFactor = 3f;
 	[SerializeField]
 	private float _maxSpeed = 7f;
-
+	
 	private readonly float _withoutPressingAcceleration = 3f;
 	private readonly float _accelerationInput = 1;
 	private float _defaultMaxSpeed;

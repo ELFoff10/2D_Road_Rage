@@ -12,6 +12,7 @@ public class MainLifeScope : LifetimeScope
 		builder.RegisterComponent(FindObjectOfType<FMOD_Events>());
 		builder.RegisterEntryPoint<ScenesControllerModel>();
 		builder.Register<PrefabInject>(Lifetime.Singleton);
+		builder.Register<GameEventsManager>(Lifetime.Singleton);
 		builder.Register<IMultiSceneManager, MultiSceneManager>(Lifetime.Singleton);
 		builder.Register<ICoreStateMachine, CoreStateMachine>(Lifetime.Singleton);
 		builder.Register<TimerService>(Lifetime.Singleton).As<ITimerService>();
