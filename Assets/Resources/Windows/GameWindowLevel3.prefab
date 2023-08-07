@@ -1138,6 +1138,7 @@ MonoBehaviour:
   _exitButton: {fileID: 5040403929770263965}
   _menuUI: {fileID: 559341849590351305}
   _lifeCountUI: {fileID: 8188825903622190614}
+  _distanceUIHandler: {fileID: 0}
   _countDownUIHandler: {fileID: 6461986761223577056}
   _menuUITextMenu: {fileID: 24240113679475272}
   _menuUITextRaceOver: {fileID: 8065079301659156107}
@@ -3483,7 +3484,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lifeCountText: {fileID: 8932232430262112489}
   _lifeCount: 3
-  _particleSystem: {fileID: 372670402190108805}
 --- !u!1001 &6487727963383015967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3572,6 +3572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CFXR2 Broken Heart
       objectReference: {fileID: 0}
+    - target: {fileID: 6855314210357232287, guid: 7c2a9b83b809a0848915fabd9596b68b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8381569884986705926, guid: 7c2a9b83b809a0848915fabd9596b68b, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -3585,10 +3589,5 @@ PrefabInstance:
 --- !u!4 &372670402190108803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6855314210357232284, guid: 7c2a9b83b809a0848915fabd9596b68b, type: 3}
-  m_PrefabInstance: {fileID: 6487727963383015967}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &372670402190108805 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6855314210357232282, guid: 7c2a9b83b809a0848915fabd9596b68b, type: 3}
   m_PrefabInstance: {fileID: 6487727963383015967}
   m_PrefabAsset: {fileID: 0}

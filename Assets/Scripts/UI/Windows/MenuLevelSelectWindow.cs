@@ -11,6 +11,8 @@ public class MenuLevelSelectWindow : Window
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
+	private readonly IWindowManager _windowManager;
+	[Inject]
 	private readonly AudioManager _audioManager;
 	[Inject]
 	private readonly FMOD_Events _fmodEvents;
@@ -47,6 +49,10 @@ public class MenuLevelSelectWindow : Window
 	private void OnTrainingLevelButton()
 	{
 		LoadLevel(ScenesStateEnum.TrainingLevel);
+		_windowManager.Show<GameWindowLevelTraining>();
+		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		_audioManager.EventInstances[(int)AudioNameEnum.TrainingLevelBgMusic].start();
+
 	}
 	
 	private void OnLevel1Button()

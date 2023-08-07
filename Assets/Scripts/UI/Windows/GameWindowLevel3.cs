@@ -27,6 +27,8 @@ public class GameWindowLevel3 : Window
 	[SerializeField]
 	private LifeCountUI _lifeCountUI;
 	[SerializeField]
+	private DistanceUIHandler _distanceUIHandler;
+	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
 	[SerializeField]
 	private TMP_Text _menuUITextMenu;
@@ -86,9 +88,11 @@ public class GameWindowLevel3 : Window
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
 		_countDownUIHandler.gameObject.SetActive(true);
+		_distanceUIHandler.gameObject.SetActive(false);
 		PlayClip();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.CountDown);
+		_distanceUIHandler.gameObject.SetActive(true);
 	}
 
 	private void OnExitButton()
@@ -96,6 +100,7 @@ public class GameWindowLevel3 : Window
 		Time.timeScale = 1;
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
+		
 		StopClip();
 		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 		LoadLevel(ScenesStateEnum.Menu);

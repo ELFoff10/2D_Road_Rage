@@ -14,16 +14,21 @@ public class AudioManager : MonoBehaviour
 	private void Awake()
 	{
 		EventInstances = new List<EventInstance>();
+		DontDestroyOnLoad(this);
 	}
 
 	private void Start()
 	{
 		CreateInstance(_fmodEvents.MenuBackgroundMusic);
 		CreateInstance(_fmodEvents.GameBackgroundMusic);
+		CreateInstance(_fmodEvents.TrainingLevelBgMusic);
 		CreateInstance(_fmodEvents.CarEngine);
 		CreateInstance(_fmodEvents.CarSkid);
 		CreateInstance(_fmodEvents.CarHit);
 		CreateInstance(_fmodEvents.Finish);
+		CreateInstance(_fmodEvents.PickUpGem);
+		CreateInstance(_fmodEvents.Firework);
+		CreateInstance(_fmodEvents.BarrierCrush);
 	}
 
 	public static void PlayOneShot(EventReference sound)

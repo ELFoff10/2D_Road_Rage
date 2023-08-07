@@ -2,8 +2,12 @@ public enum AudioNameEnum
 {
 	MenuBackgroundMusic,
 	GameBackgroundMusic,
+	TrainingLevelBgMusic,
 	CarEngine,
 	CarSkid,
 	CarHit,
-	Finish
+	Finish,
+	PickUpGem,
+	Firework,
+	BarrierCrush
 }

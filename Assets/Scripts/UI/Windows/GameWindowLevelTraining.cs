@@ -61,8 +61,7 @@ public class GameWindowLevelTraining : Window
 		Time.timeScale = 1;
 		_trainingUI.gameObject.SetActive(false);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.Play);
-		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].start();
-		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].start();
+		PlayClip();
 	}
 
 	private void OnExitButton()
@@ -70,6 +69,7 @@ public class GameWindowLevelTraining : Window
 		Time.timeScale = 1;
 		_trainingUI.gameObject.SetActive(false);
 		StopClip();
+		_audioManager.EventInstances[(int)AudioNameEnum.TrainingLevelBgMusic].stop(STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 		LoadLevel(ScenesStateEnum.Menu);
 	}
@@ -131,20 +131,16 @@ public class GameWindowLevelTraining : Window
 		_manager.Hide(this);
 		_manager.Show<MenuMainWindow>();
 	}
-
+	
 	private void PlayClip()
 	{
-		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].start();
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].start();
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].start();
 	}
 
 	private void StopClip()
 	{
-		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(STOP_MODE.ALLOWFADEOUT);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
-		_audioManager.EventInstances[(int)AudioNameEnum.CarHit].stop(STOP_MODE.IMMEDIATE);
-		
 	}
 }

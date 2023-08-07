@@ -149,12 +149,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123048905}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 243866776}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &123048907
 MonoBehaviour:
@@ -168,6 +168,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a0161db9daa9d4fb5ebd3404c9260f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Finish>k__BackingField:
+    Guid:
+      Data1: 499386866
+      Data2: 1213483037
+      Data3: -212023925
+      Data4: 788851814
+    Path: event:/Game/Finish
+  <PickUpGem>k__BackingField:
+    Guid:
+      Data1: 1732268074
+      Data2: 1193412888
+      Data3: 1867666577
+      Data4: -1779737153
+    Path: event:/Game/PickUpGem
+  <Firework>k__BackingField:
+    Guid:
+      Data1: 1642547062
+      Data2: 1099867756
+      Data3: -1952448869
+      Data4: 1221917581
+    Path: event:/Game/Firework
+  <BarrierCrush>k__BackingField:
+    Guid:
+      Data1: -738863475
+      Data2: 1232130331
+      Data3: 801057425
+      Data4: 1123686857
+    Path: event:/Game/BarrierCrush
+  <GameBackgroundMusic>k__BackingField:
+    Guid:
+      Data1: -1390882490
+      Data2: 1162567132
+      Data3: 1937155494
+      Data4: 1628798210
+    Path: event:/BackgroundMusic/Game/RaceMusic
+  <TrainingLevelBgMusic>k__BackingField:
+    Guid:
+      Data1: -1437215415
+      Data2: 1204575807
+      Data3: -693580653
+      Data4: -528449525
+    Path: event:/BackgroundMusic/Game/TrainigLevelMusic
   <ClickButton>k__BackingField:
     Guid:
       Data1: 431299423
@@ -182,13 +224,6 @@ MonoBehaviour:
       Data3: -573948536
       Data4: 437812662
     Path: event:/BackgroundMusic/Menu/BackgroundMusic
-  <GameBackgroundMusic>k__BackingField:
-    Guid:
-      Data1: -1390882490
-      Data2: 1162567132
-      Data3: 1937155494
-      Data4: 1628798210
-    Path: event:/BackgroundMusic/Game/RaceMusic
   <CarEngine>k__BackingField:
     Guid:
       Data1: 113039488
@@ -210,13 +245,6 @@ MonoBehaviour:
       Data3: 2055141548
       Data4: -139248438
     Path: event:/Car/Hit
-  <Finish>k__BackingField:
-    Guid:
-      Data1: 499386866
-      Data2: 1213483037
-      Data3: -212023925
-      Data4: 788851814
-    Path: event:/Other/Finish
 --- !u!114 &123048908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +299,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 123048906}
   - {fileID: 1329479476}
   - {fileID: 1531887436}
   m_Father: {fileID: 0}
@@ -335,8 +362,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1050216955}
   - component: {fileID: 1050216954}
-  - component: {fileID: 1050216953}
   - component: {fileID: 1050216952}
+  - component: {fileID: 1050216956}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -388,14 +415,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1050216953
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050216950}
-  m_Enabled: 1
 --- !u!20 &1050216954
 Camera:
   m_ObjectHideFlags: 0
@@ -462,6 +481,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1050216956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050216950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &1329479473
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,5 +817,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 501576986}
-  - {fileID: 243866776}
   - {fileID: 1050216955}
+  - {fileID: 243866776}
+  - {fileID: 123048906}

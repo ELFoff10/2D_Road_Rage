@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,14 +5,15 @@ using VContainer;
 
 public class LeaderBoardUIHandler : MonoBehaviour
 {
-	[Inject]
-	private readonly ICoreStateMachine _coreStateMachine;
 	[SerializeField]
 	private GameObject _leaderBoardItemPrefab;
 	public Canvas Canvas;
 	
 	private SetLeaderBoardItemInfo[] _setLeaderBoardItemInfo;
 	private bool _isInitialized;
+	
+	[Inject]
+	private readonly ICoreStateMachine _coreStateMachine;
 
 	private void Awake()
 	{

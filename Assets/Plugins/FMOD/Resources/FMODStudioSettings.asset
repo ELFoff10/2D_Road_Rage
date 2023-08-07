@@ -242,9 +242,9 @@ MonoBehaviour:
   - Master
   Banks:
   - Car
+  - Game
   - GameBackgroundMusic
   - MenuBackgroundMusic
-  - Other
   - UI
   BanksToLoad: []
   LiveUpdatePort: 9264

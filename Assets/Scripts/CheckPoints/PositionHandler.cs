@@ -5,20 +5,20 @@ using VContainer;
 
 public class PositionHandler : MonoBehaviour
 {
-	[Inject]
-	private ICoreStateMachine _coreStateMachine;
-
-	public List<CarLapCounter> CarLapCounters = new List<CarLapCounter>();
+	private List<CarLapCounter> _carLapCounters = new List<CarLapCounter>();
 
 	private LeaderBoardUIHandler _leaderBoardUIHandler;
+
+	[Inject]
+	private ICoreStateMachine _coreStateMachine;
 
 	private void Start()
 	{
 		var carLapCounterArray = FindObjectsOfType<CarLapCounter>();
 
-		CarLapCounters = carLapCounterArray.ToList<CarLapCounter>();
+		_carLapCounters = carLapCounterArray.ToList<CarLapCounter>();
 
-		foreach (var lapCounters in CarLapCounters)
+		foreach (var lapCounters in _carLapCounters)
 		{
 			lapCounters.OnPassCheckPoint += OnPassCheckPoint;
 			lapCounters.OnPassTrainingCheckPoint1 += OnPassTrainingCheckPoint1;
@@ -30,13 +30,13 @@ public class PositionHandler : MonoBehaviour
 
 		if (_leaderBoardUIHandler != null)
 		{
-			_leaderBoardUIHandler.UpdateList(CarLapCounters);
+			_leaderBoardUIHandler.UpdateList(_carLapCounters);
 		}
 	}
 
 	private void OnDestroy()
 	{
-		foreach (var lapCounters in CarLapCounters)
+		foreach (var lapCounters in _carLapCounters)
 		{
 			lapCounters.OnPassCheckPoint -= OnPassCheckPoint;
 			lapCounters.OnPassTrainingCheckPoint1 -= OnPassTrainingCheckPoint1;
@@ -48,18 +48,18 @@ public class PositionHandler : MonoBehaviour
 	private void OnPassCheckPoint(CarLapCounter carLapCounter)
 	{
 		// Sort the cars position first based on how many checkpoints they have passed, more is always better. Then sort on time where shorter time os better
-		CarLapCounters = CarLapCounters.OrderByDescending(s => s.GetNumberOfCheckPointPassed())
+		_carLapCounters = _carLapCounters.OrderByDescending(s => s.GetNumberOfCheckPointPassed())
 			.ThenBy(s => s.GetTimeAtLastCheckPoint()).ToList();
 
 		// Get the cars position
-		var carPosition = CarLapCounters.IndexOf(carLapCounter) + 1;
+		var carPosition = _carLapCounters.IndexOf(carLapCounter) + 1;
 
 		// Tell the lap counter which position the car has
 		carLapCounter.SetCarPosition(carPosition);
 
 		if (_leaderBoardUIHandler != null)
 		{
-			_leaderBoardUIHandler.UpdateList(CarLapCounters);
+			_leaderBoardUIHandler.UpdateList(_carLapCounters);
 		}
 	}
 

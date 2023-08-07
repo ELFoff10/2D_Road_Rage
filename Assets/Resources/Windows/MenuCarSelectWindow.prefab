@@ -510,7 +510,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1867329635927621514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,8 +544,6 @@ MonoBehaviour:
   _isTransparent: 1
   _backButton: {fileID: 8004847956788400350}
   _selectButton: {fileID: 9211828025748495408}
-  _leftButton: {fileID: 951736587887331757}
-  _rightButton: {fileID: 3982267338090265063}
 --- !u!114 &462673035599847326
 MonoBehaviour:
   m_ObjectHideFlags: 0

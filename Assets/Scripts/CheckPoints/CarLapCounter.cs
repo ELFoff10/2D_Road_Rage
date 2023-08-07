@@ -13,6 +13,7 @@ public class CarLapCounter : MonoBehaviour
 	private readonly FMOD_Events _fmodEvents;
 
 	public event Action<CarLapCounter> OnPassCheckPoint;
+	// public event Action<CarLapCounter> OnFinishCheckPoint;
 	public event Action<CarLapCounter> OnPassTrainingCheckPoint1;
 	public event Action<CarLapCounter> OnPassTrainingCheckPoint2;
 	public event Action<CarLapCounter> OnPassTrainingCheckPoint3;
@@ -94,7 +95,7 @@ public class CarLapCounter : MonoBehaviour
 			StartCoroutine(ShowPositionCo(300));
 
 			if (!CompareTag("Player")) return;
-
+			// OnFinishCheckPoint?.Invoke(this);
 			_audioManager.EventInstances[(int)AudioNameEnum.Finish].start();
 			_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
 			GetComponent<CarInputHandler>().enabled = false;

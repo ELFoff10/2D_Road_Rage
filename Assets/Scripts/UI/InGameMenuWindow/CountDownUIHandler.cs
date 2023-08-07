@@ -5,18 +5,14 @@ using VContainer;
 
 public class CountDownUIHandler : MonoBehaviour
 {
-	[Inject]
-	private readonly ICoreStateMachine _coreStateMachine;
-
-	[Inject]
-	private readonly ITimerService _timerService;
-
 	[SerializeField]
 	private TMP_Text _countDownText;
-
 	private CompositeDisposable _disposable = new CompositeDisposable();
-
 	private int _countDownTimer;
+	[Inject]
+	private readonly ICoreStateMachine _coreStateMachine;
+	[Inject]
+	private readonly AudioManager _audioManager;
 
 	private void OnEnable()
 	{
@@ -46,6 +42,7 @@ public class CountDownUIHandler : MonoBehaviour
 					{
 						case 0:
 							_countDownText.text = "GO!";
+							_audioManager.EventInstances[(int)AudioNameEnum.Firework].start();
 							break;
 						case < 0:
 							_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.Play);

@@ -10,7 +10,9 @@ public class Gem : Pickup
 
 	[Inject]
 	private readonly GameEventsManager _gameEventsManager;
-
+	[Inject]
+	private readonly AudioManager _audioManager;
+	
 	private void Awake()
 	{
 		_particleSystem.Stop();
@@ -26,5 +28,6 @@ public class Gem : Pickup
 		IsCollected = true;
 		_spriteRenderer.gameObject.SetActive(false);
 		_gameEventsManager.GemCollected();
+		_audioManager.EventInstances[(int)AudioNameEnum.PickUpGem].start();
 	}
 }

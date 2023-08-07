@@ -1138,6 +1138,7 @@ MonoBehaviour:
   _countDownUIHandler: {fileID: 6461986761223577056}
   _menuUITextMenu: {fileID: 24240113679475272}
   _menuUITextRaceOver: {fileID: 8065079301659156107}
+  _particleFinishFirework: {fileID: 0}
 --- !u!1 &2742721525376266977
 GameObject:
   m_ObjectHideFlags: 0
