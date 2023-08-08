@@ -22,7 +22,7 @@ public class CarLapCounter : MonoBehaviour
 	private float _timeAtLastPassedCheckPoint;
 	private int _numberOfPassedCheckPoints;
 	private int _lapsCompleted;
-	private const int LapsToComplete = 1;
+	public int LapsToComplete = 1;
 	private bool _isRaceCompleted;
 	private int _carPosition;
 	private bool _isHideRoutineRunning;

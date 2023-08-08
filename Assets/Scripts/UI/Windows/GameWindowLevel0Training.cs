@@ -5,7 +5,7 @@ using Tools.UiManager;
 using UnityEngine;
 using VContainer;
 
-public class GameWindowLevelTraining : Window
+public class GameWindowLevel0Training : Window
 {
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;

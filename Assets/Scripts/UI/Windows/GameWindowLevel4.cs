@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VContainer;
 
-public class GameWindowLevel3 : Window
+public class GameWindowLevel4 : Window
 {
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
@@ -25,9 +25,7 @@ public class GameWindowLevel3 : Window
 	[SerializeField]
 	private MenuUI _menuUI;
 	[SerializeField]
-	private LifeCountUI _lifeCountUI;
-	[SerializeField]
-	private DistanceUIHandler _distanceUIHandler;
+	private RaceTimeUIHandler _raceTimeUIHandler;
 	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
 	[SerializeField]
@@ -50,7 +48,6 @@ public class GameWindowLevel3 : Window
 
 	protected override void OnDeactivate()
 	{
-		
 		base.OnDeactivate();
 		_menuButton.OnClick -= OnMenuButton;
 		_resumeButton.OnClick -= OnResumeGame;
@@ -67,7 +64,6 @@ public class GameWindowLevel3 : Window
 		_menuUI.gameObject.SetActive(true);
 		_resumeButton.gameObject.SetActive(true);
 		_menuUITextMenu.gameObject.SetActive(true);
-		_countDownUIHandler.gameObject.SetActive(true);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
 	}
@@ -86,11 +82,9 @@ public class GameWindowLevel3 : Window
 	{
 		Time.timeScale = 1;
 		_menuButton.gameObject.SetActive(true);
+		_raceTimeUIHandler.RaceTimer = 0;
 		_menuUI.gameObject.SetActive(false);
 		_countDownUIHandler.gameObject.SetActive(true);
-		// _distanceUIHandler.gameObject.SetActive(false);
-		_lifeCountUI.gameObject.SetActive(false);
-		_lifeCountUI.gameObject.SetActive(true);
 		PlayClip();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.CountDown);
@@ -101,7 +95,6 @@ public class GameWindowLevel3 : Window
 		Time.timeScale = 1;
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
-		
 		StopClip();
 		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 		LoadLevel(ScenesStateEnum.Menu);

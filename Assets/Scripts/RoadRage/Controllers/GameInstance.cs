@@ -15,6 +15,8 @@ public class GameInstance : MonoBehaviour
 	// private readonly DataCentralService _dataCentralService;
 	[Inject]
 	private readonly AudioManager _audioManager;
+	
+	
 
 	private void Start()
 	{

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VContainer;
 
-public class GameWindow : Window
+public class GameWindowLevel1 : Window
 {
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;

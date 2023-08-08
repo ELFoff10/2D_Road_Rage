@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 2732237584399391549}
   - component: {fileID: 5941271591424328352}
   m_Layer: 5
-  m_Name: GameWindowLevelTraining
+  m_Name: GameWindowLevel0Training
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -16,6 +16,14 @@ public class PositionHandler : MonoBehaviour
 	{
 		var carLapCounterArray = FindObjectsOfType<CarLapCounter>();
 
+		if (_coreStateMachine.ScenesState.Value is ScenesStateEnum.Level4 or ScenesStateEnum.Level5)
+		{
+			foreach (var carLapCounter in carLapCounterArray)
+			{
+				carLapCounter.LapsToComplete = 3;
+			}
+		}
+
 		_carLapCounters = carLapCounterArray.ToList<CarLapCounter>();
 
 		foreach (var lapCounters in _carLapCounters)

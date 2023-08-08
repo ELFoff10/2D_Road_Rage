@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using VContainer;
 
@@ -6,7 +7,7 @@ public class CrashBarrier : Pickup
 	[SerializeField]
 	private SpriteRenderer _spriteRenderer;
 	[SerializeField]
-	private ParticleSystem _particleSystem;
+	private List<ParticleSystem> _particles;
 
 	[Inject]
 	private readonly GameEventsManager _gameEventsManager;
@@ -15,12 +16,18 @@ public class CrashBarrier : Pickup
 
 	private void Awake()
 	{
-		_particleSystem.Stop();
+		foreach (var particle in _particles)
+		{
+			particle.Stop();
+		}
 	}
 
 	protected override void OnPickedUp(CarController car)
 	{
-		_particleSystem.Play();
+		foreach (var particle in _particles)
+		{
+			particle.Play();
+		}
 	}
 
 	protected override void Collect(CarController car)

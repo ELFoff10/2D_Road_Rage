@@ -8,20 +8,18 @@ public class LifeCountUI : MonoBehaviour
 	private TMP_Text _lifeCountText;
 	[SerializeField] 
 	private int _lifeCount = 3;
-	// [SerializeField] 
-	// private ParticleSystem _particleSystem;
 
 	[Inject]
 	private readonly GameEventsManager _gameEventsManager;
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 	
-	private void Start()
+	private void OnEnable()
 	{
 		_gameEventsManager.OnPlayerBreakBarrier += OnPlayerBreakBarrier;
 	}
 
-	private void OnDestroy()
+	private void OnDisable()
 	{
 		_gameEventsManager.OnPlayerBreakBarrier -= OnPlayerBreakBarrier;
 	}
@@ -35,7 +33,7 @@ public class LifeCountUI : MonoBehaviour
 		{
 			_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
 			_lifeCount = 3;
-			// _particleSystem.Play();
+			_lifeCountText.text = _lifeCount.ToString();
 		}
 	}
 }

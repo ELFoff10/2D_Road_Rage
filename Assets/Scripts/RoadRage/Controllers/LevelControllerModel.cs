@@ -32,68 +32,57 @@ public class LevelControllerModel : IInitializable, IDisposable
 
 	private void GameStateChange(GameStateEnum gameState)
 	{
-		if (_coreStateMachine.ScenesState.Value == ScenesStateEnum.TrainingLevel)
+		switch (_coreStateMachine.ScenesState.Value)
 		{
-			switch (gameState)
-			{
-				case GameStateEnum.None:
-					break;
-				case GameStateEnum.TrainingCheckPoint1:
-					break;
-				case GameStateEnum.CountDown:
-					_windowManager.Hide<MenuBackgroundWindow>();
-					_windowManager.Hide<MenuMainWindow>();
-					_windowManager.Show<GameWindowLevelTraining>();
-					break;
-				case GameStateEnum.Play:
-					break;
-				case GameStateEnum.Dead:
-					break;
-				case GameStateEnum.RaceOver:
-					break;
-			}
-		}
-		if (_coreStateMachine.ScenesState.Value == ScenesStateEnum.Level3)
-		{
-			switch (gameState)
-			{
-				case GameStateEnum.None:
-					break;
-				case GameStateEnum.TrainingCheckPoint1:
-					break;
-				case GameStateEnum.CountDown:
-					_windowManager.Hide<MenuBackgroundWindow>();
-					_windowManager.Hide<MenuMainWindow>();
+			case ScenesStateEnum.TrainingLevel:
+				if (gameState == GameStateEnum.CountDown)
+				{
+					HideMenuWindows();
+					_windowManager.Show<GameWindowLevel0Training>();
+				}
+
+				break;
+			case ScenesStateEnum.Level1:
+				if (gameState == GameStateEnum.CountDown)
+				{
+					HideMenuWindows();
+					_windowManager.Show<GameWindowLevel1>();
+				}
+
+				break;
+			case ScenesStateEnum.Level2:
+				if (gameState == GameStateEnum.CountDown)
+				{
+					HideMenuWindows();
+					_windowManager.Show<GameWindowLevel2>();
+				}
+
+				break;
+			case ScenesStateEnum.Level3:
+				if (gameState == GameStateEnum.CountDown)
+				{
+					HideMenuWindows();
 					_windowManager.Show<GameWindowLevel3>();
-					break;
-				case GameStateEnum.Play:
-					break;
-				case GameStateEnum.Dead:
-					break;
-				case GameStateEnum.RaceOver:
-					break;
-			}
-		}
-		if (_coreStateMachine.ScenesState.Value == ScenesStateEnum.Level1 || _coreStateMachine.ScenesState.Value == ScenesStateEnum.Level2)
-		{
-			switch (gameState)
-			{
-				case GameStateEnum.None:
-					break;
-				case GameStateEnum.TrainingCheckPoint1:
-					break;
-				case GameStateEnum.CountDown:
-					_windowManager.Hide<MenuBackgroundWindow>();
-					_windowManager.Hide<MenuMainWindow>();
-					_windowManager.Show<GameWindow>();
-					break;
-				case GameStateEnum.Play:
-					break;
-				case GameStateEnum.Dead:
-					break;
-				case GameStateEnum.RaceOver:
-					break;
-			}
+				}
+
+				break;
+			case ScenesStateEnum.Level4:
+				if (gameState == GameStateEnum.CountDown)
+				{
+					HideMenuWindows();
+
+					_windowManager.Show<GameWindowLevel4>();
+				}
+
+				break;
+			case ScenesStateEnum.Level5:
+				if (gameState == GameStateEnum.CountDown)
+				{
+					HideMenuWindows();
+					_windowManager.Show<GameWindowLevel5>();
+				}
+
+				break;
 		}
 	}
 
@@ -108,4 +97,10 @@ public class LevelControllerModel : IInitializable, IDisposable
 	}
 
 	#endregion
+
+	private void HideMenuWindows()
+	{
+		_windowManager.Hide<MenuBackgroundWindow>();
+		_windowManager.Hide<MenuMainWindow>();
+	}
 }
