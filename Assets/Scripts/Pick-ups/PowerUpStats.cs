@@ -5,7 +5,8 @@ public class PickupStats : Pickup
     private enum EffectType
     {
         AddSpeed,
-        SlowSpeed
+        SlowSpeed,
+        OffCarLight
     }
 
     [SerializeField]
@@ -26,6 +27,9 @@ public class PickupStats : Pickup
                 break;
             case EffectType.SlowSpeed:
                 car.SlowSpeed(_value);
+                break;
+            case EffectType.OffCarLight:
+                car.OffHeadlight();
                 break;
         }
     }

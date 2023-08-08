@@ -4,7 +4,6 @@ using UnityEngine.Rendering.Universal;
 public class LampOff : MonoBehaviour
 {
     [SerializeField] private Light2D _lampLight2D;
-
     [SerializeField] private float _time;
 
     private float _timer;

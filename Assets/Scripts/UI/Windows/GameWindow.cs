@@ -64,7 +64,6 @@ public class GameWindow : Window
 		_menuUI.gameObject.SetActive(true);
 		_resumeButton.gameObject.SetActive(true);
 		_menuUITextMenu.gameObject.SetActive(true);
-		_countDownUIHandler.gameObject.SetActive(true);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
 	}

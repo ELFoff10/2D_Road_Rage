@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6728348045978490521}
   - component: {fileID: 6728348045978490726}
+  - component: {fileID: 4903538179393387178}
   m_Layer: 0
   m_Name: OffCarHeadlights
   m_TagString: Untagged
@@ -171,3 +172,18 @@ PolygonCollider2D:
       - {x: -0.3604083, y: -0.046387494}
       - {x: 0.008544624, y: -0.046387434}
   m_UseDelaunayMesh: 0
+--- !u!114 &4903538179393387178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728348045978490724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68e57cf678ebbb4d8d918d364d19c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effectType: 2
+  _value: 0
+  _spriteRenderer: {fileID: 6728348045882566675}

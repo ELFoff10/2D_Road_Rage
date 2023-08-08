@@ -1,6 +1,7 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using VContainer;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -29,11 +30,13 @@ public class CarController : MonoBehaviour
 	private float _velocityVsUp;
 
 	private Rigidbody2D _carRigidbody2D;
+	private Light2D[] _lights2D;
 
 	private void Awake()
 	{
 		_carRigidbody2D = GetComponent<Rigidbody2D>();
 		_defaultMaxSpeed = _maxSpeed;
+		_lights2D = GetComponentsInChildren<Light2D>();
 	}
 
 	private void FixedUpdate()
@@ -130,6 +133,15 @@ public class CarController : MonoBehaviour
 		_maxSpeed = _defaultMaxSpeed - speed;
 		StartCoroutine(SlowSpeedCoroutine());
 	}
+	
+	public void OffHeadlight()
+	{
+		foreach (var light2D in _lights2D)
+		{
+			light2D.enabled = false;
+		}
+		StartCoroutine(OffHeadlightCoroutine());
+	}
 
 	private IEnumerator AddSpeedCoroutine()
 	{
@@ -142,7 +154,16 @@ public class CarController : MonoBehaviour
 		yield return new WaitForSeconds(3f);
 		_maxSpeed = _defaultMaxSpeed;
 	}
-
+	
+	private IEnumerator OffHeadlightCoroutine()
+	{
+		yield return new WaitForSeconds(3f);
+		foreach (var light2D in _lights2D)
+		{
+			light2D.enabled = true;
+		}
+	}
+	
 	internal float GetVelocityMagnitude()
 	{
 		return _carRigidbody2D.velocity.magnitude;
