@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/MenuBackgroundMusic.bank
   Name: MenuBackgroundMusic
   StudioPath: bank:/MenuBackgroundMusic
-  lastModified: 638262562838415388
+  lastModified: 638253751898130991
   FileSizes: []
   Exists: 1
 --- !u!114 &-4732355042806765301
@@ -114,7 +114,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638270182110276191
+  lastModified: 638253751898086199
   FileSizes: []
   Exists: 1
 --- !u!114 &-1122151191181611923
@@ -182,7 +182,7 @@ MonoBehaviour:
   - {fileID: -2086642672922542945}
   StringsBanks:
   - {fileID: 1142557859591529258}
-  cacheTime: 638271120639893194
+  cacheTime: 638271133587978011
   cacheVersion: 131605
 --- !u!114 &950255155997978121
 MonoBehaviour:
@@ -226,7 +226,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638270182110296198
+  lastModified: 638270387982602924
   FileSizes:
   - Name: 
     Value: 1762
@@ -273,7 +273,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 638262562838904547
+  lastModified: 638266668593902148
   FileSizes: []
   Exists: 1
 --- !u!114 &4072871509737435806
@@ -291,7 +291,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Car.bank
   Name: Car
   StudioPath: bank:/Car
-  lastModified: 638271120639893194
+  lastModified: 638271133587978011
   FileSizes: []
   Exists: 1
 --- !u!114 &4306132300757633323
@@ -471,7 +471,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/GameBackgroundMusic.bank
   Name: GameBackgroundMusic
   StudioPath: bank:/GameBackgroundMusic
-  lastModified: 638269942936214803
+  lastModified: 638270387982595458
   FileSizes: []
   Exists: 1
 --- !u!114 &9216671786045942439
@@ -489,6 +489,6 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Game.bank
   Name: Game
   StudioPath: bank:/Game
-  lastModified: 638270330499848924
+  lastModified: 638270387982261864
   FileSizes: []
   Exists: 1
