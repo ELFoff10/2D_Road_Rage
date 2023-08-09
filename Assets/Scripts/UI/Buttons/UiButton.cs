@@ -8,15 +8,14 @@ using UIBehaviour = Tools.UiManager.UIBehaviour;
 
 public class UiButton : UIBehaviour
 {
-	[Inject]
-	private readonly AudioManager _audioManager;
-	[Inject]
-	private readonly FMOD_Events _fmodEvents;
-
 	[SerializeField]
 	private Button _button;
 	[SerializeField]
 	private DOTweenAnimation _doTweenAnimation;
+	[Inject]
+	private readonly AudioManager _audioManager;
+	[Inject]
+	private readonly FMOD_Events _fmodEvents;
 
 	public event Action OnClick;
 

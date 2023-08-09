@@ -7,7 +7,7 @@ public class GemCountUI : MonoBehaviour
 	[SerializeField] 
 	private TMP_Text _gemCollectedText;
 	
-	private int _totalGems;
+	public int TotalGems;
 
 	[Inject]
 	private readonly GameEventsManager _gameEventsManager;
@@ -24,7 +24,12 @@ public class GemCountUI : MonoBehaviour
 
 	private void OnCoinCollected()
 	{
-		_totalGems++;
-		_gemCollectedText.text = _totalGems.ToString();
+		TotalGems++;
+		_gemCollectedText.text = TotalGems.ToString();
+	}
+
+	public void UpdateText()
+	{
+		_gemCollectedText.text = TotalGems.ToString();
 	}
 }

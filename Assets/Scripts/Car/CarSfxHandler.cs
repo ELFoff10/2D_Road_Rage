@@ -3,13 +3,13 @@ using VContainer;
 
 public class CarSfxHandler : MonoBehaviour
 {
-	[Inject]
-	private readonly AudioManager _audioManager;
-
 	private CarController _carController;
 	private float _desiredEnginePitch = 0.5f;
 	private float _tireScreechPitch = 0.5f;
 
+	[Inject]
+	private readonly AudioManager _audioManager;
+	
 	private void Start()
 	{
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].start();

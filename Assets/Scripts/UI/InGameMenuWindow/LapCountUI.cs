@@ -7,7 +7,7 @@ public class LapCountUI : MonoBehaviour
 	[SerializeField] 
 	private TMP_Text _lapCountText;
 	
-	private int _lapCount = 1;
+	public int LapCount = 1;
 
 	[Inject]
 	private readonly GameEventsManager _gameEventsManager;
@@ -24,7 +24,12 @@ public class LapCountUI : MonoBehaviour
 
 	private void OnFinishPassed()
 	{
-		_lapCount = 2;
-		_lapCountText.text = _lapCount.ToString();
+		LapCount = 2;
+		_lapCountText.text = LapCount.ToString();
+	}
+
+	public void UpdateText()
+	{
+		_lapCountText.text = LapCount.ToString();
 	}
 }

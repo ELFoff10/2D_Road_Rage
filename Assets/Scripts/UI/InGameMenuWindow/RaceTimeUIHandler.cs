@@ -5,14 +5,13 @@ using VContainer;
 
 public class RaceTimeUIHandler : MonoBehaviour
 {
+	public int RaceTimer = 0;
+	
+	private CompositeDisposable _compositeDisposable = new CompositeDisposable();
 	private TMP_Text _timeText;
 
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
-
-	private CompositeDisposable _compositeDisposable = new CompositeDisposable();
-
-	public int RaceTimer = 0;
 
 	private void Awake()
 	{

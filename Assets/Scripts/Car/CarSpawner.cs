@@ -21,7 +21,6 @@ public class CarSpawner : MonoBehaviour
 		for (var i = 0; i < _spawnPoints.Count; i++)
 		{
 			var spawnPoint = _spawnPoints[i].transform;
-
 			var playerSelectedCarID = PlayerPrefs.GetInt($"P{i + 1}SelectedCarID");
 
 			foreach (var carData in carDatabase)
@@ -29,9 +28,8 @@ public class CarSpawner : MonoBehaviour
 				if (carData.CarUniqueID != playerSelectedCarID) continue;
 
 				var car = Instantiate(carData.CarPrefab, spawnPoint.position, spawnPoint.rotation);
-
 				_prefabInject.InjectGameObject(car);
-
+				
 				var playerNumber = i + 1;
 
 				if (PlayerPrefs.GetInt($"P{playerNumber}_IsAI") == 1)
@@ -42,7 +40,6 @@ public class CarSpawner : MonoBehaviour
 					}
 
 					car.GetComponentInChildren<SpriteRenderer>().material = new Material(carData.Material);
-
 					car.GetComponent<CarSfxHandler>().enabled = false;
 					car.GetComponent<CarInputHandler>().enabled = false;
 					car.name = "AI";
@@ -55,7 +52,7 @@ public class CarSpawner : MonoBehaviour
 					car.tag = "Player";
 
 					if (_coreStateMachine.ScenesState.Value is ScenesStateEnum.Level2 or ScenesStateEnum.Level3
-					    or ScenesStateEnum.Level4 or ScenesStateEnum.Level5)
+					    or ScenesStateEnum.Level4)
 					{
 						foreach (var light2D in car.GetComponentsInChildren<Light2D>())
 						{

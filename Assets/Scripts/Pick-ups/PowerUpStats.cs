@@ -17,10 +17,10 @@ public class PickupStats : Pickup
     private List<Light2D> _lights2D;
     [SerializeField]
     private EffectType _effectType;
-    [SerializeField]
-    private float _value;
     [SerializeField] 
     private SpriteRenderer _spriteRenderer;
+    [SerializeField]
+    private float _value;
 
     [Inject]
     private readonly AudioManager _audioManager;

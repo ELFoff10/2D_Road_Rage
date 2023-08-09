@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using VContainer;
 
 public class DistanceUIHandler : MonoBehaviour
 {
@@ -10,11 +11,22 @@ public class DistanceUIHandler : MonoBehaviour
     private float _startingPosition;
     private float _distanceTraveled;
 
+    [Inject]
+    private readonly ICoreStateMachine _coreStateMachine;
+ 
     private void Start()
     {
         _carTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         _startingPosition = _carTransform.position.y;
+        
+        _coreStateMachine.LevelGameStateMachine.OnSetGameState += UpdateText;
+    }
+
+    private void OnDestroy()
+    {
+        _coreStateMachine.LevelGameStateMachine.OnSetGameState -= UpdateText;
+
     }
 
     private void Update()
@@ -27,6 +39,15 @@ public class DistanceUIHandler : MonoBehaviour
             _distanceText.text = (_distanceTraveled > 1000)
                 ? (_distanceTraveled / 1000).ToString("F2") + " km"
                 : _distanceTraveled.ToString("F0") + " m";
+        }
+    }
+
+    private void UpdateText(GameStateEnum gameStateEnum)
+    {
+        if (gameStateEnum == GameStateEnum.CountDown)
+        {
+            _distanceTraveled = 0;
+            _distanceText.text = _distanceTraveled.ToString("F2") + " m";
         }
     }
 }

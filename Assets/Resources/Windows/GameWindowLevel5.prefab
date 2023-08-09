@@ -1559,8 +1559,10 @@ MonoBehaviour:
   _menuUI: {fileID: 559341849590351305}
   _raceTimeUIHandler: {fileID: 2732237584011287265}
   _countDownUIHandler: {fileID: 6461986761223577056}
+  _leaderBoardUIHandler: {fileID: 3131505885377777308}
+  _lapCountUI: {fileID: 3710856163617866907}
   _menuUITextMenu: {fileID: 24240113679475272}
-  _menuUITextRaceOver: {fileID: 8065079301659156107}
+  _menuUITextFinish: {fileID: 8065079301659156107}
 --- !u!1 &3660298560576344375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,7 +1746,7 @@ GameObject:
   - component: {fileID: 5704079696788158502}
   - component: {fileID: 8065079301659156107}
   m_Layer: 5
-  m_Name: HeaderTextRaceOver
+  m_Name: HeaderTextFinish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1797,7 +1799,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RACE OVER
+  m_text: FINISH!!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1918,6 +1920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lapCountText: {fileID: 469843711271602340}
+  LapCount: 1
 --- !u!1 &5184326923121315949
 GameObject:
   m_ObjectHideFlags: 0

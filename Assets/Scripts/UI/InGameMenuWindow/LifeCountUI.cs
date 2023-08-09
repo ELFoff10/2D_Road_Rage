@@ -30,9 +30,14 @@ public class LifeCountUI : MonoBehaviour
 		
 		if (LifeCount == 0)
 		{
-			_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
+			_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.Dead);
 			LifeCount = 3;
 			_lifeCountText.text = LifeCount.ToString();
 		}
+	}
+
+	public void UpdateText()
+	{
+		_lifeCountText.text = LifeCount.ToString();
 	}
 }

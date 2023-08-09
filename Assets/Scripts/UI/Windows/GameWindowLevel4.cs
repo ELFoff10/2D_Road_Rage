@@ -8,12 +8,6 @@ using VContainer;
 
 public class GameWindowLevel4 : Window
 {
-	[Inject]
-	private readonly ICoreStateMachine _coreStateMachine;
-	[Inject]
-	private readonly AudioManager _audioManager;
-	[Inject]
-	private readonly IMultiSceneManager _multiSceneManager;
 	[SerializeField]
 	private UiButton _menuButton;
 	[SerializeField]
@@ -29,16 +23,26 @@ public class GameWindowLevel4 : Window
 	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
 	[SerializeField]
+	private LeaderBoardUIHandler _leaderBoardUIHandler;
+	[SerializeField]
+	private LapCountUI _lapCountUI;
+	[SerializeField]
 	private TMP_Text _menuUITextMenu;
 	[SerializeField]
-	private TMP_Text _menuUITextRaceOver;
+	private TMP_Text _menuUITextFinish;
+	[Inject]
+	private readonly ICoreStateMachine _coreStateMachine;
+	[Inject]
+	private readonly AudioManager _audioManager;
+	[Inject]
+	private readonly IMultiSceneManager _multiSceneManager;
 
 	protected override void OnActivate()
 	{
 		base.OnActivate();
 
 		_countDownUIHandler.gameObject.SetActive(true);
-		
+
 		_menuButton.OnClick += OnMenuButton;
 		_resumeButton.OnClick += OnResumeGame;
 		_raceAgainButton.OnClick += OnRaceAgainButton;
@@ -60,10 +64,10 @@ public class GameWindowLevel4 : Window
 	private void OnMenuButton()
 	{
 		Time.timeScale = 0;
-		_menuUITextRaceOver.gameObject.SetActive(false);
+		_menuUITextFinish.gameObject.SetActive(false);
+		_menuUITextMenu.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(true);
 		_resumeButton.gameObject.SetActive(true);
-		_menuUITextMenu.gameObject.SetActive(true);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
 	}
@@ -81,6 +85,9 @@ public class GameWindowLevel4 : Window
 	private void OnRaceAgainButton()
 	{
 		Time.timeScale = 1;
+		_lapCountUI.LapCount = 0;
+		_leaderBoardUIHandler.gameObject.SetActive(true);
+		_leaderBoardUIHandler.gameObject.SetActive(false);
 		_menuButton.gameObject.SetActive(true);
 		_raceTimeUIHandler.RaceTimer = 0;
 		_menuUI.gameObject.SetActive(false);
@@ -93,6 +100,7 @@ public class GameWindowLevel4 : Window
 	private void OnExitButton()
 	{
 		Time.timeScale = 1;
+		_lapCountUI.LapCount = 0;
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
 		StopClip();
@@ -105,11 +113,11 @@ public class GameWindowLevel4 : Window
 	{
 		switch (gameStateEnum)
 		{
-			case GameStateEnum.RaceOver:
+			case GameStateEnum.Finish:
 				Time.timeScale = 0;
 				StopClip();
 				_menuUI.gameObject.SetActive(true);
-				_menuUITextRaceOver.gameObject.SetActive(true);
+				_menuUITextFinish.gameObject.SetActive(true);
 				_menuButton.gameObject.SetActive(false);
 				_resumeButton.gameObject.SetActive(false);
 				_menuUITextMenu.gameObject.SetActive(false);

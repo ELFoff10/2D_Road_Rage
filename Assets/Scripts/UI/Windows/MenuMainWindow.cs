@@ -5,13 +5,10 @@ public class MenuMainWindow : Window
 {
 	[SerializeField]
 	private UiButton _playButton;
-
 	[SerializeField]
 	private UiButton _statusButton;
-
 	[SerializeField]
 	private UiButton _optionsButton;
-
 	[SerializeField]
 	private UiButton _quitButton;
 

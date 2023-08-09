@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using VContainer;
@@ -19,7 +18,7 @@ public class CarController : MonoBehaviour
 	private float _turnFactor = 3f;
 	[SerializeField]
 	private float _maxSpeed = 7f;
-	
+
 	private readonly float _withoutPressingAcceleration = 3f;
 	private readonly float _accelerationInput = 1;
 	private float _defaultMaxSpeed;
@@ -133,13 +132,14 @@ public class CarController : MonoBehaviour
 		_maxSpeed = _defaultMaxSpeed - speed;
 		StartCoroutine(SlowSpeedCoroutine());
 	}
-	
+
 	public void OffHeadlight(float time)
 	{
 		foreach (var light2D in _lights2D)
 		{
 			light2D.enabled = false;
 		}
+
 		StartCoroutine(OffHeadlightCoroutine(time));
 	}
 
@@ -154,8 +154,8 @@ public class CarController : MonoBehaviour
 		yield return new WaitForSeconds(3f);
 		_maxSpeed = _defaultMaxSpeed;
 	}
-	
-	private IEnumerator OffHeadlightCoroutine( float time)
+
+	private IEnumerator OffHeadlightCoroutine(float time)
 	{
 		yield return new WaitForSeconds(time);
 		foreach (var light2D in _lights2D)
@@ -163,7 +163,7 @@ public class CarController : MonoBehaviour
 			light2D.enabled = true;
 		}
 	}
-	
+
 	internal float GetVelocityMagnitude()
 	{
 		return _carRigidbody2D.velocity.magnitude;

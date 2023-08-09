@@ -3,24 +3,22 @@ using VContainer;
 
 public class LevelGeneration : MonoBehaviour
 {
-	[SerializeField] 
+	[SerializeField]
 	private GameObject _roadPrefab;
-	[SerializeField] 
+	[SerializeField]
 	private Transform _startRoad;
+	
 	private Vector3 _lastEndPosition;
 	private float _offset;
 	private const float PlayerDistanceSpawn = 200f;
 	private Transform _carTransform;
-	// private CarController _carController;
-	
+
 	[Inject]
 	private readonly PrefabInject _prefabInject;
 
 	private void Awake()
 	{
 		_lastEndPosition = _startRoad.transform.Find("EndPosition").position;
-		// _offset = _startRoad.transform.Find("View").GetComponent<SpriteRenderer>().bounds.size.y * 2;
-
 		SpawnPart();
 	}
 
@@ -28,7 +26,6 @@ public class LevelGeneration : MonoBehaviour
 	{
 		_carTransform = GameObject.FindGameObjectWithTag("Player").transform;
 		_carTransform.GetComponent<CarAIHandler>().enabled = false;
-		// _carController = _carTransform.GetComponent<CarController>();
 	}
 
 	private void Update()

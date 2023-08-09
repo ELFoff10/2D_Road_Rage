@@ -8,12 +8,6 @@ using VContainer;
 
 public class GameWindowLevel3 : Window
 {
-	[Inject]
-	private readonly ICoreStateMachine _coreStateMachine;
-	[Inject]
-	private readonly AudioManager _audioManager;
-	[Inject]
-	private readonly IMultiSceneManager _multiSceneManager;
 	[SerializeField]
 	private UiButton _menuButton;
 	[SerializeField]
@@ -27,20 +21,28 @@ public class GameWindowLevel3 : Window
 	[SerializeField]
 	private LifeCountUI _lifeCountUI;
 	[SerializeField]
-	private DistanceUIHandler _distanceUIHandler;
+	private GemCountUI _gemCountUI;
 	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
+	[SerializeField]
+	private DistanceUIHandler _distanceUIHandler;
 	[SerializeField]
 	private TMP_Text _menuUITextMenu;
 	[SerializeField]
 	private TMP_Text _menuUITextRaceOver;
+	[SerializeField]
+	private TMP_Text _menuUITextFinish;
+	[Inject]
+	private readonly ICoreStateMachine _coreStateMachine;
+	[Inject]
+	private readonly AudioManager _audioManager;
+	[Inject]
+	private readonly IMultiSceneManager _multiSceneManager;
 
 	protected override void OnActivate()
 	{
 		base.OnActivate();
-
 		_countDownUIHandler.gameObject.SetActive(true);
-		
 		_menuButton.OnClick += OnMenuButton;
 		_resumeButton.OnClick += OnResumeGame;
 		_raceAgainButton.OnClick += OnRaceAgainButton;
@@ -50,7 +52,6 @@ public class GameWindowLevel3 : Window
 
 	protected override void OnDeactivate()
 	{
-		
 		base.OnDeactivate();
 		_menuButton.OnClick -= OnMenuButton;
 		_resumeButton.OnClick -= OnResumeGame;
@@ -64,6 +65,8 @@ public class GameWindowLevel3 : Window
 	{
 		Time.timeScale = 0;
 		_menuUITextRaceOver.gameObject.SetActive(false);
+		_menuUITextFinish.gameObject.SetActive(false);
+		_menuUITextMenu.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(true);
 		_resumeButton.gameObject.SetActive(true);
 		_menuUITextMenu.gameObject.SetActive(true);
@@ -85,10 +88,14 @@ public class GameWindowLevel3 : Window
 	private void OnRaceAgainButton()
 	{
 		Time.timeScale = 1;
+		_gemCountUI.TotalGems = 0;
+		_gemCountUI.UpdateText();
+		_lifeCountUI.LifeCount = 3;
+		_lifeCountUI.UpdateText();
+		
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
 		_countDownUIHandler.gameObject.SetActive(true);
-		_lifeCountUI.LifeCount = 3;
 		_lifeCountUI.gameObject.SetActive(false);
 		_lifeCountUI.gameObject.SetActive(true);
 		PlayClip();
@@ -99,9 +106,9 @@ public class GameWindowLevel3 : Window
 	private void OnExitButton()
 	{
 		Time.timeScale = 1;
+		_gemCountUI.TotalGems = 0;
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
-		
 		StopClip();
 		_audioManager.EventInstances[(int)AudioNameEnum.MenuBackgroundMusic].start();
 		LoadLevel(ScenesStateEnum.Menu);
@@ -112,14 +119,26 @@ public class GameWindowLevel3 : Window
 	{
 		switch (gameStateEnum)
 		{
-			case GameStateEnum.RaceOver:
+			case GameStateEnum.Finish:
 				Time.timeScale = 0;
 				StopClip();
 				_menuUI.gameObject.SetActive(true);
-				_menuUITextRaceOver.gameObject.SetActive(true);
+				_menuUITextMenu.gameObject.SetActive(false);
+				_menuUITextRaceOver.gameObject.SetActive(false);
+				_menuUITextFinish.gameObject.SetActive(true);
 				_menuButton.gameObject.SetActive(false);
 				_resumeButton.gameObject.SetActive(false);
 				_menuUITextMenu.gameObject.SetActive(false);
+				break;
+			case GameStateEnum.Dead:
+				Time.timeScale = 0;
+				StopClip();
+				_menuButton.gameObject.SetActive(false);
+				_resumeButton.gameObject.SetActive(false);
+				_menuUITextMenu.gameObject.SetActive(false);
+				_menuUITextFinish.gameObject.SetActive(false);
+				_menuUITextRaceOver.gameObject.SetActive(true);
+				_menuUI.gameObject.SetActive(true);
 				break;
 		}
 	}

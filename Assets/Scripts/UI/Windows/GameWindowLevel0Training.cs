@@ -7,12 +7,6 @@ using VContainer;
 
 public class GameWindowLevel0Training : Window
 {
-	[Inject]
-	private readonly ICoreStateMachine _coreStateMachine;
-	[Inject]
-	private readonly AudioManager _audioManager;
-	[Inject]
-	private readonly IMultiSceneManager _multiSceneManager;
 	[SerializeField]
 	private TrainingUI _trainingUI;
 	[SerializeField]
@@ -33,6 +27,12 @@ public class GameWindowLevel0Training : Window
 	private TMP_Text _trainingTextRight2;
 	[SerializeField]
 	private TMP_Text _trainingHeaderText;
+	[Inject]
+	private readonly ICoreStateMachine _coreStateMachine;
+	[Inject]
+	private readonly AudioManager _audioManager;
+	[Inject]
+	private readonly IMultiSceneManager _multiSceneManager;
 
 	protected override void OnActivate()
 	{
@@ -78,10 +78,6 @@ public class GameWindowLevel0Training : Window
 	{
 		switch (gameStateEnum)
 		{
-			// case GameStateEnum.RaceOver:
-			// 	Time.timeScale = 0;
-			// 	StopClip();
-			// 	break;
 			case GameStateEnum.TrainingCheckPoint1:
 				Time.timeScale = 0;
 				StopClip();

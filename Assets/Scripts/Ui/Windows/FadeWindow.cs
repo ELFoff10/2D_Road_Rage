@@ -4,7 +4,6 @@ using DG.Tweening;
 using Tools.UiManager;
 using UnityEngine;
 
-
 public class FadeWindow : Window
 {
 	[SerializeField]

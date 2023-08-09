@@ -7,7 +7,12 @@ public class MenuLevelSelectWindow : Window
 	[SerializeField]
 	private UiButton _backButton;
 	[SerializeField]
-	private UiButton _trainingLevelButton, _level1Button, _level2Button, _level3Button, _level4Button, _level5Button;
+	private UiButton _trainingLevelButton,
+		_level1Button,
+		_level2Button,
+		_level3Button,
+		_level4Button,
+		_level5Button;
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
@@ -47,16 +52,15 @@ public class MenuLevelSelectWindow : Window
 		_manager.Hide<MenuLevelSelectWindow>();
 		_manager.Show<MenuCarSelectWindow>();
 	}
-	
+
 	private void OnTrainingLevelButton()
 	{
 		LoadLevel(ScenesStateEnum.TrainingLevel);
 		_windowManager.Show<GameWindowLevel0Training>();
 		_audioManager.EventInstances[(int)AudioNameEnum.GameBackgroundMusic].stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.TrainingLevelBgMusic].start();
-
 	}
-	
+
 	private void OnLevel1Button()
 	{
 		LoadLevel(ScenesStateEnum.Level1);
@@ -66,7 +70,7 @@ public class MenuLevelSelectWindow : Window
 	{
 		LoadLevel(ScenesStateEnum.Level2);
 	}
-	
+
 	private void OnLevel3Button()
 	{
 		LoadLevel(ScenesStateEnum.Level3);

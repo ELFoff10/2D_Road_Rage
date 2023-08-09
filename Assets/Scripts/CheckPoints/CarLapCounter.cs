@@ -15,16 +15,16 @@ public class CarLapCounter : MonoBehaviour
 	private readonly GameEventsManager _gameEventsManager;
 
 	public event Action<CarLapCounter> OnPassCheckPoint;
-	// public event Action<CarLapCounter> OnFinishCheckPoint;
 	public event Action<CarLapCounter> OnPassTrainingCheckPoint1;
 	public event Action<CarLapCounter> OnPassTrainingCheckPoint2;
 	public event Action<CarLapCounter> OnPassTrainingCheckPoint3;
+	
+	public int LapsToComplete = 1;
 
 	private int _passedCheckPointNumber;
 	private float _timeAtLastPassedCheckPoint;
 	private int _numberOfPassedCheckPoints;
 	private int _lapsCompleted;
-	public int LapsToComplete = 1;
 	private bool _isRaceCompleted;
 	private int _carPosition;
 	private bool _isHideRoutineRunning;
@@ -48,7 +48,7 @@ public class CarLapCounter : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (!collision.CompareTag("CheckPoint")) return;
-
+		
 		if (_isRaceCompleted)
 		{
 			return;
@@ -59,15 +59,12 @@ public class CarLapCounter : MonoBehaviour
 		if (_passedCheckPointNumber + 1 != checkPoint.CheckPointNumber) return;
 
 		_passedCheckPointNumber = checkPoint.CheckPointNumber;
-
 		_numberOfPassedCheckPoints++;
-
 		_timeAtLastPassedCheckPoint = Time.time;
 
 		if (checkPoint.IsFinishLine)
 		{
 			_gameEventsManager.FinishLinePassed();
-            
 			_passedCheckPointNumber = 0;
 			_lapsCompleted++;
 
@@ -99,9 +96,9 @@ public class CarLapCounter : MonoBehaviour
 			StartCoroutine(ShowPositionCo(300));
 
 			if (!CompareTag("Player")) return;
-			// OnFinishCheckPoint?.Invoke(this);
+			
 			_audioManager.EventInstances[(int)AudioNameEnum.Finish].start();
-			_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
+			_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.Finish);
 			GetComponent<CarInputHandler>().enabled = false;
 			GetComponent<CarAIHandler>().enabled = true;
 		}
@@ -118,9 +115,7 @@ public class CarLapCounter : MonoBehaviour
 		if (_isHideRoutineRunning) yield break;
 
 		_isHideRoutineRunning = true;
-
 		yield return new WaitForSeconds(_hideUIDelayTime);
-
 		_isHideRoutineRunning = false;
 	}
 }

@@ -6,6 +6,6 @@ public enum GameStateEnum
     TrainingCheckPoint3,
     CountDown,
     Play,
-    RaceOver,
+    Finish,
     Dead
 }
