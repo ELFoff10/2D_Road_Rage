@@ -105,6 +105,11 @@ public class GameWindowLevel2 : Window
 	private void OnExitButton()
 	{
 		Time.timeScale = 1;
+		_gemCountUI.TotalGems = 0;
+		_gemCountUI.UpdateText();
+		_raceTimeUIHandler.RaceTimer = 0;
+		_lifeCountUI.LifeCount = 3;
+		_lifeCountUI.UpdateText();
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
 		StopClip();

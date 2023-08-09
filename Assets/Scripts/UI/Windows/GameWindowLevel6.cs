@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VContainer;
 
-public class GameWindowLevel4 : Window
+public class GameWindowLevel6 : Window
 {
 	[SerializeField]
 	private UiButton _menuButton;
@@ -23,9 +23,7 @@ public class GameWindowLevel4 : Window
 	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
 	[SerializeField]
-	private LeaderBoardUIHandler _leaderBoardUIHandler;
-	[SerializeField]
-	private LapCountUI _lapCountUI;
+	private GemCountUI _gemCountUI;
 	[SerializeField]
 	private TMP_Text _menuUITextMenu;
 	[SerializeField]
@@ -63,9 +61,9 @@ public class GameWindowLevel4 : Window
 	{
 		Time.timeScale = 0;
 		_menuUITextFinish.gameObject.SetActive(false);
-		_menuUITextMenu.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(true);
 		_resumeButton.gameObject.SetActive(true);
+		_menuUITextMenu.gameObject.SetActive(true);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarEngine].stop(STOP_MODE.IMMEDIATE);
 		_audioManager.EventInstances[(int)AudioNameEnum.CarSkid].stop(STOP_MODE.IMMEDIATE);
 	}
@@ -83,9 +81,8 @@ public class GameWindowLevel4 : Window
 	private void OnRaceAgainButton()
 	{
 		Time.timeScale = 1;
-		_lapCountUI.LapCount = 0;
-		_leaderBoardUIHandler.gameObject.SetActive(true);
-		_leaderBoardUIHandler.gameObject.SetActive(false);
+		_gemCountUI.TotalGems = 0;
+		_gemCountUI.UpdateText();
 		_menuButton.gameObject.SetActive(true);
 		_raceTimeUIHandler.RaceTimer = 0;
 		_menuUI.gameObject.SetActive(false);
@@ -98,7 +95,8 @@ public class GameWindowLevel4 : Window
 	private void OnExitButton()
 	{
 		Time.timeScale = 1;
-		_lapCountUI.LapCount = 0;
+		_gemCountUI.TotalGems = 0;
+		_gemCountUI.UpdateText();
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
 		StopClip();

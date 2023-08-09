@@ -88,7 +88,13 @@ public class UiSelectCar : MonoBehaviour
         PlayerPrefs.SetInt("P7SelectedCarID", _carData[Random.Range(0, _carData.Length)].CarUniqueID);
         PlayerPrefs.SetInt("P7_IsAI", 1);
         PlayerPrefs.SetInt("P8SelectedCarID", _carData[Random.Range(0, _carData.Length)].CarUniqueID);
-        PlayerPrefs.SetInt("P8_IsAI", 1);
+        PlayerPrefs.SetInt("P8_IsAI", 1);   
+        PlayerPrefs.SetInt("P8SelectedCarID", _carData[Random.Range(0, _carData.Length)].CarUniqueID);
+        PlayerPrefs.SetInt("P9_IsAI", 1); 
+        PlayerPrefs.SetInt("P8SelectedCarID", _carData[Random.Range(0, _carData.Length)].CarUniqueID);
+        PlayerPrefs.SetInt("P10_IsAI", 1);    
+        PlayerPrefs.SetInt("P8SelectedCarID", _carData[Random.Range(0, _carData.Length)].CarUniqueID);
+        PlayerPrefs.SetInt("P11_IsAI", 1);
 
         PlayerPrefs.Save();
     }

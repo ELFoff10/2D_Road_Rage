@@ -7,5 +7,6 @@
     Level3,
     Level4,
     Level5,
+    Level6,
     Menu
 }

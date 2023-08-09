@@ -83,6 +83,14 @@ public class LevelControllerModel : IInitializable, IDisposable
 				}
 
 				break;
+			case ScenesStateEnum.Level6:
+				if (gameState == GameStateEnum.CountDown)
+				{
+					HideMenuWindows();
+					_windowManager.Show<GameWindowLevel6>();
+				}
+
+				break;
 		}
 	}
 

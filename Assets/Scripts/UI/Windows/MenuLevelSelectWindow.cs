@@ -12,7 +12,8 @@ public class MenuLevelSelectWindow : Window
 		_level2Button,
 		_level3Button,
 		_level4Button,
-		_level5Button;
+		_level5Button,
+		_level6Button;
 	[Inject]
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
@@ -32,6 +33,7 @@ public class MenuLevelSelectWindow : Window
 		_level3Button.OnClick += OnLevel3Button;
 		_level4Button.OnClick += OnLevel4Button;
 		_level5Button.OnClick += OnLevel5Button;
+		_level6Button.OnClick += OnLevel6Button;
 	}
 
 	protected override void OnDeactivate()
@@ -44,6 +46,7 @@ public class MenuLevelSelectWindow : Window
 		_level3Button.OnClick -= OnLevel3Button;
 		_level4Button.OnClick -= OnLevel4Button;
 		_level5Button.OnClick -= OnLevel5Button;
+		_level6Button.OnClick -= OnLevel6Button;
 		_coreStateMachine.SceneEndLoad -= OnSceneEndLoad;
 	}
 
@@ -84,6 +87,10 @@ public class MenuLevelSelectWindow : Window
 	private void OnLevel5Button()
 	{
 		LoadLevel(ScenesStateEnum.Level5);
+	}
+	private void OnLevel6Button()
+	{
+		LoadLevel(ScenesStateEnum.Level6);
 	}
 
 	private void LoadLevel(ScenesStateEnum scenesStateEnum)

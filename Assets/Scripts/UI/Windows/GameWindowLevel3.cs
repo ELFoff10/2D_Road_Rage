@@ -92,7 +92,8 @@ public class GameWindowLevel3 : Window
 		_gemCountUI.UpdateText();
 		_lifeCountUI.LifeCount = 3;
 		_lifeCountUI.UpdateText();
-		
+		_distanceUIHandler.gameObject.SetActive(false);
+		_distanceUIHandler.gameObject.SetActive(true);
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
 		_countDownUIHandler.gameObject.SetActive(true);
@@ -107,6 +108,11 @@ public class GameWindowLevel3 : Window
 	{
 		Time.timeScale = 1;
 		_gemCountUI.TotalGems = 0;
+		_gemCountUI.UpdateText();
+		_lifeCountUI.LifeCount = 3;
+		_lifeCountUI.UpdateText();
+		_distanceUIHandler.gameObject.SetActive(false);
+		_distanceUIHandler.gameObject.SetActive(true);
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
 		StopClip();

@@ -82,7 +82,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.7
-  m_Color: {r: 0.11489451, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.61849785, g: 0, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.7
-  m_Color: {r: 0.11489451, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.61849785, g: 0, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 5632448760841595785}
   - component: {fileID: 2174551543530826955}
   m_Layer: 0
-  m_Name: PlayerCar_4
+  m_Name: PlayerCar_9
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10274,7 +10274,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 9feb13edc87dc154dba3df1f86a85508, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0eb055af4069d143ad4817c733709a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10550,7 +10550,7 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 1
   m_FalloffIntensity: 0.85
-  m_Color: {r: 0.11489451, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.61849785, g: 0, b: 1, a: 1}
   m_Intensity: 1.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -10568,8 +10568,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0015000105, y: 0.04640001, z: 0}
-    m_Extent: {x: 0.8491, y: 1.3046999, z: 0}
+    m_Center: {x: 0.0010000169, y: 0.056349993, z: 0}
+    m_Extent: {x: 0.85220003, y: 1.30285, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

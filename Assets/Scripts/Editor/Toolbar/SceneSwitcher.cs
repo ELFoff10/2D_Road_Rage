@@ -86,6 +86,12 @@ namespace UnityToolbarExtender.Examples
                 //SceneHelper.OpenLastLaunchScene();
                 SceneHelper.OpenScene("Level5");
             }
+            
+            if (GUILayout.Button(new GUIContent("6", "Level 6"), ToolbarStyles.CommandButtonStyle))
+            {
+                //SceneHelper.OpenLastLaunchScene();
+                SceneHelper.OpenScene("Level6");
+            }
         }
     }
 
