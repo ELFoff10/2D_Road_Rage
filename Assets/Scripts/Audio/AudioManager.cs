@@ -27,8 +27,9 @@ public class AudioManager : MonoBehaviour
 		CreateInstance(_fmodEvents.CarHit);
 		CreateInstance(_fmodEvents.Finish);
 		CreateInstance(_fmodEvents.PickUpGem);
-		CreateInstance(_fmodEvents.Firework);
+		CreateInstance(_fmodEvents.PickUpLightOff);
 		CreateInstance(_fmodEvents.BarrierCrush);
+		CreateInstance(_fmodEvents.StartFirework);
 	}
 
 	public static void PlayOneShot(EventReference sound)

@@ -134,13 +134,13 @@ public class CarController : MonoBehaviour
 		StartCoroutine(SlowSpeedCoroutine());
 	}
 	
-	public void OffHeadlight()
+	public void OffHeadlight(float time)
 	{
 		foreach (var light2D in _lights2D)
 		{
 			light2D.enabled = false;
 		}
-		StartCoroutine(OffHeadlightCoroutine());
+		StartCoroutine(OffHeadlightCoroutine(time));
 	}
 
 	private IEnumerator AddSpeedCoroutine()
@@ -155,9 +155,9 @@ public class CarController : MonoBehaviour
 		_maxSpeed = _defaultMaxSpeed;
 	}
 	
-	private IEnumerator OffHeadlightCoroutine()
+	private IEnumerator OffHeadlightCoroutine( float time)
 	{
-		yield return new WaitForSeconds(3f);
+		yield return new WaitForSeconds(time);
 		foreach (var light2D in _lights2D)
 		{
 			light2D.enabled = true;

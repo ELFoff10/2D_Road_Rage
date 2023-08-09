@@ -5,15 +5,15 @@ using VContainer;
 
 public class CarSpawner : MonoBehaviour
 {
-	[Inject]
-	private CameraController _cameraController;
-
 	[SerializeField]
 	private List<GameObject> _spawnPoints;
-	
+	[Inject]
+	private CameraController _cameraController;
 	[Inject]
 	private readonly PrefabInject _prefabInject;
-    
+	[Inject]
+	private readonly ICoreStateMachine _coreStateMachine;
+
 	private void Awake()
 	{
 		var carDatabase = Resources.LoadAll<CarData>(nameof(CarData) + "/");
@@ -27,11 +27,11 @@ public class CarSpawner : MonoBehaviour
 			foreach (var carData in carDatabase)
 			{
 				if (carData.CarUniqueID != playerSelectedCarID) continue;
-				
+
 				var car = Instantiate(carData.CarPrefab, spawnPoint.position, spawnPoint.rotation);
 
 				_prefabInject.InjectGameObject(car);
-					
+
 				var playerNumber = i + 1;
 
 				if (PlayerPrefs.GetInt($"P{playerNumber}_IsAI") == 1)
@@ -53,6 +53,15 @@ public class CarSpawner : MonoBehaviour
 					car.GetComponent<CarAIHandler>().enabled = false;
 					car.name = "Player";
 					car.tag = "Player";
+
+					if (_coreStateMachine.ScenesState.Value is ScenesStateEnum.Level2 or ScenesStateEnum.Level3
+					    or ScenesStateEnum.Level4 or ScenesStateEnum.Level5)
+					{
+						foreach (var light2D in car.GetComponentsInChildren<Light2D>())
+						{
+							light2D.enabled = false;
+						}
+					}
 
 					if (_cameraController != null)
 					{

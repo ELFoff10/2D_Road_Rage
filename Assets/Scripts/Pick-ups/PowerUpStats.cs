@@ -1,4 +1,8 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using VContainer;
 
 public class PickupStats : Pickup
 {
@@ -6,17 +10,20 @@ public class PickupStats : Pickup
     {
         AddSpeed,
         SlowSpeed,
-        OffCarLight
+        OffLightArea
     }
-
+    
+    [SerializeField]
+    private List<Light2D> _lights2D;
     [SerializeField]
     private EffectType _effectType;
-
     [SerializeField]
     private float _value;
-    
     [SerializeField] 
     private SpriteRenderer _spriteRenderer;
+
+    [Inject]
+    private readonly AudioManager _audioManager;
 
     protected override void OnPickedUp(CarController car)
     {
@@ -28,8 +35,13 @@ public class PickupStats : Pickup
             case EffectType.SlowSpeed:
                 car.SlowSpeed(_value);
                 break;
-            case EffectType.OffCarLight:
-                car.OffHeadlight();
+            case EffectType.OffLightArea:
+                car.OffHeadlight(_value);
+                _audioManager.EventInstances[(int)AudioNameEnum.PickUpLightOff].start();
+                foreach (var light2D in _lights2D.Where(light2D => _lights2D != null))
+                {
+                    light2D.enabled = false;
+                }
                 break;
         }
     }
@@ -38,5 +50,6 @@ public class PickupStats : Pickup
     {
         IsCollected = true;
         _spriteRenderer.gameObject.SetActive(false);
+
     }
 }

@@ -10,9 +10,11 @@ public class FMOD_Events : MonoBehaviour
 	[field: SerializeField]
 	public EventReference PickUpGem { get; private set; }
 	[field: SerializeField]
-	public EventReference Firework { get; private set; }
+	public EventReference StartFirework { get; private set; }
 	[field: SerializeField]
 	public EventReference BarrierCrush { get; private set; }
+	[field: SerializeField]
+	public EventReference PickUpLightOff { get; private set; }
 	
 	[field: Header("Game Background Music")]
 	[field: SerializeField]

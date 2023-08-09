@@ -6,8 +6,7 @@ public class LifeCountUI : MonoBehaviour
 {
 	[SerializeField] 
 	private TMP_Text _lifeCountText;
-	[SerializeField] 
-	private int _lifeCount = 3;
+	public int LifeCount = 3;
 
 	[Inject]
 	private readonly GameEventsManager _gameEventsManager;
@@ -26,14 +25,14 @@ public class LifeCountUI : MonoBehaviour
 
 	private void OnPlayerBreakBarrier()
 	{
-		_lifeCount--;
-		_lifeCountText.text = _lifeCount.ToString();
+		LifeCount--;
+		_lifeCountText.text = LifeCount.ToString();
 		
-		if (_lifeCount == 0)
+		if (LifeCount == 0)
 		{
 			_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.RaceOver);
-			_lifeCount = 3;
-			_lifeCountText.text = _lifeCount.ToString();
+			LifeCount = 3;
+			_lifeCountText.text = LifeCount.ToString();
 		}
 	}
 }

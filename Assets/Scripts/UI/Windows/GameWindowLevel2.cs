@@ -25,6 +25,8 @@ public class GameWindowLevel2 : Window
 	[SerializeField]
 	private MenuUI _menuUI;
 	[SerializeField]
+	private LifeCountUI _lifeCountUI;
+	[SerializeField]
 	private RaceTimeUIHandler _raceTimeUIHandler;
 	[SerializeField]
 	private CountDownUIHandler _countDownUIHandler;
@@ -85,6 +87,8 @@ public class GameWindowLevel2 : Window
 		_raceTimeUIHandler.RaceTimer = 0;
 		_menuUI.gameObject.SetActive(false);
 		_countDownUIHandler.gameObject.SetActive(true);
+		_lifeCountUI.gameObject.SetActive(false);
+		_lifeCountUI.gameObject.SetActive(true);
 		PlayClip();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.CountDown);

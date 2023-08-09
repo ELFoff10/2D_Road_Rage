@@ -25,10 +25,6 @@ public class GemCountUI : MonoBehaviour
 	private void OnCoinCollected()
 	{
 		_totalGems++;
-	}
-
-	private void Update()
-	{
 		_gemCollectedText.text = _totalGems.ToString();
 	}
 }

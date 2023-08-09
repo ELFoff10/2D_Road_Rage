@@ -8,6 +8,7 @@ public enum AudioNameEnum
 	CarHit,
 	Finish,
 	PickUpGem,
-	Firework,
-	BarrierCrush
+	PickUpLightOff,
+	BarrierCrush,
+	StartFirework,
 }

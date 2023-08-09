@@ -81,7 +81,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.7
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.2584905, b: 0.2584905, a: 1}
   m_Intensity: 2.19
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a468240c75b26ed4383b85dc8f8fd523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LapsToComplete: 1
 --- !u!114 &2174551543530826955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10465,7 +10466,7 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 1
   m_FalloffIntensity: 0.85
-  m_Color: {r: 1, g: 0, b: 0.7679591, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.10272598, a: 1}
   m_Intensity: 1.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -10483,8 +10484,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0016500056, y: 0.04914999, z: 0}
-    m_Extent: {x: 0.84765005, y: 1.30645, z: 0}
+    m_Center: {x: 0.00034999847, y: 0.045599997, z: 0}
+    m_Extent: {x: 0.85745, y: 1.303, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

@@ -42,7 +42,7 @@ public class CountDownUIHandler : MonoBehaviour
 					{
 						case 0:
 							_countDownText.text = "GO!";
-							_audioManager.EventInstances[(int)AudioNameEnum.Firework].start();
+							_audioManager.EventInstances[(int)AudioNameEnum.StartFirework].start();
 							break;
 						case < 0:
 							_coreStateMachine.LevelGameStateMachine.SetGameState(GameStateEnum.Play);

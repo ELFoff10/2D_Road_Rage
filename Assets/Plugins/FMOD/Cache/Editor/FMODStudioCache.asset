@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/MenuBackgroundMusic.bank
   Name: MenuBackgroundMusic
   StudioPath: bank:/MenuBackgroundMusic
-  lastModified: 638253751898130991
+  lastModified: 638262562838415388
   FileSizes: []
   Exists: 1
 --- !u!114 &-4732355042806765301
@@ -71,6 +71,33 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+  Length: 0
+--- !u!114 &-4563035829679203167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Game/LightOff
+  m_EditorClassIdentifier: 
+  Path: event:/Game/LightOff
+  Guid:
+    Data1: 189678523
+    Data2: 1150338918
+    Data3: 1450241461
+    Data4: 1774565422
+  Banks:
+  - {fileID: 9216671786045942439}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
 --- !u!114 &-2421672522608945895
 MonoBehaviour:
@@ -114,7 +141,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638253751898086199
+  lastModified: 638271210808069941
   FileSizes: []
   Exists: 1
 --- !u!114 &-1122151191181611923
@@ -177,12 +204,13 @@ MonoBehaviour:
   - {fileID: -2421672522608945895}
   - {fileID: 7982981491929167451}
   - {fileID: 2492686328862569965}
+  - {fileID: -4563035829679203167}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2086642672922542945}
   StringsBanks:
   - {fileID: 1142557859591529258}
-  cacheTime: 638271133587978011
+  cacheTime: 638271210808090010
   cacheVersion: 131605
 --- !u!114 &950255155997978121
 MonoBehaviour:
@@ -226,10 +254,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638270387982602924
+  lastModified: 638271210808090010
   FileSizes:
   - Name: 
-    Value: 1762
+    Value: 1802
   Exists: 1
 --- !u!114 &2492686328862569965
 MonoBehaviour:
@@ -273,7 +301,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 638266668593902148
+  lastModified: 638262562838904547
   FileSizes: []
   Exists: 1
 --- !u!114 &4072871509737435806
@@ -291,7 +319,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Car.bank
   Name: Car
   StudioPath: bank:/Car
-  lastModified: 638271133587978011
+  lastModified: 638271120639893194
   FileSizes: []
   Exists: 1
 --- !u!114 &4306132300757633323
@@ -471,7 +499,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/GameBackgroundMusic.bank
   Name: GameBackgroundMusic
   StudioPath: bank:/GameBackgroundMusic
-  lastModified: 638270387982595458
+  lastModified: 638269942936214803
   FileSizes: []
   Exists: 1
 --- !u!114 &9216671786045942439
@@ -489,6 +517,6 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD/Build/Desktop/Game.bank
   Name: Game
   StudioPath: bank:/Game
-  lastModified: 638270387982261864
+  lastModified: 638271210807924666
   FileSizes: []
   Exists: 1

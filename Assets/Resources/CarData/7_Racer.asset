@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 7_Racer
   m_EditorClassIdentifier: 
   _carUniqueID: 6
-  _carUISprite: {fileID: 21300000, guid: ac9388e2bea434747af9a48d0133ebba, type: 3}
-  _carSelectSprite: {fileID: 21300000, guid: ac9388e2bea434747af9a48d0133ebba, type: 3}
-  _carPrefab: {fileID: 6115639297621940794, guid: e29c8f79bbd5aba4b90527dcf0aa9b49, type: 3}
+  _carUISprite: {fileID: 21300000, guid: e8f8b68656b32e9489ae395bd42b1959, type: 3}
+  _carSelectSprite: {fileID: 21300000, guid: d5bfa938b62aee94d81a15630235d67b, type: 3}
+  _carPrefab: {fileID: 6115639297621940794, guid: 3852f87e4a81201428dee258d426a8cf, type: 3}
   _material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}

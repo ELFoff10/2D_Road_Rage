@@ -6,7 +6,6 @@ using VContainer;
 public class PositionHandler : MonoBehaviour
 {
 	private List<CarLapCounter> _carLapCounters = new List<CarLapCounter>();
-
 	private LeaderBoardUIHandler _leaderBoardUIHandler;
 
 	[Inject]
@@ -20,7 +19,7 @@ public class PositionHandler : MonoBehaviour
 		{
 			foreach (var carLapCounter in carLapCounterArray)
 			{
-				carLapCounter.LapsToComplete = 3;
+				carLapCounter.LapsToComplete = 2;
 			}
 		}
 

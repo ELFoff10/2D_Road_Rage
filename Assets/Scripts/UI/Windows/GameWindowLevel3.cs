@@ -88,7 +88,7 @@ public class GameWindowLevel3 : Window
 		_menuButton.gameObject.SetActive(true);
 		_menuUI.gameObject.SetActive(false);
 		_countDownUIHandler.gameObject.SetActive(true);
-		// _distanceUIHandler.gameObject.SetActive(false);
+		_lifeCountUI.LifeCount = 3;
 		_lifeCountUI.gameObject.SetActive(false);
 		_lifeCountUI.gameObject.SetActive(true);
 		PlayClip();

@@ -11,6 +11,8 @@ public class CarLapCounter : MonoBehaviour
 	private readonly AudioManager _audioManager;
 	[Inject]
 	private readonly FMOD_Events _fmodEvents;
+	[Inject]
+	private readonly GameEventsManager _gameEventsManager;
 
 	public event Action<CarLapCounter> OnPassCheckPoint;
 	// public event Action<CarLapCounter> OnFinishCheckPoint;
@@ -64,6 +66,8 @@ public class CarLapCounter : MonoBehaviour
 
 		if (checkPoint.IsFinishLine)
 		{
+			_gameEventsManager.FinishLinePassed();
+            
 			_passedCheckPointNumber = 0;
 			_lapsCompleted++;
 

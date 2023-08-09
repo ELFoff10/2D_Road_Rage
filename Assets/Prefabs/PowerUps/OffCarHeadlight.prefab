@@ -185,5 +185,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effectType: 2
-  _value: 0
+  _value: 3
   _spriteRenderer: {fileID: 6728348045882566675}
