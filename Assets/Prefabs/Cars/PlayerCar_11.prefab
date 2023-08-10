@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002f942856e8ef448865ebe5f26c635b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AICarMode: 1
+  _carAIMode: 1
 --- !u!114 &2230227221456775530
 MonoBehaviour:
   m_ObjectHideFlags: 0

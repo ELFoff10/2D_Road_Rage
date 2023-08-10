@@ -4,6 +4,7 @@ public class WheelParticleHandler : MonoBehaviour
 {
 	[SerializeField]
 	private CarController _carController;
+	
 	private ParticleSystem.EmissionModule _particleSystemEmissionModule;
 	private ParticleSystem _particleSystemSmoke;
 	private float _particleEmissionRate;

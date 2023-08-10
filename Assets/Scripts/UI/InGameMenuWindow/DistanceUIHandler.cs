@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using VContainer;
@@ -19,6 +20,16 @@ public class DistanceUIHandler : MonoBehaviour
 		_carTransform = GameObject.FindGameObjectWithTag("Player").transform;
 		_startingPosition = _carTransform.position.y;
 	}
+
+	// private void OnEnable()
+	// {
+	// 	// При изменении _distanceTraveled мы подписываемся? 
+	// }
+
+	// private void OnDisable()
+	// {
+	// 	throw new NotImplementedException();
+	// }
 
 	private void Update()
 	{

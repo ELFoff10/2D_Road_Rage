@@ -5,15 +5,6 @@ using VContainer;
 
 public class CarLapCounter : MonoBehaviour
 {
-	[Inject]
-	private readonly ICoreStateMachine _coreStateMachine;
-	[Inject]
-	private readonly AudioManager _audioManager;
-	[Inject]
-	private readonly FMOD_Events _fmodEvents;
-	[Inject]
-	private readonly GameEventsManager _gameEventsManager;
-
 	public event Action<CarLapCounter> OnPassCheckPoint;
 	public event Action<CarLapCounter> OnPassTrainingCheckPoint1;
 	public event Action<CarLapCounter> OnPassTrainingCheckPoint2;
@@ -29,6 +20,15 @@ public class CarLapCounter : MonoBehaviour
 	private int _carPosition;
 	private bool _isHideRoutineRunning;
 	private float _hideUIDelayTime;
+	
+	[Inject]
+	private readonly ICoreStateMachine _coreStateMachine;
+	[Inject]
+	private readonly AudioManager _audioManager;
+	[Inject]
+	private readonly FMOD_Events _fmodEvents;
+	[Inject]
+	private readonly GameEventsManager _gameEventsManager;
 
 	public void SetCarPosition(int position)
 	{
