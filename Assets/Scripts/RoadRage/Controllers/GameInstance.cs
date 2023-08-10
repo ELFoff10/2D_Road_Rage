@@ -11,13 +11,11 @@ public class GameInstance : MonoBehaviour
 	private readonly ICoreStateMachine _coreStateMachine;
 	[Inject]
 	private readonly IWindowManager _windowManager;
-	// [Inject]
-	// private readonly DataCentralService _dataCentralService;
 	[Inject]
 	private readonly AudioManager _audioManager;
+	// [Inject]
+	// private readonly DataCentralService _dataCentralService;
 	
-	
-
 	private void Start()
 	{
 		// Time.timeScale = 10f;
